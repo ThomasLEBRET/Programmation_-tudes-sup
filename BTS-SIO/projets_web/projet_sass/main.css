@@ -1,0 +1,40 @@
+nav li a:hover, nav li a {
+  color: white;
+}
+
+#link {
+  color: black;
+}
+
+@media screen and (max-width: 600px) {
+  .bg {
+    background-color: black;
+    color: white;
+  }
+}
+body {
+  background: #58D8E8;
+  font-family: lato;
+}
+
+nav {
+  text-align: center;
+  margin-top: 50px;
+}
+nav li {
+  padding-right: 40px;
+  display: inline;
+}
+nav li a {
+  padding: 10px;
+  text-decoration: none;
+}
+nav li a:hover {
+  border-top: 3px solid white;
+}
+
+table {
+  width: 75px;
+}
+
+/*# sourceMappingURL=main.css.map */

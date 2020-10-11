@@ -1,0 +1,27 @@
+<div class="body">
+	<div class="insc">
+		<form class="insc" action="index.php?page=inscription" method="post" enctype="multipart/form-data">
+			<h1 class="titre">Inscription</h1>
+			<label>Nom</label><br>
+			<input type="text" name="nom" placeholder="Nom" required><br>
+			<label>Prénom</label><br>
+			<input type="text" name="prenom" placeholder="Prénom" required><br>
+			<label>Date de naissance</label><br>
+			<input type="date" name="ddn" placeholder="Prénom" required><br>
+			<label>Photo de profil</label><br>
+			<input type="file" name="pdp" placeholder="Photo de profil" required><br>
+			<label>Mail</label><br>
+			<input type="email" name="mail" placeholder="example.domain.com" required><br>
+			<label>Mot de passe</label><br>
+			<input type="password" name="password" required><br>
+			<label>Vérifier mot de passe</label><br>
+			<input type="password" name="password2"required><br>
+			<label>N° Téléphone</label><br>
+			<input type="number" name="no_tel" required><br>
+			<label>Présentation</label><br>
+			<textarea name="presentation" rows="5" cols="50" placeholder="Présente toi !" required></textarea><br>
+			<input type="submit" name="envoi" value="Envoyer">
+		</form>
+		<label>Pas encore inscrit ? </label> <button class="connexion"><a href="index.php?page=connexion">Connecte toi</a></button>
+	</div>
+</div>

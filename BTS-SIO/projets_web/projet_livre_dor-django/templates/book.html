@@ -1,0 +1,41 @@
+{% include "public/head.html" %}
+<div class="card mb-3" style="max-width: 600px; margin: 0 auto;">
+	<div class="card-body">
+		<h5 class="card-title">{{ book[2] }}</h5>
+		{% if n != 0 %}
+		<p>Moyenne : {{ moyenne }}/5</p>
+		{% endif %}
+		<h6 class="card-subtitle mb-2 text-muted">{{ book[1] }}</h6>
+		<p>Nombre d'avis : {{ nbAvis }}</p>
+		<p class="card-text">{{ book[3] }}</p>
+		<i class="card-text">{{ book[4] }}</i><br>
+	</div>
+</div>
+{% if not(monavis) %}
+<form  method="POST" action="/user/result/{{ id }}/post">
+	<!-- Si utilisateur n'a pas donné son avis, alors : -->
+	<div class="form-group" style="max-width: 600px; margin: 0 auto;">
+		<label for="exampleFormControlTextarea1">Donnez votre avis</label>
+		<textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="avis"></textarea><br>
+		<label for="note">Donnez votre avis</label>
+		<input id="note" type="number" max="5" name="note" value="0">
+		<input type="submit" name="submit" value="Envoyer" class="btn btn-primary">
+	</div>
+
+</form>
+{% endif %}
+<hr>
+{% if n != 0 %}
+<h1 style="text-align:center;"> Voici les avis utilisateur </h1>
+{% endif %}
+{% for i in range(n) %}
+<div class="card mb-3" style="max-width: 600px; margin: 0 auto;">
+	<div class="card-body">
+		<h5 class="card-title">{{ avis[i][0] }} {{ avis[i][1] }}</h5>
+		<h6 class="card-subtitle mb-2">Avis : {{ avis[i][2] }}</h6>
+		<p class="card-text">Note : {{ avis[i][3] }}/5</p>
+	</div>
+</div>
+{% endfor %}
+</body>
+</html>

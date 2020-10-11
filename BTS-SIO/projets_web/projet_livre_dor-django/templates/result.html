@@ -1,0 +1,14 @@
+{% include "public/head.html" %}
+	{% for book in books %}
+	<div class="card mb-3" style="max-width: 600px; margin: 0 auto;">
+		<div class="card-body">
+			<h5 class="card-title">{{ book[2] }}</h5>
+			<h6 class="card-subtitle mb-2 text-muted">{{ book[1] }}</h6>
+			<p class="card-text">{{ book[3] }}</p>
+			<i class="card-text">{{ book[4] }}</i><br>
+			<a href="/user/result/{{ book[0] }}" class="card-link">Donner un avis</a>
+		</div>
+	</div>
+	{% endfor %}
+</body>
+</html>

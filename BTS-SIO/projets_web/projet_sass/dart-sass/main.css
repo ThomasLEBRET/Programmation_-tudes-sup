@@ -1,0 +1,27 @@
+body {
+  background: #58D8E8;
+  font-family: lato;
+}
+
+.menu {
+  text-align: center;
+  margin-top: 50px;
+}
+
+li {
+  padding-right: 40px;
+  display: inline;
+}
+
+a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a:hover {
+  border-top: 3px solid white;
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */

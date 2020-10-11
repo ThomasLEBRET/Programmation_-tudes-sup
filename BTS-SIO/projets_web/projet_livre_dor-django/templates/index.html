@@ -1,0 +1,14 @@
+{% include "public/head.html" %}
+	{% if not(session['id']) %}
+	<div class="jumbotron">
+		<h1 class="display-4">Bienvenu !</h1>
+		<p class="lead">Veuillez vous inscrire ou vous connecter svp.</p>
+	</div>
+	{% else %}
+	<div class="jumbotron">
+		<h1 class="display-4">Bienvenu {{ session['prenom'] }} {{ session ['nom']}}</h1>
+		<p class="lead">Votre adresse mail : {{ session['email'] }}.</p>
+	</div>
+	{% endif %}
+</body>
+</html>
