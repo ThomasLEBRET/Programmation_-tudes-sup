@@ -1,0 +1,5 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\insee_verify_key\insee_version_debutant\bin\Debug\insee_version_debutant.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\insee_verify_key\insee_version_debutant\bin\Debug\insee_version_debutant.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\insee_verify_key\insee_version_debutant\obj\x86\Debug\insee_version_debutant.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\insee_verify_key\insee_version_debutant\obj\x86\Debug\insee_version_debutant.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\insee_verify_key\insee_version_debutant\obj\x86\Debug\insee_version_debutant.csprojResolveAssemblyReference.cache

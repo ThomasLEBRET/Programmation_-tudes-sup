@@ -1,0 +1,13 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\blind_test\obj\x86\Debug\blind_test.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\blind_test\obj\x86\Debug\blind_test.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\blind_test\bin\Debug\blind_test.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\blind_test\bin\Debug\blind_test.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\blind_test\obj\x86\Debug\blind_test.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\blind_test\obj\x86\Debug\blind_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Debug\blind_test.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Debug\blind_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\bin\Debug\blind_test.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\bin\Debug\blind_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Debug\blind_test.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Debug\blind_test.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Debug\blind_test.csproj.GenerateResource.Cache

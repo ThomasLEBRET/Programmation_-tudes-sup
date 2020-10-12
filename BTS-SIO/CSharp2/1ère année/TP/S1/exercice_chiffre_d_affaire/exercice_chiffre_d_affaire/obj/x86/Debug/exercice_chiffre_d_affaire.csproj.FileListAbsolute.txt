@@ -1,0 +1,9 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\exercice_chiffre_d_affaire\bin\Debug\exercice_chiffre_d_affaire.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\exercice_chiffre_d_affaire\bin\Debug\exercice_chiffre_d_affaire.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\exercice_chiffre_d_affaire\obj\x86\Debug\exercice_chiffre_d_affaire.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\exercice_chiffre_d_affaire\obj\x86\Debug\exercice_chiffre_d_affaire.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\exercice_chiffre_d_affaire\exercice_chiffre_d_affaire\obj\x86\Debug\exercice_chiffre_d_affaire.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\exercice_chiffre_d_affaire\exercice_chiffre_d_affaire\obj\x86\Debug\exercice_chiffre_d_affaire.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\exercice_chiffre_d_affaire\exercice_chiffre_d_affaire\bin\Debug\exercice_chiffre_d_affaire.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\exercice_chiffre_d_affaire\exercice_chiffre_d_affaire\bin\Debug\exercice_chiffre_d_affaire.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\exercice_chiffre_d_affaire\exercice_chiffre_d_affaire\obj\x86\Debug\exercice_chiffre_d_affaire.csprojResolveAssemblyReference.cache

@@ -1,0 +1,25 @@
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\ResolveAssemblyReference.cache
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\SacADos.Properties.Resources.resources
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\GenerateResource.read.1.tlog
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\GenerateResource.write.1.tlog
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\bin\Debug\SacADos.exe
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\bin\Debug\SacADos.pdb
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\SacADos.FormSacADos.resources
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\SacADos.exe
+c:\users\lebret\documents\visual studio 2010\Projects\SacADos\SacADos\obj\x86\Debug\SacADos.pdb
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.exe
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.pdb
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\bin\Debug\SacADos.exe
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\bin\Debug\SacADos.pdb
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.csproj.GenerateResource.Cache
+C:\Users\Thomas\Documents\GitHub\CSharp_BTS-SIO\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.FormAppliSac.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\bin\Debug\SacADos.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\bin\Debug\SacADos.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.FormAppliSac.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp\2ème année\TD\SacADos\SacADos\obj\x86\Debug\SacADos.csproj.GenerateResource.Cache

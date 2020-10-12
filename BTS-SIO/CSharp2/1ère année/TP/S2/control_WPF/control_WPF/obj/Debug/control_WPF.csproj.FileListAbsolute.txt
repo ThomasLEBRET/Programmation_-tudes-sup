@@ -1,0 +1,8 @@
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\bin\Debug\control_WPF.dll
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\bin\Debug\control_WPF.pdb
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\obj\Debug\control_WPF.BoiteConnexion.resources
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\obj\Debug\GenerateResource.read.1.tlog
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\obj\Debug\GenerateResource.write.1.tlog
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\obj\Debug\control_WPF.dll
+C:\Users\LEBRET\Documents\Visual Studio 2010\Projects\control_WPF\control_WPF\obj\Debug\control_WPF.pdb

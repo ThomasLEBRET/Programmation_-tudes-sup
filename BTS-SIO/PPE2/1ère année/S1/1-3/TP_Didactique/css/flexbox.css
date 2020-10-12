@@ -1,0 +1,20 @@
+div.container {
+  border: 1px solid black;
+  width: 600px;
+  height: 160px;
+  display: flex; /*Affichage sur une même ligne*/
+  flex-direction: column;; /*Affichage en colonne -> permet de gérer les dispositions d'affichages*/
+  justify-content: center;/*Gère l'espacement pour center dans le container le contenu*/
+  align-items: flex-start; /*Commence l'affichage en haut */
+}
+div.contenu {
+  border: 1px solid black;
+  width: 100px;
+  height: 30px;
+}
+
+/*
+flex direction :gère la disposition de l'affichage
+justify-content : Gère l'espacement pour center et éviter les débordements
+align-items : Gère la position de lecture des sous éléments du container
+*/

@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{237FFCD1-1BBA-4FCE-BD67-DB554267DA54}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>tricount</RootNamespace>
+    <AssemblyName>tricount</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Depense.cs" />
+    <Compile Include="DonneesPubliques.cs" />
+    <Compile Include="FormAddParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAddParticipant.Designer.cs">
+      <DependentUpon>FormAddParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormConnexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConnexion.Designer.cs">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormListeTricount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormListeTricount.Designer.cs">
+      <DependentUpon>FormListeTricount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormMaDepense.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMaDepense.Designer.cs">
+      <DependentUpon>FormMaDepense.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuppParticipant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuppParticipant.Designer.cs">
+      <DependentUpon>FormSuppParticipant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTricount.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTricount.Designer.cs">
+      <DependentUpon>FormTricount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MesOutils.cs" />
+    <Compile Include="Participant.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Remboursement.cs" />
+    <Compile Include="Tricount.cs" />
+    <EmbeddedResource Include="FormAddParticipant.resx">
+      <DependentUpon>FormAddParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConnexion.resx">
+      <DependentUpon>FormConnexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormListeTricount.resx">
+      <DependentUpon>FormListeTricount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMaDepense.resx">
+      <DependentUpon>FormMaDepense.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuppParticipant.resx">
+      <DependentUpon>FormSuppParticipant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTricount.resx">
+      <DependentUpon>FormTricount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

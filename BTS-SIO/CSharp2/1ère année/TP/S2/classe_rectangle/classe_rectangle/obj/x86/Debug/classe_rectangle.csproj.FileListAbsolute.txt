@@ -1,0 +1,5 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\classe_rectangle\classe_rectangle\bin\Debug\classe_rectangle.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\classe_rectangle\classe_rectangle\bin\Debug\classe_rectangle.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\classe_rectangle\classe_rectangle\obj\x86\Debug\classe_rectangle.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\classe_rectangle\classe_rectangle\obj\x86\Debug\classe_rectangle.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\classe_rectangle\classe_rectangle\obj\x86\Debug\classe_rectangle.csprojAssemblyReference.cache

@@ -1,0 +1,7 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\bin\Release\pendu.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\bin\Release\pendu.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Release\pendu.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Release\pendu.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Release\pendu.csproj.GenerateResource.Cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Release\pendu.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Release\pendu.pdb

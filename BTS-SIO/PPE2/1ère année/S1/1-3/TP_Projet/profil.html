@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Profil Fakebook</title>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="img/fakebook.jpg" alt="Fakebook">
+    </div>
+    <nav>
+      <a class="menu" href="index.html">Mur</a>&nbsp;
+      <a class="menu" href="">Profil</a>&nbsp;
+      <a class="menu" href="#">Déconnexion</a>
+    </nav>
+  </header>
+  <div class="body">
+    <section class="gauche">
+      <div class="contenugauche">
+        <img src="img/avatar5.jpg" alt="Mon Avatar">
+      </div>
+      <div class="contenugauche">
+        <table class="amis">
+          <tr class="photo">
+            <td colspan="2">
+              <font class="titre">Amis</font>
+            </td>
+          </tr>
+          <tr class="photo">
+            <td ><img src="img/avatar1.jpg" alt="Avatar 1"></td>
+            <td ><img src="img/avatar2.jpg" alt="Avatar 2"></td>
+          </tr>
+          <tr class="photo">
+            <td ><img src="img/avatar3.jpg" alt="Avatar 3"></td>
+            <td ><img src="img/avatar4.png" alt="Avatar 4"></td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="droite">
+        <table>
+          <tr>
+            <td class="gauche">Nom : </td>
+            <td class="droite">LEBRET</td>
+          </tr>
+          <tr>
+            <td class="gauche">Prénom : </td>
+            <td class="droite"> Thomas</td>
+          </tr>
+          <tr>
+            <td class="gauche">Date de naissance :</td>
+            <td class="droite">03/02/2000</td>
+          </tr>
+          <tr>
+            <td class="gauche">Sexe :</td>
+            <td class="droite">Homme</td>
+          </tr>
+        </table>
+    </section>
+  </div>
+</body>
+</html>
+
+<style>
+  table, td, th {
+    border: none;
+  }
+  td.gauche {
+    text-align: right; /*pour aligner des cellules dans un tableau horizontalement */
+    /* vertical-align : top, bottom, middle, baseline pour aligner dans un tableau verticalement*/
+  }
+  td.droite {
+    text-align: left;
+  }
+</style>

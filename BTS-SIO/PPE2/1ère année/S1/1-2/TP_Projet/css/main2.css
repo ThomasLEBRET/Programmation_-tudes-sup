@@ -1,0 +1,17 @@
+font {
+  font-family: tahoma;
+  font-size: 14pt;
+}
+font.titre {
+  font-size: 18pt;
+  font-weight: bold;
+}
+img.publi {
+  width: 40px;
+}
+a.publi{
+  color: #3B5998;
+}
+div.actu {
+  width: 400px;
+}

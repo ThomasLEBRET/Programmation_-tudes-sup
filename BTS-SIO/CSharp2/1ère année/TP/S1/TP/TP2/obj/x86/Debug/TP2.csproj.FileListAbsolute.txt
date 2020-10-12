@@ -1,0 +1,5 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP2\bin\Debug\TP2.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP2\bin\Debug\TP2.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP2\obj\x86\Debug\TP2.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP2\obj\x86\Debug\TP2.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP2\obj\x86\Debug\TP2.csprojResolveAssemblyReference.cache

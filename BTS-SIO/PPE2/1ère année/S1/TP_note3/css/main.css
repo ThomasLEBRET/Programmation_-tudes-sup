@@ -1,0 +1,171 @@
+/* main.css */
+a.listeAmis {
+     font-family: Tahoma;
+     font-size: 18pt;
+     color: #3B5998;
+     font-weight: bold;
+}
+td.lienListeAmis {
+     text-align: inherit;
+     vertical-align: inherit;
+}
+td.lienListeAmis {
+     width: 360px;
+}
+
+img.photoListeAmis {
+     width: 80px;
+     text-align: center;
+     vertical-align: center;
+}
+* {
+  font-family: Tahoma;
+  font-size: 12pt;
+}
+body {
+  display : flex;
+  flex-direction : column;
+}
+
+a.menu {
+  color: white;
+  font-weight: bold;
+}
+
+header {
+  background-color: #3B5998;
+  width : 600px;
+  display : flex;
+  flex-direction : row;
+  align-items : center;
+}
+
+div.body {
+  width : 600px;
+  display : flex;
+  flex-direction : row;
+}
+
+div.logo {
+  width : 160px;
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+}
+
+nav {
+  width :440px;
+  display : flex;
+  flex-direction : row;
+  justify-content : flex-end;
+  align-items : center;
+}
+section.gauche {
+  width : 160px;
+  display : flex;
+  flex-direction : column;
+  align-items: center;
+}
+
+div.contenugauche {
+  width : 160px;
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : center;
+}
+
+section.droite {
+  width : 440px;
+  display : flex;
+  flex-direction : column;
+  align-items : center;
+}
+
+div.formactu {
+  width : 440px;
+  display : flex;
+  flex-direction : row;
+  justify-content : center;
+  align-items : flex-start;
+}
+
+div.actu {
+  width : 400px;
+  display : flex;
+  flex-direction : row;
+  justify-content : flex-start;
+  align-items : flex-start;
+}
+
+input.publication {
+  width: 360px;
+}
+
+input.publiButton {
+  color: #3B5998;
+  background-color: white;
+  border: 1px solid black;
+  width : 70px;
+  height : 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+input.publiButton:hover {
+  background-color: #3B5998;
+  color: white;
+  cursor: pointer;
+  transition: .25s;
+}
+
+/*tableau_amis.css*/
+table {
+  border-spacing: 0px;
+}
+img {
+  width: 100%;
+  border-radius: 5px;
+}
+font {
+  font-family: tahoma;
+  font-size: 14pt;
+}
+font.titre {
+  font-size: 18pt;
+  text-decoration: bold;
+}
+table.amis {
+  width: 160px;
+}
+td.photo {
+  width: 50%;
+}
+
+/*actualite.css*/
+
+font {
+  font-family: tahoma;
+  font-size: 14pt;
+}
+font.titre {
+  font-size: 18pt;
+  font-weight: bold;
+}
+img.publi {
+  width: 40px;
+  border-radius: 5px;
+}
+a.publi{
+  color: #3B5998;
+}
+div.actua {
+  width: 400px;
+}
+td.gauche {
+	text-align:right;
+}
+td.droite{
+	text-align: left;
+}

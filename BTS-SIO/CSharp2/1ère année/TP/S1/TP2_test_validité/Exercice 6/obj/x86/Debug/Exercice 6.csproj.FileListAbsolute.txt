@@ -1,0 +1,5 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 6\bin\Debug\Exercice 6.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 6\bin\Debug\Exercice 6.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 6\obj\x86\Debug\Exercice 6.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 6\obj\x86\Debug\Exercice 6.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 6\obj\x86\Debug\Exercice 6.csprojResolveAssemblyReference.cache

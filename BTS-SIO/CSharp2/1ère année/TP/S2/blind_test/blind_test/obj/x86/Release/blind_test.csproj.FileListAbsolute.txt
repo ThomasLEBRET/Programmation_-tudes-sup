@@ -1,0 +1,7 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\bin\Release\blind_test.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\bin\Release\blind_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Release\blind_test.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Release\blind_test.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Release\blind_test.csproj.GenerateResource.Cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Release\blind_test.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\blind_test\blind_test\obj\x86\Release\blind_test.pdb

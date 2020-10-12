@@ -1,0 +1,4 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\TP2_Exercices\bin\Debug\TP2_Exercices.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\TP2_Exercices\bin\Debug\TP2_Exercices.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\TP2_Exercices\obj\x86\Debug\TP2_Exercices.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\TP2_Exercices\obj\x86\Debug\TP2_Exercices.pdb

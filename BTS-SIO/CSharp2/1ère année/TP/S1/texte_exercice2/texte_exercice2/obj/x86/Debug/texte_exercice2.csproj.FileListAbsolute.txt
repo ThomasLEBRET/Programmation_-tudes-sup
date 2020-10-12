@@ -1,0 +1,9 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\bin\Debug\texte_exercice2.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\bin\Debug\texte_exercice2.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\obj\x86\Debug\texte_exercice2.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\obj\x86\Debug\texte_exercice2.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\obj\x86\Debug\texte_exercice2.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\obj\x86\Debug\texte_exercice2.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\texte_exercice2\obj\x86\Debug\texte_exercice2.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\texte_exercice2\texte_exercice2\obj\x86\Debug\texte_exercice2.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\texte_exercice2\texte_exercice2\obj\x86\Debug\texte_exercice2.pdb

@@ -1,0 +1,4 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 5\bin\Debug\Exercice 5.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 5\bin\Debug\Exercice 5.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 5\obj\x86\Debug\Exercice 5.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Exercice 5\Exercice 5\obj\x86\Debug\Exercice 5.pdb

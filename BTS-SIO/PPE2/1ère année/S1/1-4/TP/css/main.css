@@ -1,0 +1,22 @@
+a, .listeAmis {
+  font-family: Tahoma;
+  font-size: 18pt;
+  color: #3B5998;
+  font-weight: bold;
+}
+
+table {
+  border: 1px solid black;
+}
+
+td.lienListeAmis {
+  width: 360px;
+  border: 1px solid black;
+}
+
+img.photoListAmis {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80px;
+  text-align: center;
+}

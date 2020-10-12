@@ -1,0 +1,7 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\bin\Debug\rectangle_classe.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\bin\Debug\rectangle_classe.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\obj\x86\Debug\rectangle_classe.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\obj\x86\Debug\rectangle_classe.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\obj\x86\Debug\rectangle_classe.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\obj\x86\Debug\rectangle_classe.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\rectangle_classe\obj\x86\Debug\rectangle_classe.pdb

@@ -1,0 +1,4 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP\bin\Release\TP.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP\bin\Release\TP.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP\obj\x86\Release\TP.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP\TP\obj\x86\Release\TP.pdb

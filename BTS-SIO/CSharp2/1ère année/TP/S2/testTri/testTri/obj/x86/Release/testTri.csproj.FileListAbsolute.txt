@@ -1,0 +1,4 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\testTri\bin\Release\testTri.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\testTri\bin\Release\testTri.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\testTri\obj\x86\Release\testTri.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\testTri\obj\x86\Release\testTri.pdb

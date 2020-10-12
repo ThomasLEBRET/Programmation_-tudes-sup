@@ -1,0 +1,14 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\bin\Debug\test_pour_slam.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\bin\Debug\test_pour_slam.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\obj\x86\Debug\test_pour_slam.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\obj\x86\Debug\test_pour_slam.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\obj\x86\Debug\test_pour_slam.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\obj\x86\Debug\test_pour_slam.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\test_pour_slam\obj\x86\Debug\test_pour_slam.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\obj\x86\Debug\test_pour_slam.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\obj\x86\Debug\test_pour_slam.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\bin\Debug\test_pour_slam.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\bin\Debug\test_pour_slam.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\obj\x86\Debug\test_pour_slam.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\obj\x86\Debug\test_pour_slam.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\test_pour_slam\test_pour_slam\obj\x86\Debug\test_pour_slam.csproj.GenerateResource.Cache

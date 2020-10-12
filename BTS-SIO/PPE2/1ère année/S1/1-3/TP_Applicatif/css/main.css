@@ -1,0 +1,67 @@
+div.logo {
+  width: 160px;
+  display : flex;
+	flex-direction : row;
+	justify-content : center;
+	align-items : center;
+  border: 1px solid black;
+}
+nav {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  border: 1px solid black;
+}
+header {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  border: 1px solid black;
+}
+div.body {
+  width: 600px;
+  display : flex;
+  flex-direction : row;
+  border: 1px solid black;
+}
+section.gauche {
+  width: 160px;
+  display : flex;
+  flex-direction : column;
+  border: 1px solid black;
+}
+div.contenugauche {
+  width: 160px;
+  display : flex;
+	flex-direction : row;
+	justify-content : center;
+	align-items : center;
+  border: 1px solid black;
+}
+div.actu {
+  width: 400px;
+  display : flex;
+	flex-direction : column;
+	justify-content : flex-start;
+	align-items : flex-start;
+  border: 1px solid black;
+}
+section.droite {
+  width: 440px;
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
+  align-items : center;
+  border: 1px solid black;
+}
+div.formactu {
+  width: 440px;
+  display : flex;
+	flex-direction : column;
+	justify-content : flex-start;
+	align-items : center;
+  border: 1px solid black;
+}

@@ -1,0 +1,49 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\bin\Release\inscription_serialisation.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\bin\Release\inscription_serialisation.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\obj\x86\Release\inscription_serialisation.Inscription.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\obj\x86\Release\inscription_serialisation.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\obj\x86\Release\inscription_serialisation.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\obj\x86\Release\inscription_serialisation.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\inscription_serialisation\obj\x86\Release\inscription_serialisation.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\bin\Release\inscription_serialisation.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\bin\Release\inscription_serialisation.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Connexion.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Inscription.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.csproj.GenerateResource.Cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Menu.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.JeuMemory.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Classement.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\bin\Release\inscription_serialisation.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\bin\Release\inscription_serialisation.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Classement.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Connexion.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Inscription.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.JeuMemory.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Menu.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.csproj.GenerateResource.Cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.pdb
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\ResolveAssemblyReference.cache
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\Interop.SpeechLib.dll
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.csproj.ResolveComReference.cache
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Classement.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Connexion.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Info.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Inscription.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.JeuDevine.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.JeuMemory.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Menu.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.JeuDevine.fr.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\GenerateResource.read.1.tlog
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\GenerateResource.write.1.tlog
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.exe
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.pdb
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\bin\Release\inscription_serialisation.exe
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\bin\Release\inscription_serialisation.pdb
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\bin\Release\fr\inscription_serialisation.resources.dll
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\inscription_serialisation.Properties.Resources.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\Projets\inscription_serialisation\inscription_serialisation\obj\x86\Release\fr\inscription_serialisation.resources.dll

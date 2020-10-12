@@ -1,0 +1,9 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\voyage_class_test\bin\Debug\voyage_class_test.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\voyage_class_test\bin\Debug\voyage_class_test.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\voyage_class_test\obj\x86\Debug\voyage_class_test.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\voyage_class_test\obj\x86\Debug\voyage_class_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\voyage_class_test\voyage_class_test\obj\x86\Debug\voyage_class_test.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\voyage_class_test\voyage_class_test\obj\x86\Debug\voyage_class_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\voyage_class_test\voyage_class_test\bin\Debug\voyage_class_test.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\voyage_class_test\voyage_class_test\bin\Debug\voyage_class_test.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\voyage_class_test\voyage_class_test\obj\x86\Debug\voyage_class_test.csprojResolveAssemblyReference.cache

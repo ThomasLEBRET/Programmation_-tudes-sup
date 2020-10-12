@@ -1,0 +1,7 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\test\bin\Release\test.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\test\bin\Release\test.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\test\obj\x86\Release\test.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\test\obj\x86\Release\test.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\test\obj\x86\Release\test.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\test\obj\x86\Release\test.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\test\obj\x86\Release\test.pdb

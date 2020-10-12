@@ -1,0 +1,7 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\bin\Release\calculatrice.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\bin\Release\calculatrice.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\obj\x86\Release\calculatrice.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\obj\x86\Release\calculatrice.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\obj\x86\Release\calculatrice.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\obj\x86\Release\calculatrice.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\calculatrice\obj\x86\Release\calculatrice.pdb

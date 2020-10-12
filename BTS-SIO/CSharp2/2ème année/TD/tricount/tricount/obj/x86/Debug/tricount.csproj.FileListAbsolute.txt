@@ -1,0 +1,14 @@
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\bin\Debug\tricount.exe
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\bin\Debug\tricount.pdb
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.FormConnexion.resources
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.Properties.Resources.resources
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\GenerateResource.write.1.tlog
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.exe
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.pdb
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.FormListeTricount.resources
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.FormTricount.resources
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.FormAddParticipant.resources
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.FormSuppParticipant.resources
+C:\Users\LEBRET\documents\visual studio 2010\Projects\tricount\tricount\obj\x86\Debug\tricount.FormMaDepense.resources

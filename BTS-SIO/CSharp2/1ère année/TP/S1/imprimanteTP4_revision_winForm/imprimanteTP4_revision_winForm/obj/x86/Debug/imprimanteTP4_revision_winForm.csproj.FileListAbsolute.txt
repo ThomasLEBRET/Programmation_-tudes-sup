@@ -1,0 +1,9 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\bin\Debug\imprimanteTP4_revision_winForm.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\bin\Debug\imprimanteTP4_revision_winForm.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.csproj.GenerateResource.Cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.csprojResolveAssemblyReference.cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\imprimanteTP4_revision_winForm\imprimanteTP4_revision_winForm\obj\x86\Debug\imprimanteTP4_revision_winForm.Form2.resources

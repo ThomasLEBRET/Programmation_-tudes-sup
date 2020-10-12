@@ -1,0 +1,38 @@
+/*
+J'ai préféré utiliser la propriété margin pour aligner horizontalement le tableau
+car elle a exactement le même effet que la réalisation d'un contenu flexible dans le body.
+J'ai pensé coller au mieux aux consignes du sujet car on demande un alignement au milieu de
+la page dans le tableau de classe inscription et non dans le body class bleu
+*/
+
+table.inscription {
+	width: 400px;
+	border: 0px;
+	border-spacing: 0px;
+	margin: auto;
+}
+
+font.blanc {
+	font-family: Tahoma;
+	font-size: 14pt;
+	color: white;
+}
+
+body.bleu {
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+	background-color: #3B5998;
+}
+
+td.gauche {
+	text-align: right;
+}
+
+td.droite{
+	text-align: left;
+}
+
+td.centré {
+	text-align: center;
+}

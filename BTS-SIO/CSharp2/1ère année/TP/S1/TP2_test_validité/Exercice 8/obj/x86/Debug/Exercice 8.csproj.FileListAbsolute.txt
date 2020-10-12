@@ -1,0 +1,4 @@
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP2_test_validité\Exercice 8\bin\Debug\Exercice 8.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP2_test_validité\Exercice 8\bin\Debug\Exercice 8.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP2_test_validité\Exercice 8\obj\x86\Debug\Exercice 8.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\TP2_test_validité\Exercice 8\obj\x86\Debug\Exercice 8.pdb

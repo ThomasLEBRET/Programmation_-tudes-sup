@@ -1,0 +1,9 @@
+.justify {
+    width: 75%;
+	margin: auto;
+	margin-top: 10vh;
+	margin-bottom: 10vh;
+	border-radius: 15px;
+	padding: 5vh 5vh 5vh 5vh;
+	box-shadow: 10px 5px 15px 5px black;
+}

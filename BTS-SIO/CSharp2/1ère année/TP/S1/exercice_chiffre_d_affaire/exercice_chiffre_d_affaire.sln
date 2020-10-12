@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercice_chiffre_d_affaire", "exercice_chiffre_d_affaire\exercice_chiffre_d_affaire.csproj", "{609AFE6C-EB53-4CB1-A3B5-E4734BCBBA86}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "exercice_chiffre_affaire_V2", "exercice_chiffre_affaire_V2\exercice_chiffre_affaire_V2.csproj", "{DA5C9C1A-3AAD-415C-A217-05F0F7721397}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{609AFE6C-EB53-4CB1-A3B5-E4734BCBBA86}.Debug|x86.ActiveCfg = Debug|x86
+		{609AFE6C-EB53-4CB1-A3B5-E4734BCBBA86}.Debug|x86.Build.0 = Debug|x86
+		{609AFE6C-EB53-4CB1-A3B5-E4734BCBBA86}.Release|x86.ActiveCfg = Release|x86
+		{609AFE6C-EB53-4CB1-A3B5-E4734BCBBA86}.Release|x86.Build.0 = Release|x86
+		{DA5C9C1A-3AAD-415C-A217-05F0F7721397}.Debug|x86.ActiveCfg = Debug|x86
+		{DA5C9C1A-3AAD-415C-A217-05F0F7721397}.Debug|x86.Build.0 = Debug|x86
+		{DA5C9C1A-3AAD-415C-A217-05F0F7721397}.Release|x86.ActiveCfg = Release|x86
+		{DA5C9C1A-3AAD-415C-A217-05F0F7721397}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

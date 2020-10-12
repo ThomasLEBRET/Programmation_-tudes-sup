@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Formulaire</title>
+		<link rel="stylesheet" href="css/inscription.css">
+		<link rel="icon" href="image/favicon.ico">
+	</head>
+	<body class="bleu">
+		<form action="index.php?page=profil" method="post">
+			<table class="inscription">
+				<tr>
+					<td class="gauche" colspan="2"> <img src="image/fakebook.jpg" alt="Fakebook"> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <font class="blanc">Login :</font> </td>
+					<td class="droite"> <input type="text" name="login"> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <font class="blanc">Mot de passe :</font> </td>
+					<td class="droite"> <input type="password" name="password"> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <font class="blanc">Nom :</font> </td>
+					<td class="droite"> <input type="text" name="nom" required> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <font class="blanc">Prénom :</font> </td>
+					<td class="droite"> <input type="text" name="prenom" required> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <font class="blanc">Date de naissance :</font> </td>
+					<td class="droite"> <input type="date" name="birthday" required> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <font class="blanc">Sexe</font> </td>
+					<td class="droite">
+						<input type="radio" name="sexe" value="Masculin" required> <font class="blanc">Homme</font>
+						<input type="radio" name="sexe" value="Féminin"> <font class="blanc">Femme</font>
+					</td>
+				</tr>
+				<tr>
+					<td class="centré" colspan="2"> <input type="submit" value="Ok"> </td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\obj\x86\Debug\pendu.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\obj\x86\Debug\pendu.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\obj\x86\Debug\pendu.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\bin\Debug\pendu.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\bin\Debug\pendu.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\obj\x86\Debug\pendu.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\pendu\obj\x86\Debug\pendu.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Debug\pendu.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Debug\pendu.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Debug\pendu.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Debug\pendu.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Debug\pendu.csproj.GenerateResource.Cache
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\bin\Debug\pendu.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\bin\Debug\pendu.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\S2\pendu\pendu\obj\x86\Debug\pendu.csprojResolveAssemblyReference.cache

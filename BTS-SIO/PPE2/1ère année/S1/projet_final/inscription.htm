@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Fakebook</title>
+		<link rel="stylesheet" href="css/inscription.css">
+		<link rel="icon" href="image/favicon.ico">
+	</head>
+	<body class="bleu">
+
+			<table class="inscription">
+				<form action="traitement_inscription.php" method="post">
+				<tr>
+					<td class="gauche" colspan="2"> <img src="image/fakebook.jpg" alt="Fakebook"> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <label class="blanc">Login :</label> </td>
+					<td> <input type="text" name="login"> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <label class="blanc">Mot de passe :</label> </td>
+					<td class="droite"> <input type="password" name="password"> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <label class="blanc">Nom :</label> </td>
+					<td class="droite"> <input type="text" name="nom" required> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <label class="blanc">Prénom :</label> </td>
+					<td class="droite"> <input type="text" name="prenom" required> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <label class="blanc">Date de naissance :</label> </td>
+					<td class="droite"> <input type="date" name="ddn" required> </td>
+				</tr>
+				<tr>
+					<td class="gauche"> <label class="blanc">Sexe</label> </td>
+					<td class="droite">
+						<input type="radio" name="sexe" value="M" required> <label class="blanc">Homme</label>
+						<input type="radio" name="sexe" value="F"> <label class="blanc">Femme</label>
+					</td>
+				</tr>
+				<tr>
+					<td class="centré" colspan="2"> <input type="submit" value="Ok" name="form_insc"> </td>
+				</tr>
+				</form>
+			</table>
+
+	</body>
+</html>

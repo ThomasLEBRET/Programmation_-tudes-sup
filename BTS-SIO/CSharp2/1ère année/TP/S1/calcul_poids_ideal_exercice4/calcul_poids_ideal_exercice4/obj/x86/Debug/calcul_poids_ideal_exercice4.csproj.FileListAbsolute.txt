@@ -1,0 +1,14 @@
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\bin\Debug\calcul_poids_ideal_exercice4.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\bin\Debug\calcul_poids_ideal_exercice4.pdb
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.Form1.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.Properties.Resources.resources
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.csproj.GenerateResource.Cache
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.exe
+C:\Users\thleb\AppData\Local\Temporary Projects\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\bin\Debug\calcul_poids_ideal_exercice4.exe
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\bin\Debug\calcul_poids_ideal_exercice4.pdb
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.Form1.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.Properties.Resources.resources
+C:\Users\thleb\Documents\GitHub\CSharp_BTS-SIO\calcul_poids_ideal_exercice4\calcul_poids_ideal_exercice4\obj\x86\Debug\calcul_poids_ideal_exercice4.csproj.GenerateResource.Cache

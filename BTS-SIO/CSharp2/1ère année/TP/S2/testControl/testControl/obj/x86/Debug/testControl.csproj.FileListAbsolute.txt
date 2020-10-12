@@ -1,0 +1,11 @@
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\bin\Debug\testControl.exe
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\bin\Debug\testControl.pdb
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\bin\Debug\control_WPF.dll
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\bin\Debug\control_WPF.pdb
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\ResolveAssemblyReference.cache
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\testControl.Form1.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\testControl.Properties.Resources.resources
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\GenerateResource.read.1.tlog
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\GenerateResource.write.1.tlog
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\testControl.exe
+Z:\Documents\GitHub\CSharp_BTS-SIO\TP\S2\testControl\testControl\obj\x86\Debug\testControl.pdb
