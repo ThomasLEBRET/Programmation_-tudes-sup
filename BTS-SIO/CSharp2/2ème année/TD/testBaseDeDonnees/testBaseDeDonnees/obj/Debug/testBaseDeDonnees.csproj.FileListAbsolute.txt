@@ -1,0 +1,20 @@
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\testBaseDeDonnees.exe.config
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\testBaseDeDonnees.exe
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\testBaseDeDonnees.pdb
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\MySql.Data.dll
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.csprojResolveAssemblyReference.cache
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.Form1.resources
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.Properties.Resources.resources
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.csproj.GenerateResource.Cache
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.exe
+c:\users\thomas\documents\visual studio 2015\Projects\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\testBaseDeDonnees.exe.config
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\testBaseDeDonnees.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\testBaseDeDonnees.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\bin\Debug\MySql.Data.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.Form1.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\testBaseDeDonnees\testBaseDeDonnees\obj\Debug\testBaseDeDonnees.csproj.GenerateResource.Cache

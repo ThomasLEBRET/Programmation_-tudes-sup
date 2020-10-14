@@ -15,6 +15,7 @@ class Activite extends Database {
   private $nomresp;
   private $prenomresp;
 
+
   public function getNoact(){
     return $this->noact;
   }
@@ -114,6 +115,11 @@ class Activite extends Database {
       return true;
   }
 
+  /**
+   * Récupère les activités liés à une animation
+   * @param  string $cdAnimation un code d'animation
+   * @return $req              une requête préparée 
+   */
   public function getActivites($cdAnimation) {
     $req = "
     SELECT *

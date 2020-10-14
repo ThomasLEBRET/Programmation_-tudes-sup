@@ -195,7 +195,6 @@ namespace SacADos
 
         private void btRempliAutoSac_Click(object sender, EventArgs e)
         {
-            List<Article> listeSac = new List<Article>();
             ViderSacADos();
             armoire.GetListeArticles().Sort();
             foreach(Article a in armoire.GetListeArticles())
@@ -204,7 +203,6 @@ namespace SacADos
                 {
                     sacADos.AjouterArticle(a);
                     sacADos.SetPoidsActuel(sacADos.GetPoidsActuel() + a.GetPoids());
-                    listeSac.Add(a);
                 }
             }
             foreach(Article a in sacADos.GetArticlesEmportes())
