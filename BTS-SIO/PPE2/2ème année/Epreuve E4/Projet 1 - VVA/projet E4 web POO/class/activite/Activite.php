@@ -154,17 +154,36 @@ class Activite extends Database {
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
    */
   public function estInscritActivite($user, $noAct) {
-      $req = "
-      SELECT *
-      FROM INSCRIPTION I, ACTIVITE A
-      WHERE I.NOACT = A.NOACT
-      AND I.USER = ?
-      AND I.DATEANNULE IS NULL";
-      $res = $this->createQuery($req, [$user]);
-      if($res->rowCount() > 0) {
-        return true;
-      }
+    $req = "
+    SELECT I.DATEANNULE
+    FROM INSCRIPTION I, ACTIVITE A
+    WHERE I.NOACT = A.NOACT
+    AND I.USER = ?
+    AND I.DATEANNULE IS NULL";
+    $res = $this->createQuery($req, [$user]);
+    if(($res->rowCount() == 1))
+      return true;
     return false;
+  }
+
+
+  /**
+   * Vérifie si un utilisateur ayant une ligne pour une inscription données a une date annule null ou non null
+   * @param  string $user  le pseudo utilisateur (PK COMPTE)
+   * @param  int $noAct le numéro d'activité lié à une animation (PK ACTIVITE)
+   * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
+   */
+  public function peutSeReinscrire($user, $noAct) {
+        $req = "
+        SELECT *
+        FROM INSCRIPTION
+        WHERE USER = ?
+        AND DATEANNULE IS NOT NULL
+        AND NOACT = ?";
+        if($this->createQuery($req, [$user, $noAct])->rowCount() > 0) {
+            return true;
+        }
+      return false;
   }
 
   /**
@@ -175,21 +194,29 @@ class Activite extends Database {
    * @return bool         retourne vrai si une inscription a été insérée pour un utilisateur à une activité valide
    */
   public function execInscription($user, $cdAnim, $noAct) {
-    if(!$this->estInscritActivite($user, $noAct)) {
+    if($this->peutSeReinscrire($user, $noAct)) {
       $req = "
-      INSERT INTO INSCRIPTION(USER, NOACT, DATEINSCRIP)
+      UPDATE INSCRIPTION
+      SET DATEANNULE = NULL, DATEINSCRIP = DATE(NOW())
+      WHERE USER = ?
+      AND NOACT = ?
+      ";
+      if($this->createQuery($req, [$user, $noAct]))
+        return true;
+    } else {
+      $req = "
+      INSERT INTO INSCRIPTION(USER, NOACT, DATEINSCRIP, DATEANNULE)
       VALUES
       (
           ?,
           ?,
-          ?
+          ?,
+          NULL
       )";
-
-      if($this->createQuery($req, [$user, $noAct, date("Y-m-d")])) {
+      if($this->createQuery($req, [$user, $noAct, date("Y-m-d")]))
         return true;
-      }
-      return false;
     }
+    return false;
   }
 
   /**

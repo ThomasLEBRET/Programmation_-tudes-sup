@@ -11,14 +11,9 @@ class ActiviteController {
   }
 
   public function voirActivitesByCodeAnimation($cdAnimation) {
-
-    if(!empty(Session::get('USER'))) {
-      if($this->activite->getActivitesValides($cdAnimation)->fetch()) {
-        $activites = $this->activite->getActivitesValides($cdAnimation);
-        require("view/activite/activites.php");
-      } else {
-        require("view/activite/errors/errorActivites.php");
-      }
+    if($this->activite->getActivitesValides($cdAnimation)->fetch()) {
+      $activites = $this->activite->getActivitesValides($cdAnimation);
+      require("view/activite/activites.php");
     } else {
       require("view/activite/errors/errorActivites.php");
     }
@@ -26,9 +21,8 @@ class ActiviteController {
 
   public function createInscription($cdAnim, $noActi) {
     if($this->activite->execInscription(Session::get('USER'), $cdAnim, $noActi)) {
-        require("view/activite/succesInscription.php");
+      require("view/activite/succesInscription.php");
     } else {
-      //déjà inscrit à l'activité
       require("view/activite/errors/errorActivites.php");
     }
     header('Refresh:3;url=index.php?page=animation');
@@ -36,11 +30,10 @@ class ActiviteController {
 
   public function removeInscription($cdAnim, $noActi) {
     if($this->activite->annuleInscription(Session::get('USER'), $cdAnim, $noActi)) {
-        require("view/activite/succesDesinscription.php");
+      require("view/activite/succesDesinscription.php");
     } else {
-      //Erreur de désinscription
       require("view/activite/errors/errorRemoveInscription.php");
     }
-    //header('Refresh:3;url=index.php?page=animation');
+    header('Refresh:3;url=index.php?page=animation');
   }
 }

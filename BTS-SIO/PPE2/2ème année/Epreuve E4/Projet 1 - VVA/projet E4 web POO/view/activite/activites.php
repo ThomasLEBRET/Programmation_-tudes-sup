@@ -20,8 +20,10 @@ while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
           require("components/btDesinscription.php");
         else
           require("components/btInscription.php");
+      } else {
+        echo "<p>Connectez vous pour vous inscrire à une activité</p>";
       }
-      if($btn) {
+      if(!empty($btn)) {
         echo $btn;
       }
       ?>
