@@ -9,7 +9,7 @@
       if($this->animation->getNbreplaceanim() == 0)
         $places = 'Il ne reste aucune place pour cette activité';
       else
-        $places = 'Il reste '.$this->animation->getNbreplaceanim(). ' places pour cette animation. Se termine le '. date('d/m/Y', strtotime($this->animation->getDatevaliditeanim()));
+        $places = 'Il reste '.$ligne['nbPlacesRestantes']. ' places pour cette animation. Se termine le '. date('d/m/Y', strtotime($this->animation->getDatevaliditeanim()));
   ?>
 
 

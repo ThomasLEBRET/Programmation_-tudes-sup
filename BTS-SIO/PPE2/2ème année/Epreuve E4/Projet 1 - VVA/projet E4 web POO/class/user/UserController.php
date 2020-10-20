@@ -16,6 +16,7 @@ class UserController {
       require('view/accueil.php');
     } else {
       if($this->user->getLogUser($post) || !empty(Session::get('USER'))) {
+        $age = floor(abs(strtotime(date('Y-m-d')) - strtotime(Session::get('DATENAISCOMPTE'))) / (365 * 60 * 60 * 24));
         switch(Session::get('TYPEPROFIL')) {
           case 'VA':
           require('view/user/vacancier.php');

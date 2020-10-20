@@ -10,6 +10,7 @@
         <h3>Mes données personnelles</h3>
         <p>Email : <a href="mailto: <?= Session::get('ADRMAILCOMPTE') ?> "><?= Session::get('ADRMAILCOMPTE') ?></a></p>
         <p>Date de naissance : <?= date_format($date,"d/m/Y"); ?></p>
+        <p>Age : <?= $age." ans" ?></p>
     </div>
 </div>
 

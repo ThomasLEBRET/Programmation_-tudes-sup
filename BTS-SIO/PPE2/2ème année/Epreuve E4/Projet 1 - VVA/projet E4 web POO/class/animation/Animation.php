@@ -16,6 +16,21 @@ class Animation extends Database {
   private $commentanim;
   private $difficulteanim;
 
+  public function __construct() {
+    $codeanim = "unknow";
+    $codetypeanim = "unknow";
+    $nomanim = "unknow";
+    $datecreationanim = "unknow";
+    $datevaliditeanim = "unknow";
+    $dureeanim = "unknow";
+    $limiteage = "unknow";
+    $tarifanim = "unknow";
+    $nbreplaceanim = "unknow";
+    $descriptanim = "unknow";
+    $commentanim = "unknow";
+    $difficulteanim = "unknow";
+  }
+
 
   public function getCodeanim(){
     return $this->codeanim;
@@ -123,12 +138,27 @@ class Animation extends Database {
   }
 
   public function getAnimationsValides() {
+    $ageUser = floor(abs(strtotime(date('Y-m-d')) - strtotime(Session::get('DATENAISCOMPTE'))) / (365 * 60 * 60 * 24));
+
+    $nbPlacesAnim = "
+    SELECT COUNT(*)
+    FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
+    WHERE A.NOACT = I.NOACT
+    AND A.CODEANIM = AN.CODEANIM
+    AND A.CODEETATACT = 'O'
+    ";
+
+    $valNbPlacesAnim = $this->createQuery($nbPlacesAnim)->execute();
+
     $req = "
-    SELECT AN.*
+    SELECT AN.*, AN.NBREPLACEANIM - (?) as nbPlacesRestantes
     FROM ANIMATION AN, ACTIVITE A
     WHERE AN.CODEANIM = A.CODEANIM
-    AND AN.DATEVALIDITEANIM > DATE(NOW())";
-    $res = $this->createQuery($req);
+    AND AN.DATEVALIDITEANIM > DATE(NOW())
+    AND A.DATEACT > DATE(NOW())
+    AND AN.LIMITEAGE <= ?
+    AND AN.NBREPLACEANIM - (?) > 0";
+    $res = $this->createQuery($req, [$valNbPlacesAnim, $ageUser, $valNbPlacesAnim]);
     return $res;
   }
 

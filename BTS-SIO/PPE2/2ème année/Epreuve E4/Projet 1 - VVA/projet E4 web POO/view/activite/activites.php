@@ -1,6 +1,5 @@
 <?php $title = "VVA - Animations en cours" ?>
 
-
 <?php ob_start(); ?>
 <?php
 while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
@@ -16,8 +15,14 @@ while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
       <p class="card-text">Heure de rendez-vous à <?= $this->activite->getHrrdvact('HRRDVACT') ?></p>
       <p class="card-text">Départ à <?= $this->activite->getHrdebutact('HRDEBUTACT') ?></p>
       <?php
-      if(!empty($btnInscript)) {
-        echo $btnInscript;
+      if(!empty(SESSION::get('USER'))) {
+        if($this->activite->estInscritActivite(Session::get('USER'), $cdAnimation))
+          require("components/btDesinscription.php");
+        else
+          require("components/btInscription.php");
+      }
+      if($btn) {
+        echo $btn;
       }
       ?>
     </div>

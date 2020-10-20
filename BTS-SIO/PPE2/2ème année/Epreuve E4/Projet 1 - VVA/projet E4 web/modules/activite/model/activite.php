@@ -114,6 +114,7 @@ function inscriptionActivite($usr, $noAct, $cdAnim) {
         FROM ANIMATION
         WHERE NBREPLACEANIM > 0
         AND DATEVALIDITEANIM >= DATE(NOW())
+        AND CODEETATACT = 'O'
         ";
         $res = mysqli_query($con, $req);
         while($ligne = mysqli_fetch_array($res)) {

@@ -11,15 +11,36 @@ class ActiviteController {
   }
 
   public function voirActivitesByCodeAnimation($cdAnimation) {
-    if($this->activite->getActivites($cdAnimation)->fetch() == false) {
-      require("view/activite/errors/errorActivites.php");
-    } else {
-      $activites = $this->activite->getActivites($cdAnimation);
-      if(!empty(Session::get('USER'))) {
-        $btnInscript = "<a onclick='document.getElementById('inscription').submit()' class='btn btn-primary'>S'inscrire</a>";
+
+    if(!empty(Session::get('USER'))) {
+      if($this->activite->getActivitesValides($cdAnimation)->fetch()) {
+        $activites = $this->activite->getActivitesValides($cdAnimation);
+        require("view/activite/activites.php");
+      } else {
+        require("view/activite/errors/errorActivites.php");
       }
-      require("view/activite/activites.php");
+    } else {
+      require("view/activite/errors/errorActivites.php");
     }
   }
 
+  public function createInscription($cdAnim, $noActi) {
+    if($this->activite->execInscription(Session::get('USER'), $cdAnim, $noActi)) {
+        require("view/activite/succesInscription.php");
+    } else {
+      //déjà inscrit à l'activité
+      require("view/activite/errors/errorActivites.php");
+    }
+    header('Refresh:3;url=index.php?page=animation');
+  }
+
+  public function removeInscription($cdAnim, $noActi) {
+    if($this->activite->annuleInscription(Session::get('USER'), $cdAnim, $noActi)) {
+        require("view/activite/succesDesinscription.php");
+    } else {
+      //Erreur de désinscription
+      require("view/activite/errors/errorRemoveInscription.php");
+    }
+    //header('Refresh:3;url=index.php?page=animation');
+  }
 }

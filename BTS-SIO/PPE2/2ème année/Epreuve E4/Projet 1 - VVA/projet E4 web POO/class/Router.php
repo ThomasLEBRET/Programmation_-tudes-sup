@@ -31,6 +31,8 @@ class Router {
   {
     $page = $this->request->getGet()->get('page');
     $cdAnimation = $this->request->getGet()->get('anim');
+    $noActivite = $this->request->getGet()->get('acti');
+
     try {
       if($page) {
         switch($page) {
@@ -42,6 +44,12 @@ class Router {
           break;
           case 'activite':
           $this->activiteController->voirActivitesByCodeAnimation($cdAnimation);
+          break;
+          case 'inscription':
+          $this->activiteController->createInscription($cdAnimation, $noActivite);
+          break;
+          case 'desinscription':
+          $this->activiteController->removeInscription($cdAnimation, $noActivite);
           break;
           case 'deconnexion':
               Session::stop();
