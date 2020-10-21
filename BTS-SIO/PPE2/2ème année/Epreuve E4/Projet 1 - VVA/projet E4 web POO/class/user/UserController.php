@@ -2,7 +2,7 @@
 
 require_once("User.php");
 
-class UserController {
+class UserController extends User {
 
   private $user;
 
@@ -32,6 +32,24 @@ class UserController {
         require("view/errors/errorLogin.php");
       }
     }
+  }
+
+  public function loadDatas() {
+    $this->user->getUserLoged();
+    $age = floor(abs(strtotime(date('Y-m-d')) - strtotime(Session::get('DATENAISCOMPTE'))) / (365 * 60 * 60 * 24));
+    $typeProfil = "unknow";
+    switch(Session::get('TYPEPROFIL')) {
+      case 'EN':
+      $typeProfil = "encadrant";
+      break;
+      case 'VA':
+      $typeProfil = "vacancier";
+      break;
+      default:
+      require("view/user/errors/errorUserCode.php");
+      break;
+    }
+    require("view/user/donneesPerso.php");
   }
 
 }

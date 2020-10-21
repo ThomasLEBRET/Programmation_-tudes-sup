@@ -2,12 +2,13 @@
 
 require_once('Activite.php');
 
-class ActiviteController {
+class ActiviteController extends Activite {
 
   private $activite;
 
   public function __construct() {
     $this->activite = new Activite();
+    global $page;
   }
 
   public function voirActivitesByCodeAnimation($cdAnimation) {

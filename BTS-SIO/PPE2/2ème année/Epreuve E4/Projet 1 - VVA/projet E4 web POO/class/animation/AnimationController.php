@@ -2,7 +2,7 @@
 
 require_once("Animation.php");
 
-class AnimationController {
+class AnimationController extends Animation {
 
   private $animation;
 

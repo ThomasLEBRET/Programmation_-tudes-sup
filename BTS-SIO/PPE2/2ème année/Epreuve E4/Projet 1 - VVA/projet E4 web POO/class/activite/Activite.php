@@ -242,10 +242,12 @@ class Activite extends Database {
   public function getActivitesInscrit() {
     $req =
     "
-    SELECT *
-    FROM INSCRIPTION I, ACTIVITE A
-    WHERE USER = ?
+    SELECT A.*, AN.NOMANIM
+    FROM INSCRIPTION I, ACTIVITE A, ANIMATION AN
+    WHERE AN.CODEANIM = A.CODEANIM
     AND I.NOACT = A.NOACT
+    AND USER = ?
+
     ";
     return $this->createQuery($req, [Session::get('USER')]);
   }

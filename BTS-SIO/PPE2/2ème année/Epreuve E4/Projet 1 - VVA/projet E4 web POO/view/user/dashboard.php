@@ -5,6 +5,7 @@
   $this->activite->buildObject($ligne); ?>
   <div class="card justify">
     <div class="card-header">
+      <h1><?= $ligne['NOMANIM'] ?></h1>
       <?= 'Prix : '.$this->activite->getPrixact('PRIXACT'). '€'?>
     </div>
     <div class="card-body">

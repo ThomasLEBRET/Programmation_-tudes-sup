@@ -154,13 +154,22 @@ class User extends Database {
     ";
     $username = htmlspecialchars($post->get('username'));
     $password = htmlspecialchars($post->get('password'));
-    if($usr = $this->createQuery($req, [$username, $password])) {
+    if($usr = $this->createQuery($req, [$username, $password]))
       $this->buildObject((array)$usr->fetch());
-      return true;
-    }
-    return false;
+    return $this;;
   }
 
-
+public function getUserLoged() {
+  $req =
+  "
+  SELECT *
+  FROM COMPTE
+  WHERE USER = ?
+  ";
+  $usr = $this;
+  if($usr = $this->createQuery($req, [Session::get('USER')]))
+    $usr = $this->buildObject((array)$usr->fetch());
+  return $usr;
+}
 
 }
