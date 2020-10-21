@@ -1,4 +1,4 @@
-<?php $title = "Erreur 404" ?>
+<?php $title = "Erreur 500" ?>
 
 <?php ob_start(); ?>
 
@@ -6,7 +6,7 @@
     <div class="container">
         <h1 class="display-4">Erreur 500</h1>
         <p class="lead">Une erreur serveur est survenue</p>
-        <i>Redirection automatique dans 5 secondes</i>
+        <i>Redirection automatique dans 3 secondes</i>
     </div>
 </div>
 

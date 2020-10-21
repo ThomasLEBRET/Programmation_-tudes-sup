@@ -141,14 +141,15 @@ class Animation extends Database {
     $ageUser = floor(abs(strtotime(date('Y-m-d')) - strtotime(Session::get('DATENAISCOMPTE'))) / (365 * 60 * 60 * 24));
 
     $nbPlacesAnim = "
-    SELECT COUNT(*)
+    SELECT COUNT(*) as nbPlacesPrises
     FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
     WHERE A.NOACT = I.NOACT
     AND A.CODEANIM = AN.CODEANIM
     AND A.CODEETATACT = 'O'
+    AND I.DATEANNULE IS NULL
     ";
 
-    $valNbPlacesAnim = $this->createQuery($nbPlacesAnim)->execute();
+    $valNbPlacesAnim = $this->createQuery($nbPlacesAnim)->fetch()->nbPlacesPrises;
 
     $req = "
     SELECT AN.*, AN.NBREPLACEANIM - (?) as nbPlacesRestantes
@@ -158,8 +159,25 @@ class Animation extends Database {
     AND A.DATEACT > DATE(NOW())
     AND AN.LIMITEAGE <= ?
     AND AN.NBREPLACEANIM - (?) > 0";
-    $res = $this->createQuery($req, [$valNbPlacesAnim, $ageUser, $valNbPlacesAnim]);
-    return $res;
+    return $this->createQuery($req, [$valNbPlacesAnim, $ageUser, $valNbPlacesAnim]);
   }
 
 }
+
+// SELECT AN.*, AN.NBREPLACEANIM - (SELECT COUNT(*)
+//     FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
+//     WHERE A.NOACT = I.NOACT
+//     AND A.CODEANIM = AN.CODEANIM
+//     AND A.CODEETATACT = 'O'
+//     AND I.DATEANNULE IS NOT NULL) as nbPlacesRestantes
+//     FROM ANIMATION AN, ACTIVITE A
+//     WHERE AN.CODEANIM = A.CODEANIM
+//     AND AN.DATEVALIDITEANIM > DATE(NOW())
+//     AND A.DATEACT > DATE(NOW())
+//     AND AN.LIMITEAGE <= 20
+//     AND AN.NBREPLACEANIM - (SELECT COUNT(*)
+//     FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
+//     WHERE A.NOACT = I.NOACT
+//     AND A.CODEANIM = AN.CODEANIM
+//     AND A.CODEETATACT = 'O'
+//     AND I.DATEANNULE IS NOT NULL) > 0

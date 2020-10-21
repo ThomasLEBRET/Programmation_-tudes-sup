@@ -154,14 +154,13 @@ class User extends Database {
     ";
     $username = htmlspecialchars($post->get('username'));
     $password = htmlspecialchars($post->get('password'));
-    $result = $this->createQuery($req, [$username, $password]);
-    $user = $result->fetch();
-    $result->closeCursor();
-    if($result) {
-      $this->buildObject((array)$user);
+    if($usr = $this->createQuery($req, [$username, $password])) {
+      $this->buildObject((array)$usr->fetch());
       return true;
     }
     return false;
   }
+
+
 
 }

@@ -36,4 +36,24 @@ class ActiviteController {
     }
     header('Refresh:3;url=index.php?page=animation');
   }
+
+  public function loadDashboard() {
+    if(!empty(Session::get('TYPEPROFIL'))) {
+      switch(Session::get('TYPEPROFIL')) {
+        case 'EN':
+        $activites = $this->activite->getActivitesResponsable();
+        require("view/user/dashboard.php");
+        break;
+        case 'VA':
+        $activites = $this->activite->getActivitesInscrit();
+        require("view/user/dashboard.php");
+        break;
+        default :
+        require("view/user/errors/errorUserCode.php");
+        break;
+      }
+    } else {
+      require("view/user/errors/errorLogin.php");
+    }
+  }
 }

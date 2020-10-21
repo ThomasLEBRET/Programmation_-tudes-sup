@@ -6,10 +6,12 @@
 <?php
   while($ligne = $anims->fetch(PDO::FETCH_ASSOC)) {
     $this->animation->buildObject($ligne);
-      if($this->animation->getNbreplaceanim() == 0)
-        $places = 'Il ne reste aucune place pour cette activité';
-      else
-        $places = 'Il reste '.$ligne['nbPlacesRestantes']. ' places pour cette animation. Se termine le '. date('d/m/Y', strtotime($this->animation->getDatevaliditeanim()));
+
+        if($this->animation->getNbreplaceanim() == 0 || $ligne['nbPlacesRestantes'] == 0)
+          $places = 'Il ne reste aucune place pour cette activité';
+        else
+          $places = 'Il reste '.$ligne['nbPlacesRestantes']. ' places pour cette animation. Se termine le '. date('d/m/Y', strtotime($this->animation->getDatevaliditeanim()));
+      
   ?>
 
 

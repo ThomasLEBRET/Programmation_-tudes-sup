@@ -23,7 +23,7 @@ class Database {
             return $this->pdo;
         } catch (\Exception $e) {
             die ('Erreur de connection : '.$e->getMessage());
-        }
+        } 
     }
 
     protected function createQuery($myRequest, $params = null) {

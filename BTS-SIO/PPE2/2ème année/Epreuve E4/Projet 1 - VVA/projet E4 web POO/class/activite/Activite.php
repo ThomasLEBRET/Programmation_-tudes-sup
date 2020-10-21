@@ -143,8 +143,7 @@ class Activite extends Database {
     AND A.CODEETATACT = 'O'
     AND A.DATEANNULEACT IS NULL
     AND A.DATEACT > DATE(NOW())";
-    $res = $this->createQuery($req, [$cdAnimation]);
-    return $res;
+    return $this->createQuery($req, [$cdAnimation]);
   }
 
   /**
@@ -238,6 +237,26 @@ class Activite extends Database {
       }
       return false;
     }
+  }
+
+  public function getActivitesInscrit() {
+    $req =
+    "
+    SELECT *
+    FROM INSCRIPTION I, ACTIVITE A
+    WHERE USER = ?
+    AND I.NOACT = A.NOACT
+    ";
+    return $this->createQuery($req, [Session::get('USER')]);
+  }
+
+  public function getActivitesResponsable() {
+    $req =
+    "
+    SELECT *
+    FROM  ACTIVITE
+    ";
+    return $this->createQuery($req);
   }
 
 }

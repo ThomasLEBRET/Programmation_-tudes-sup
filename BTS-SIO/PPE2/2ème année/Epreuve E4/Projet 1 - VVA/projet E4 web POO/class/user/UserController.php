@@ -19,10 +19,10 @@ class UserController {
         $age = floor(abs(strtotime(date('Y-m-d')) - strtotime(Session::get('DATENAISCOMPTE'))) / (365 * 60 * 60 * 24));
         switch(Session::get('TYPEPROFIL')) {
           case 'VA':
-          require('view/user/vacancier.php');
+          header('Location: index.php?page=dashboard');
           break;
           case 'EN';
-          require('view/user/encadrant.php');
+          header('Location: index.php?page=dashboard');
           break;
           default:
           require('view/user/errors/errorLogin.php');

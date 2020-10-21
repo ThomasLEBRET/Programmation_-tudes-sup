@@ -39,6 +39,12 @@ class Router {
           case 'accueil':
           $this->userController->home($this->request->getPost());
           break;
+          case 'dashboard':
+          $this->activiteController->loadDashboard();
+          break;
+          case 'compte':
+          $this->userController->loadDatas();
+          break;
           case 'animation':
           $this->animationController->voirAnimations();
           break;
