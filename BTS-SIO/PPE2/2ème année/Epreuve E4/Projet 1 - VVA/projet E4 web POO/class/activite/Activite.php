@@ -118,6 +118,11 @@ class Activite extends Database {
     $this->prenomresp = $prenomresp;
   }
 
+  /**
+   * Construit un objet grâce à ses mutateurs associés
+   * @param  array  $params une liste de paramètres correspondant aux champs associés à l'entité de l'objet et aux noms de mutateurs
+   * @return bool   retourne toujours vrai
+   */
   public function buildObject(array $params) {
     foreach ($params as $key => $value) {
       $method = 'set'.ucfirst(strtolower($key));
@@ -126,12 +131,12 @@ class Activite extends Database {
         $_SESSION[$key] = $value;
       }
     }
-    return true;
+    return $this;
   }
 
   /**
   * Récupère les activités liés à une animation
-  * @param  string $cdAnimation un code d'animation
+  * @param  string $cdAnimation PK ANIMATION (code d'animation)
   * @return $req              un résultat de requête préparée
   */
   public function getActivitesValides($cdAnimation) {
@@ -148,8 +153,8 @@ class Activite extends Database {
 
   /**
    * Vérifie si un utilisateur est inscrit à une activité et n'a pas annulé son inscription
-   * @param  string $user  le pseudo utilisateur (PK COMPTE)
-   * @param  int $noAct le numéro d'activité lié à une animation (PK ACTIVITE)
+   * @param  string $user  le pseudo utilisateur PK COMPTE
+   * @param  int $noAct le numéro d'activité lié à une animation PK ACTIVITE
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
    */
   public function estInscritActivite($user, $noAct) {
@@ -167,7 +172,7 @@ class Activite extends Database {
 
 
   /**
-   * Vérifie si un utilisateur ayant une ligne pour une inscription données a une date annule null ou non null
+   * Vérifie si un utilisateur ayant une ligne pour une inscription données peut se réinscrire ou non
    * @param  string $user  le pseudo utilisateur (PK COMPTE)
    * @param  int $noAct le numéro d'activité lié à une animation (PK ACTIVITE)
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
@@ -179,9 +184,8 @@ class Activite extends Database {
         WHERE USER = ?
         AND DATEANNULE IS NOT NULL
         AND NOACT = ?";
-        if($this->createQuery($req, [$user, $noAct])->rowCount() > 0) {
+        if($this->createQuery($req, [$user, $noAct])->rowCount() > 0)
             return true;
-        }
       return false;
   }
 
@@ -232,13 +236,16 @@ class Activite extends Database {
       SET DATEANNULE = ?
       WHERE NOACT = ?
       AND USER = ?";
-      if($this->createQuery($req, [date("Y-m-d"), $noAct, $user])) {
+      if($this->createQuery($req, [date("Y-m-d"), $noAct, $user]))
         return true;
-      }
       return false;
     }
   }
 
+  /**
+   * Retourne la liste des activités
+   * @return  PDO requête préparée au format PDO
+   */
   public function getActivitesInscrit() {
     $req =
     "
@@ -252,11 +259,16 @@ class Activite extends Database {
     return $this->createQuery($req, [Session::get('USER')]);
   }
 
+  /**
+   * Retourne l'ensemble des activités pour un encadrant
+   * @return PDO Une requête préparée
+   */
   public function getActivitesResponsable() {
     $req =
     "
-    SELECT *
-    FROM  ACTIVITE
+    SELECT A.*, AN.NOMANIM
+    FROM  ACTIVITE A, ANIMATION AN
+    WHERE A.CODEANIM = AN.CODEANIM
     ";
     return $this->createQuery($req);
   }

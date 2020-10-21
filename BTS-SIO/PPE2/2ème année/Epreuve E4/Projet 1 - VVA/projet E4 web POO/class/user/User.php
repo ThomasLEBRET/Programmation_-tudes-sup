@@ -32,7 +32,11 @@ class User extends Database {
     $notelcompte = "unknow";
   }
 
-
+  /**
+  * Construit un objet en fonction d'un tableau de paramètres
+  * @param  array  $params un tableau associatif de paramètres composant l'objet User
+  * @return User         un objet de type User
+  */
   private function buildObject(array $params) {
     foreach ($params as $key => $value) {
       $method = 'set'.ucfirst(strtolower($key));
@@ -41,7 +45,7 @@ class User extends Database {
         $_SESSION[$key] = $value;
       }
     }
-    return true;
+    return $this;
   }
 
   public function getUser(){
@@ -155,21 +159,25 @@ class User extends Database {
     $username = htmlspecialchars($post->get('username'));
     $password = htmlspecialchars($post->get('password'));
     if($usr = $this->createQuery($req, [$username, $password]))
-      $this->buildObject((array)$usr->fetch());
+    $this->buildObject((array)$usr->fetch());
     return $this;;
   }
 
-public function getUserLoged() {
-  $req =
-  "
-  SELECT *
-  FROM COMPTE
-  WHERE USER = ?
-  ";
-  $usr = $this;
-  if($usr = $this->createQuery($req, [Session::get('USER')]))
+  /**
+   * Récupère un objet de type User une fois connecté
+   * @return User un utilisateur de type User
+   */
+  public function getUserLoged() {
+    $req =
+    "
+    SELECT *
+    FROM COMPTE
+    WHERE USER = ?
+    ";
+    $usr = $this;
+    if($usr = $this->createQuery($req, [Session::get('USER')]))
     $usr = $this->buildObject((array)$usr->fetch());
-  return $usr;
-}
+    return $usr;
+  }
 
 }

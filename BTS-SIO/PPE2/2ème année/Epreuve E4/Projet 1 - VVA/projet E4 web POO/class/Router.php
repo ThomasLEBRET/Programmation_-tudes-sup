@@ -27,6 +27,10 @@ class Router {
     $this->request = new Request();
   }
 
+  /**
+   * Réparti l'utilisation des controleurs de données en fonction du chemin emprunté par l'utilisateur
+   * @return void  le controleur de données associé au chemin choisi par l'utilisateur 
+   */
   public function run()
   {
     $page = $this->request->getGet()->get('page');

@@ -4,7 +4,7 @@
 <?php
 while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
   $this->activite->buildObject($ligne);
-  ?>
+?>
 
   <div class="card justify">
     <div class="card-header">

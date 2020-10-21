@@ -137,6 +137,10 @@ class Animation extends Database {
     }
   }
 
+  /**
+   * Retourne la liste des animations valides pour un utilisateur connecté (retourne l'ensemble des animations valides si l'utilisateur navigue sur le site en tant qu'invité)
+   * @return PDO une requête préparée
+   */
   public function getAnimationsValides() {
     $ageUser = floor(abs(strtotime(date('Y-m-d')) - strtotime(Session::get('DATENAISCOMPTE'))) / (365 * 60 * 60 * 24));
 
@@ -163,21 +167,3 @@ class Animation extends Database {
   }
 
 }
-
-// SELECT AN.*, AN.NBREPLACEANIM - (SELECT COUNT(*)
-//     FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
-//     WHERE A.NOACT = I.NOACT
-//     AND A.CODEANIM = AN.CODEANIM
-//     AND A.CODEETATACT = 'O'
-//     AND I.DATEANNULE IS NOT NULL) as nbPlacesRestantes
-//     FROM ANIMATION AN, ACTIVITE A
-//     WHERE AN.CODEANIM = A.CODEANIM
-//     AND AN.DATEVALIDITEANIM > DATE(NOW())
-//     AND A.DATEACT > DATE(NOW())
-//     AND AN.LIMITEAGE <= 20
-//     AND AN.NBREPLACEANIM - (SELECT COUNT(*)
-//     FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
-//     WHERE A.NOACT = I.NOACT
-//     AND A.CODEANIM = AN.CODEANIM
-//     AND A.CODEETATACT = 'O'
-//     AND I.DATEANNULE IS NOT NULL) > 0
