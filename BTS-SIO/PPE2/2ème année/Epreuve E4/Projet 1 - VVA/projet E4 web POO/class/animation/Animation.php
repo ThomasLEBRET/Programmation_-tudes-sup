@@ -156,7 +156,7 @@ class Animation extends Database {
     $valNbPlacesAnim = $this->createQuery($nbPlacesAnim)->fetch()->nbPlacesPrises;
 
     $req = "
-    SELECT AN.*, AN.NBREPLACEANIM - (?) as nbPlacesRestantes
+    SELECT AN.CODEANIM, AN.CODETYPEANIM, AN.NOMANIM, AN.DATEVALIDITEANIM, AN.DUREEANIM, AN.LIMITEAGE, CONCAT(ROUND(AN.TARIFANIM,0),'€') as TARIFANIM, AN.NBREPLACEANIM, AN.DESCRIPTANIM, AN.COMMENTANIM, AN.NBREPLACEANIM - (?) as nbPlacesRestantes
     FROM ANIMATION AN, ACTIVITE A
     WHERE AN.CODEANIM = A.CODEANIM
     AND AN.DATEVALIDITEANIM > DATE(NOW())

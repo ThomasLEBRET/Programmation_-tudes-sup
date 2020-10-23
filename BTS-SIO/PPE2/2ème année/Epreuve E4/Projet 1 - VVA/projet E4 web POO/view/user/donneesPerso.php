@@ -3,7 +3,7 @@
 <?php $date = date_create($this->user->getDatenaiscompte()) ?>
 <?php ob_start(); ?>
 
-<div class="jumbotron jumbotron-fluid justify">
+<div class="jumbotron justify">
     <div class="container">
         <h1>Vous êtes connecté en tant que <?= $typeProfil ?> </h1>
         <h1 class="display-4">Bienvenu <?=$this->user->getPrenomcompte()." ".$this->user->getNomCompte(); ?> !</h1>

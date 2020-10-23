@@ -9,4 +9,4 @@
   <title><?= $title ?></title>
 </head>
 
-<body class="bg-dark">
+<body>

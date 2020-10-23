@@ -8,7 +8,7 @@
       </div>
     </div>
   </div>
-  <footer id="sticky-footer" class="py-4 bg-dark text-white-50">
+  <footer id="sticky-footer" class="py-4 text-white-50 footer fixed-bottom bg-primary">
     <div class="container text-center">
       <small>Copyright &copy; VVA</small>
     </div>

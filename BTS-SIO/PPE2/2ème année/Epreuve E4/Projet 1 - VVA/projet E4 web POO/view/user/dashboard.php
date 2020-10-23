@@ -1,6 +1,8 @@
 <?php $title = "VVA - Dashboard" ?>
 <?php ob_start(); ?>
 
+<h1 class="text-center">Voici les activités auxquelles vous avez souscrites</h1>
+
 <?php while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
   $this->activite->buildObject($ligne); ?>
   <div class="card justify">
