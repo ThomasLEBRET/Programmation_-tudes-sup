@@ -8,12 +8,20 @@
   <div class="card justify">
     <div class="card-header">
       <h1><?= $ligne['NOMANIM'] ?></h1>
-      <?= 'Prix : '.$this->activite->getPrixact('PRIXACT'). '€'?>
+      <?= 'Prix : '.$this->activite->getPrixact('PRIXACT')?>
     </div>
     <div class="card-body">
-      <h5 class="card-title"><?= $this->activite->getDateact('DATEACT') ?></h5>
-      <p class="card-text">Heure de rendez-vous à <?= $this->activite->getHrrdvact('HRRDVACT') ?></p>
-      <p class="card-text">Départ à <?= $this->activite->getHrdebutact('HRDEBUTACT') ?></p>
+      <h5 class="card-title"><?= date('d/m/Y', strtotime($this->activite->getDateact())) ?></h5>
+      <p class="card-text">Heure de rendez-vous à <?= $ligne['hourRdvAct'].'h'.$ligne['minRdvAct'] ?></p>
+      <p class="card-text">Départ à <?= $ligne['hourDebAct'].'h'.$ligne['minDebAct'] ?></p>
+      <p class="card-text">Durée effective de l'animation :
+          <?php
+          if(!empty($ligne['hrDureeAnim']) && $ligne['hrDureeAnim'] != 0)
+            echo $ligne['hrDureeAnim'].'h';
+          if(!empty($ligne['minDureeAnim']) && $ligne['minDureeAnim'] != 0)
+            echo $ligne['minDureeAnim'].'min';
+          ?>
+      </p>
       <?php
       if(!empty(SESSION::get('USER'))) {
         if($this->activite->estInscritActivite(Session::get('USER'), $this->activite->getCodeanim()))

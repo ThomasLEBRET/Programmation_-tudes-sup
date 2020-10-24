@@ -141,7 +141,7 @@ class Activite extends Database {
   */
   public function getActivitesValides($cdAnimation) {
     $req = "
-    SELECT *
+    SELECT *, HOUR(A.HRRDVACT) as hourRdvAct, MINUTE(A.HRRDVACT) as minRdvAct, HOUR(A.HRDEBUTACT) as hourDebAct, MINUTE(A.HRDEBUTACT) as minDebAct
     FROM ACTIVITE A, ANIMATION AN
     WHERE A.CODEANIM = AN.CODEANIM
     AND AN.CODEANIM = ?
@@ -249,7 +249,7 @@ class Activite extends Database {
   public function getActivitesInscrit() {
     $req =
     "
-    SELECT A.*, AN.NOMANIM
+    SELECT A.*, HOUR(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as hrDureeAnim, MINUTE(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as minDureeAnim, AN.NOMANIM, CONCAT(A.PRIXACT, '€') as PRIXACT, HOUR(A.HRRDVACT) as hourRdvAct, MINUTE(A.HRRDVACT) as minRdvAct, HOUR(A.HRDEBUTACT) as hourDebAct, MINUTE(A.HRDEBUTACT) as minDebAct
     FROM INSCRIPTION I, ACTIVITE A, ANIMATION AN
     WHERE AN.CODEANIM = A.CODEANIM
     AND I.NOACT = A.NOACT
@@ -266,7 +266,7 @@ class Activite extends Database {
   public function getActivitesResponsable() {
     $req =
     "
-    SELECT A.*, AN.NOMANIM
+    SELECT A.*, HOUR(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as hrDureeAnim, MINUTE(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as minDureeAnim, AN.NOMANIM, CONCAT(A.PRIXACT, '€') as PRIXACT, HOUR(A.HRRDVACT) as hourRdvAct, MINUTE(A.HRRDVACT) as minRdvAct, HOUR(A.HRDEBUTACT) as hourDebAct, MINUTE(A.HRDEBUTACT) as minDebAct
     FROM  ACTIVITE A, ANIMATION AN
     WHERE A.CODEANIM = AN.CODEANIM
     ";

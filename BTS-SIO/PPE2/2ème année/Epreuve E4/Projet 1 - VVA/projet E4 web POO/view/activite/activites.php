@@ -7,13 +7,10 @@ while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
 ?>
 
   <div class="card justify">
-    <div class="card-header">
-      <?= 'Prix : '.$this->activite->getPrixact('PRIXACT'). '€'?>
-    </div>
     <div class="card-body">
-      <h5 class="card-title"><?= $this->activite->getDateact('DATEACT') ?></h5>
-      <p class="card-text">Heure de rendez-vous à <?= $this->activite->getHrrdvact('HRRDVACT') ?></p>
-      <p class="card-text">Départ à <?= $this->activite->getHrdebutact('HRDEBUTACT') ?></p>
+      <h5 class="card-title"><?= date('d/m/Y', strtotime($this->activite->getDateact())) ?></h5>
+      <p class="card-text">Heure de rendez-vous à <?= $ligne['hourRdvAct'].'h'.$ligne['minRdvAct']?></p>
+      <p class="card-text">Départ à <?= $ligne['hourDebAct'].'h'.$ligne['minDebAct'] ?></p>
       <?php
       if(!empty(SESSION::get('USER'))) {
         if($this->activite->estInscritActivite(Session::get('USER'), $cdAnimation))
