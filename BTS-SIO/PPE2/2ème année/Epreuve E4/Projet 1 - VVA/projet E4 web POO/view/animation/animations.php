@@ -1,6 +1,12 @@
 <?php $title = "VVA - Animations en cours" ?>
 
 <?php ob_start(); ?>
+<?php if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
+    require('view/animation/components/ajouterAnimation.php');
+    if(!empty($btAjouterAnim)) {
+        echo $btAjouterAnim;
+    }
+} ?>
 
 <?php
   while($ligne = $anims->fetch(PDO::FETCH_ASSOC)):
@@ -35,6 +41,14 @@
   </div>
   </div>
 <?php endwhile ?>
+<?php if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN'): ?>
+    <?php
+    require('view/animation/updateAnimation.php');
+    require('view/animation/deleteAnimation.php');
+    require('view/animation/addAnimation.php');
+    echo $updateAnim, $deleteAnim, $addAnim;
+    ?>
+<?php endif ?>
 
 <?php $content = ob_get_clean(); ?>
 <?php require("view/template.php"); ?>

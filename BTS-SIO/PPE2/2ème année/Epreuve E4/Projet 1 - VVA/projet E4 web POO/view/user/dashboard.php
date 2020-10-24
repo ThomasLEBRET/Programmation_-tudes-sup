@@ -28,12 +28,11 @@
           require("view/activite/components/btDesinscription.php");
         else
           require("view/activite/components/btInscription.php");
-      } else {
+      }
+      else 
         echo "<p>Connectez vous pour vous inscrire à une activité</p>";
-      }
-      if(!empty($btn)) {
+      if(!empty($btn))
         echo $btn;
-      }
       ?>
     </div>
   </div>

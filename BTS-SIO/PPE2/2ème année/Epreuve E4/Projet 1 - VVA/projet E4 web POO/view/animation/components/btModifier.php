@@ -1,3 +1,3 @@
 <?php ob_start(); ?>
-<a class="btn btn-info" href="index.php?page=">Modifier</a>
+<button onclick="DisplayForm('modifier')" class="btn btn-info">Modifier</button>
 <?php $btModifierAnim = ob_get_clean(); ?>
