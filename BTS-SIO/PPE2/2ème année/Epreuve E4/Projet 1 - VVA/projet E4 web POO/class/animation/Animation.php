@@ -187,4 +187,18 @@ class Animation extends Database {
       return $this->createQuery($req, [$nbPlacesAnim]);
   }
 
+  /**
+   * Vérifie qu'une animation possède une valeur à chacun de ses attributs grâce à un tableau de données postées issues d'un formulaire
+   * @return bool true si tous les attributs de l'objets sont déclarés et non null, false sinon 
+   */
+  public function allFiledsIsNoneEmpty($formPost) {
+      foreach($formPost as $key => $value) {
+          $method = 'get'.ucfirst(strtolower($key));
+          if(!method_exists($this, $method) or empty($this->$method())) {
+              return false;
+          }
+      }
+      return true;
+  }
+
 }

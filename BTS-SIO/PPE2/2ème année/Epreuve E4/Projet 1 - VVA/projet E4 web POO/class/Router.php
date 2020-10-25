@@ -29,7 +29,7 @@ class Router {
 
   /**
    * Réparti l'utilisation des controleurs de données en fonction du chemin emprunté par l'utilisateur
-   * @return void  le controleur de données associé au chemin choisi par l'utilisateur 
+   * @return void  le controleur de données associé au chemin choisi par l'utilisateur
    */
   public function run()
   {
@@ -54,6 +54,15 @@ class Router {
           break;
           case 'activite':
           $this->activiteController->voirActivitesByCodeAnimation($cdAnimation);
+          break;
+          case 'ajouterAnimation':
+          $this->animationController->addAnimation();
+          break;
+          case 'supprimerAnimation':
+          $this->animationController->deleteAnimation();
+          break;
+          case 'modifierAnimation':
+          $this->animationController->updateAnimation($cdAnimation);
           break;
           case 'inscription':
           $this->activiteController->createInscription($cdAnimation, $noActivite);

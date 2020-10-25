@@ -3,6 +3,7 @@ function DisplayForm(typeForm, cdTypeAnim) {
 		case 'ajouter':
 			if(document.getElementById('addAnim').style.display == "none") {
 				document.getElementById('addAnim').style.display = "block";
+				window.scrollTo(0, 2000);
 			} else {
 				document.getElementById('addAnim').style.display = "none";
 			}
