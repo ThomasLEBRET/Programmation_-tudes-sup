@@ -1,35 +1,29 @@
-function DisplayForm(typeForm) {
+function DisplayForm(typeForm, cdTypeAnim) {
 	switch (typeForm) {
 		case 'ajouter':
 			if(document.getElementById('addAnim').style.display == "none") {
 				document.getElementById('addAnim').style.display = "block";
-				document.getElementById('updateAnim').style.display = "none";
-				document.getElementById('deleteAnim').style.display = "none";
 			} else {
 				document.getElementById('addAnim').style.display = "none";
 			}
 			break;
 		case 'modifier':
-			if(document.getElementById('updateAnim').style.display == "none") {
-				document.getElementById('updateAnim').style.display = "block";
-				document.getElementById('deleteAnim').style.display = "none";
+			if(document.getElementById("update"+cdTypeAnim).style.display == "none") {
+				document.getElementById("update"+cdTypeAnim).style.display = "block";
+				document.getElementById("delete"+cdTypeAnim).style.display = "none";
 				document.getElementById('addAnim').style.display = "none";
 			} else {
-				document.getElementById('updateAnim').style.display = "none";
+				document.getElementById("update"+cdTypeAnim).style.display = "none";
 			}
 			break;
 		case 'supprimer':
-			if(document.getElementById('deleteAnim').style.display == "none") {
-				document.getElementById('deleteAnim').style.display = "block";
-				document.getElementById('updateAnim').style.display = "none";
+			if(document.getElementById("delete"+cdTypeAnim).style.display == "none") {
+				document.getElementById("delete"+cdTypeAnim).style.display = "block";
+				document.getElementById("update"+cdTypeAnim).style.display = "none";
 				document.getElementById('addAnim').style.display = "none";
 			} else {
-				document.getElementById('deleteAnim').style.display = "none";
+				document.getElementById("delete"+cdTypeAnim).style.display = "none";
 			}
-			break;
-		default:
-			document.getElementById('updateAnim').style.display = "none";
-			document.getElementById('deleteAnim').style.display = "none";
 			break;
 	}
 }

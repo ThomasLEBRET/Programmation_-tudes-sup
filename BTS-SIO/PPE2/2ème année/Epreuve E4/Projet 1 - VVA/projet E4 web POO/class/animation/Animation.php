@@ -29,6 +29,7 @@ class Animation extends Database {
     $descriptanim = "unknow";
     $commentanim = "unknow";
     $difficulteanim = "unknow";
+    $listeCodeAnim = [];
   }
 
 
@@ -164,6 +165,26 @@ class Animation extends Database {
     AND AN.LIMITEAGE <= ?
     AND AN.NBREPLACEANIM - (?) > 0";
     return $this->createQuery($req, [$valNbPlacesAnim, $ageUser, $valNbPlacesAnim]);
+  }
+
+  /**
+   * Retourne toutes les animations pour l'encadrant
+   * @return PDO une requête préparée
+   */
+  public function getAllAnimationForEncadrant() {
+      $nbPlacesAnim = "
+      SELECT COUNT(*) as nbPlacesPrises
+      FROM ANIMATION AN, INSCRIPTION I, ACTIVITE A
+      WHERE A.NOACT = I.NOACT
+      AND A.CODEANIM = AN.CODEANIM
+      AND A.CODEETATACT = 'O'
+      AND I.DATEANNULE IS NULL
+      ";
+
+      $req = "
+      SELECT *, NBREPLACEANIM - (?) as nbPlacesRestantes
+      FROM ANIMATION";
+      return $this->createQuery($req, [$nbPlacesAnim]);
   }
 
 }

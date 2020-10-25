@@ -15,10 +15,10 @@ class AnimationController extends Animation {
    * @return void demande la vue associée
    */
   public function voirAnimations() {
-    $anims = $this->animation->getAnimationsValides();
     if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
-        require('view/animation/components/btSupprimer.php');
-        require('view/animation/components/btModifier.php');
+        $anims = $this->animation->getAllAnimationForEncadrant();
+    } else {
+        $anims = $this->animation->getAnimationsValides();
     }
     require('view/animation/animations.php');
   }

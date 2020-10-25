@@ -1,11 +1,11 @@
 <?php ob_start(); ?>
 
-<form id="updateAnim" class="justify" style="display:none">
+<form id="update<?= $this->animation->getCodeTypeAnim() ?>" class="justify" style="display:none">
     <h1>Mettre à jour l'animation</h1>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="cdAnim">Code animation</label>
+      <p id="cdAnim"><?= $this->animation->getCodeanim() ?></p>
     </div>
     <div class="form-group col-md-6">
       <label for="inputPassword4">Password</label>
@@ -16,7 +16,7 @@
     <label for="inputAddress">Address</label>
     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
   </div>
-  <div class="form-group">
+  <div cla ss="form-group">
     <label for="inputAddress2">Address 2</label>
     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
   </div>

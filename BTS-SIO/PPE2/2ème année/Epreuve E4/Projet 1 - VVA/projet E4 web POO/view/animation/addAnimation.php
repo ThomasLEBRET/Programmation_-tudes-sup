@@ -4,12 +4,16 @@
     <h1>Ajouter une animation</h1>
   <div class="form-row">
     <div class="form-group col-md-6">
-      <label for="inputEmail4">Email</label>
-      <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+      <label for="codeAnim">Code de l'animation (8 caractères maximum)</label>
+      <input maxlength="8" type="text" class="form-control" id="codeAnim" placeholder="CodeAnim">
     </div>
     <div class="form-group col-md-6">
-      <label for="inputPassword4">Password</label>
-      <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+      <label for="codeTypeAnim">Code du type de l'animation</label>
+      <select id="codeTypeAnim">
+            <?php for ($i=0; $i < count($cdTypeAnim); $i++): ?>
+                <option value="<?= $cdTypeAnim[$i] ?>"><?= ($cdTypeAnim[$i])?></option>
+            <?php endfor ?>
+        </select>
     </div>
   </div>
   <div class="form-group">

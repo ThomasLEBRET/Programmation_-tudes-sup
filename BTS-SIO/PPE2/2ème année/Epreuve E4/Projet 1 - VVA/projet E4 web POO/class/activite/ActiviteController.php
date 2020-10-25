@@ -16,11 +16,17 @@ class ActiviteController extends Activite {
    * @return void   demande la vue des activités si la requête demandant la liste des activités valides réussi, renvoi une vue error sinon
    */
   public function voirActivitesByCodeAnimation($cdAnimation) {
-    if($this->activite->getActivitesValides($cdAnimation)->fetch()) {
-      $activites = $this->activite->getActivitesValides($cdAnimation);
-      require("view/activite/activites.php");
-    } else {
-      require("view/activite/errors/errorActivites.php");
+    if(empty(Session::get('TYPEPROFIL')) or Session::get('TYPEPROFIL') == 'VA') {
+        $activites = $this->activite->getActivitesValides($cdAnimation);
+        require("view/activite/activites.php");
+    } elseif (Session::get('TYPEPROFIL') == 'EN') {
+        $activites = $this->activite->getAllActivitesForEncadrant($cdAnimation);
+        $nbActivites = $activites->rowCount();
+        if($nbActivites == 0) {
+            require("view/activite/errors/errorNoneActivite.php");
+        } else {
+            require("view/activite/activites.php");
+        }
     }
   }
 
@@ -62,7 +68,7 @@ class ActiviteController extends Activite {
     if(!empty(Session::get('TYPEPROFIL'))) {
       switch(Session::get('TYPEPROFIL')) {
         case 'EN':
-        $activites = $this->activite->getActivitesResponsable();
+        $activites = $this->activite->getActivitesEncadrant();
         require("view/user/dashboard.php");
         break;
         case 'VA':

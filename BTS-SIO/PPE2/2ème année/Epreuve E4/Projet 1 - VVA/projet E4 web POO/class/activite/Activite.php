@@ -263,7 +263,7 @@ class Activite extends Database {
    * Retourne l'ensemble des activités pour un encadrant
    * @return PDO Une requête préparée
    */
-  public function getActivitesResponsable() {
+  public function getActivitesEncadrant() {
     $req =
     "
     SELECT A.*, HOUR(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as hrDureeAnim, MINUTE(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as minDureeAnim, AN.NOMANIM, CONCAT(A.PRIXACT, '€') as PRIXACT, HOUR(A.HRRDVACT) as hourRdvAct, MINUTE(A.HRRDVACT) as minRdvAct, HOUR(A.HRDEBUTACT) as hourDebAct, MINUTE(A.HRDEBUTACT) as minDebAct
@@ -271,6 +271,16 @@ class Activite extends Database {
     WHERE A.CODEANIM = AN.CODEANIM
     ";
     return $this->createQuery($req);
+  }
+
+  public function getAllActivitesForEncadrant($cdAnim) {
+      $req =
+      "
+      SELECT *
+      FROM ACTIVITE
+      WHERE CODEANIM = ?
+      ";
+      return $this->createQuery($req, [$cdAnim]);
   }
 
 }
