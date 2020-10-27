@@ -158,15 +158,20 @@ class Activite extends Database {
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
    */
   public function estInscritActivite($user, $noAct) {
-    $req = "
-    SELECT I.DATEANNULE
-    FROM INSCRIPTION I, ACTIVITE A
+    $req =
+    "
+    SELECT I.*
+    FROM INSCRIPTION I, ACTIVITE A, ANIMATION AN
     WHERE I.NOACT = A.NOACT
+    AND A.CODEANIM = AN.CODEANIM
     AND I.USER = ?
-    AND I.DATEANNULE IS NULL";
-    $res = $this->createQuery($req, [$user]);
-    if(($res->rowCount() == 1))
-      return true;
+    AND A.CODEANIM = ?
+    ";
+    $res = $this->createQuery($req, [Session::get('USER'), $noAct])->fetch(PDO::FETCH_ASSOC);
+    if($res) {
+        if(($res['DATEANNULE'] == NULL && $res['DATEINSCRIP'] != NULL))
+          return true;
+    }
     return false;
   }
 
@@ -177,15 +182,22 @@ class Activite extends Database {
    * @param  int $noAct le numéro d'activité lié à une animation (PK ACTIVITE)
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
    */
-  public function peutSeReinscrire($user, $noAct) {
-        $req = "
-        SELECT *
-        FROM INSCRIPTION
-        WHERE USER = ?
-        AND DATEANNULE IS NOT NULL
-        AND NOACT = ?";
-        if($this->createQuery($req, [$user, $noAct])->rowCount() > 0)
-            return true;
+  public function peutSeReinscrire($user, $cdAnim) {
+        $req =
+        "
+        SELECT I.*
+        FROM INSCRIPTION I, ACTIVITE A, ANIMATION AN
+        WHERE A.NOACT = I.NOACT
+        AND AN.CODEANIM = A.CODEANIM
+        AND I.USER = ?
+        AND A.CODEANIM = ?
+        ";
+        $res = $this->createQuery($req, [$user, $cdAnim]);
+        if($res) {
+            if($res->rowCount() == 1 && $res->fetch(PDO::FETCH_ASSOC)['DATEANNULE'] != NULL) {
+                return true;
+            }
+        }
       return false;
   }
 
@@ -197,7 +209,7 @@ class Activite extends Database {
    * @return bool         retourne vrai si une inscription a été insérée pour un utilisateur à une activité valide
    */
   public function execInscription($user, $cdAnim, $noAct) {
-    if($this->peutSeReinscrire($user, $noAct)) {
+    if($this->peutSeReinscrire($user, $cdAnim)) {
       $req = "
       UPDATE INSCRIPTION
       SET DATEANNULE = NULL, DATEINSCRIP = DATE(NOW())
@@ -220,6 +232,8 @@ class Activite extends Database {
         return true;
     }
     return false;
+    var_dump($this->peutSeReinscrire($user, $cdAnim));
+    die();
   }
 
   /**
@@ -230,16 +244,17 @@ class Activite extends Database {
    * @return bool         vrai si l'inscription à l'activité concernée à été annulée, false sinon
    */
   public function annuleInscription($user, $cdAnim, $noAct) {
-    if($this->estInscritActivite($user, $noAct)) {
+    if($this->estInscritActivite($user, $cdAnim)) {
       $req = "
       UPDATE INSCRIPTION
       SET DATEANNULE = ?
       WHERE NOACT = ?
-      AND USER = ?";
+      AND USER = ?
+      ";
       if($this->createQuery($req, [date("Y-m-d"), $noAct, $user]))
         return true;
-      return false;
     }
+    return false;
   }
 
   /**
@@ -253,11 +268,18 @@ class Activite extends Database {
     FROM INSCRIPTION I, ACTIVITE A, ANIMATION AN
     WHERE AN.CODEANIM = A.CODEANIM
     AND I.NOACT = A.NOACT
-    AND USER = ?
-
+    AND I.USER = ?
+    AND I.DATEANNULE IS NULL
     ";
     return $this->createQuery($req, [Session::get('USER')]);
   }
+
+
+
+
+
+
+
 
   /**
    * Retourne l'ensemble des activités pour un encadrant
@@ -276,9 +298,10 @@ class Activite extends Database {
   public function getAllActivitesForEncadrant($cdAnim) {
       $req =
       "
-      SELECT *
-      FROM ACTIVITE
-      WHERE CODEANIM = ?
+      SELECT A.*, HOUR(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as hrDureeAnim, MINUTE(TIMEDIFF(A.HRFINACT, A.HRDEBUTACT)) as minDureeAnim, AN.NOMANIM, CONCAT(A.PRIXACT, '€') as PRIXACT, HOUR(A.HRRDVACT) as hourRdvAct, MINUTE(A.HRRDVACT) as minRdvAct, HOUR(A.HRDEBUTACT) as hourDebAct, MINUTE(A.HRDEBUTACT) as minDebAct
+      FROM ACTIVITE A, ANIMATION AN
+      WHERE A.CODEANIM = AN.CODEANIM
+      AND A.CODEANIM = ?
       ";
       return $this->createQuery($req, [$cdAnim]);
   }

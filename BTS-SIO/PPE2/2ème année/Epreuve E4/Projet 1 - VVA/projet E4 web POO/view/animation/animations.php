@@ -37,13 +37,15 @@ while($ligne = $anims->fetch(PDO::FETCH_ASSOC)):
             <a href="index.php?page=activite&anim=<?= $this->animation->getCodeanim() ?>" class="btn btn-primary">Dates des activités associées</a>
 
             <?php
-            require('view/animation/updateAnimation.php');
-            require('view/animation/deleteAnimation.php');
-            if(!empty($updateAnim) && !empty($deleteAnim)) {
-                echo $updateAnim, $deleteAnim;
+            if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
+                require('view/animation/updateAnimation.php');
+                require('view/animation/deleteAnimation.php');
+                if(!empty($updateAnim) && !empty($deleteAnim)) {
+                    echo $updateAnim, $deleteAnim;
+                }
+                require('view/animation/components/btModifier.php');
+                require('view/animation/components/btSupprimer.php');
             }
-            require('view/animation/components/btModifier.php');
-            require('view/animation/components/btSupprimer.php');
             ?>
         </div>
     </div>

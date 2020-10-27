@@ -65,20 +65,9 @@ class ActiviteController extends Activite {
    * @return void La vue dashboard représentant les activités auxquelles s'est inscrit un vacancier et la liste des activités classés par animation pour l'encadrant
    */
   public function loadDashboard() {
-    if(!empty(Session::get('TYPEPROFIL'))) {
-      switch(Session::get('TYPEPROFIL')) {
-        case 'EN':
-        $activites = $this->activite->getActivitesEncadrant();
-        require("view/user/dashboard.php");
-        break;
-        case 'VA':
+    if(!empty(Session::get('USER'))) {
         $activites = $this->activite->getActivitesInscrit();
         require("view/user/dashboard.php");
-        break;
-        default :
-        require("view/user/errors/errorUserCode.php");
-        break;
-      }
     } else {
       require("view/user/errors/errorLogin.php");
     }
