@@ -27,7 +27,7 @@ class AnimationController extends Animation {
         if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
             $this->animation->buildObject($_POST);
             $this->animation->setDatecreationanim(date('Y-m-d'));
-            if($this->animation->allFiledsIsNoneEmpty($_POST)) {
+            if($this->animation->allFiledsIsIsset($_POST)) {
                 if($this->animation->isUniqueCodeAnim($this->animation->getCodeanim())) {
                     if($this->animation->getDatecreationanim() == date('Y-m-d')) {
                         if($this->animation->getDatevaliditeanim() >= date('Y-m-d')) {
@@ -36,7 +36,7 @@ class AnimationController extends Animation {
                                     if($this->getTarifanim() >= 0) { //Tarif peut etre gratuit
                                         if($this->animation->getNbreplaceanim() > 0) {
                                             $this->animation->ajouterAnimation();
-                                            require('view/animation/successInsertAnimation.php');
+                                            require('view/animation/success/successInsertAnimation.php');
                                         }
                                     }
                                 }
@@ -62,20 +62,31 @@ class AnimationController extends Animation {
         }
     }
 
-    public function updateAnimation(array $datas) {
+    public function updateAnimation() {
+        $oldCodeAnim = $_POST['oldCodeAnim'];
+        unset($_POST['oldCodeAnim']);
         if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
-            $this->animation->buildObject($_POST);
-            $this->animation->setDatecreationanim(date('Y-m-d'));
-            if($this->animation->allFiledsIsNoneEmpty($_POST)) {
-                echo "Objet Valide !";
-                // Vérifie si codeanim n'existe pas
-                // Vérifie si datecreationanim correspond à la date du jour
-                // Vérifie si DATEVALIDITEANIM est supérieur ou égale à la date du jour
-                // Vérifie si DUREEANIM ne vaut pas 0
-                // Vérifie si LIMITEAGE est supérieur à 0
-                // Vérifie si TARIFANIM >= 0
-                // Vérifie si NBREPLACEANIM > 0
-            }
+            $this->animation->getAnimation($oldCodeAnim, $_POST); //récupère l'ancienne animation
+            $this->animation->buildPartialObject($_POST);
+
+            if($this->animation->allFiledsIsIsset($_POST)) {
+                if($this->animation->isUniqueCodeAnim($this->animation->getCodeanim(), $oldCodeAnim)) {
+                    if($this->animation->getDatecreationanim() == date('Y-m-d')) {
+                        if($this->animation->getDatevaliditeanim() >= date('Y-m-d')) {
+                            if($this->animation->getDureeanim() > 0) {
+                                if($this->animation->getLimiteage() > 0) {
+                                    if($this->getTarifanim() >= 0) { //Tarif peut etre gratuit
+                                        if($this->animation->getNbreplaceanim() > 0) {
+                                            $this->animation->modifierAnimation($oldCodeAnim);
+                                            require('view/animation/success/successUpdateAnimation.php');
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } else echo "error";
 
         } else {
             require('view/animation/errors/errorAccess.php');

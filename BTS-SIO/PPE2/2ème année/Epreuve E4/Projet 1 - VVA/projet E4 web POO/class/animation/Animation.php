@@ -138,6 +138,15 @@ class Animation extends Database {
         }
     }
 
+    public function buildPartialObject(array $datas) {
+        foreach($datas as $key => $ligne) {
+            $method = 'set'.ucfirst($key);
+            if(method_exists($this, $method) && !empty($ligne)) {
+                $this->$method($ligne);
+            }
+        }
+    }
+
     /**
     * Retourne la liste des animations valides pour un utilisateur connecté (retourne l'ensemble des animations valides si l'utilisateur navigue sur le site en tant qu'invité)
     * @return PDO une requête préparée
@@ -193,11 +202,13 @@ class Animation extends Database {
         * Vérifie qu'une animation possède une valeur à chacun de ses attributs grâce à un tableau de données postées issues d'un formulaire
         * @return bool true si tous les attributs de l'objets sont déclarés et non null, false sinon
         */
-        public function allFiledsIsNoneEmpty($formPost) {
+        public function allFiledsIsIsset($formPost) {
             foreach($formPost as $key => $value) {
                 $method = 'get'.ucfirst(strtolower($key));
-                if(!method_exists($this, $method) or empty($this->$method())) {
-                    return false;
+                if(!method_exists($this, $method)) {
+                    $val = $this->$method();
+                    if(!isset($val))
+                        return false;
                 }
             }
             return true;
@@ -209,18 +220,18 @@ class Animation extends Database {
 
         }
 
-        public function isUniqueCodeAnim($codeanim) {
+        public function isUniqueCodeAnim($codeanim, $oldCodeAnim = null) {
             $req =
             "
             SELECT CODEANIM
             FROM ANIMATION
             ";
             $res = $this->createQuery($req);
-            // if(in_array($codeanim, $res)) {
-            //     return true;
-            // }
-            // return false;
+
             while($cdAnim = $res->fetch(PDO::FETCH_ASSOC)) {
+                if($oldCodeAnim) {
+                    return true;
+                }
                 if($cdAnim['CODEANIM'] == $codeanim) {
                     return false;
                 }
@@ -245,30 +256,77 @@ class Animation extends Database {
                 `DESCRIPTANIM`,
                 `COMMENTANIM`,
                 `DIFFICULTEANIM`
-            )
+                )
                 VALUES
                 (
-                ?,?,?,?,?,?,?,?,?,?,?,?
-                )
-                ";
-                if($this->createQuery($req,
-                [
-                    $this->codeanim,
-                    $this->codetypeanim,
-                    $this->nomanim,
-                    $this->datecreationanim,
-                    $this->datevaliditeanim,
-                    $this->dureeanim,
-                    $this->limiteage,
-                    $this->tarifanim,
-                    $this->nbreplaceanim,
-                    $this->descriptanim,
-                    $this->commentanim,
-                    $this->difficulteanim
-                ])) {
+                    ?,?,?,?,?,?,?,?,?,?,?,?
+                    )
+                    ";
+                    if($this->createQuery($req,
+                    [
+                        $this->codeanim,
+                        $this->codetypeanim,
+                        $this->nomanim,
+                        $this->datecreationanim,
+                        $this->datevaliditeanim,
+                        $this->dureeanim,
+                        $this->limiteage,
+                        $this->tarifanim,
+                        $this->nbreplaceanim,
+                        $this->descriptanim,
+                        $this->commentanim,
+                        $this->difficulteanim
+                        ])) {
+                            return true;
+                        }
+                        return false;
+                    }
+
+        public function modifierAnimation($oldCodeAnim) {
+            $req =
+            "
+            UPDATE ANIMATION
+            SET
+                CODEANIM = ?,
+                CODETYPEANIM = ?,
+                NOMANIM = ?,
+                DATECREATIONANIM = ?,
+                DATEVALIDITEANIM = ?,
+                DUREEANIM = ?,
+                LIMITEAGE = ?,
+                TARIFANIM = ?,
+                NBREPLACEANIM = ?,
+                DESCRIPTANIM = ?,
+                COMMENTANIM = ?,
+                DIFFICULTEANIM = ?
+            WHERE CODEANIM = ?
+            ";
+            if($this->createQuery($req,
+            [
+                $this->codeanim,
+                $this->codetypeanim,
+                $this->nomanim,
+                $this->datecreationanim,
+                $this->datevaliditeanim,
+                $this->dureeanim,
+                $this->limiteage,
+                $this->tarifanim,
+                $this->nbreplaceanim,
+                $this->descriptanim,
+                $this->commentanim,
+                $this->difficulteanim,
+                $oldCodeAnim
+            ])) {
                     return true;
                 }
                 return false;
             }
 
+        public function getAnimation($codeAnim, $post = null) {
+            $req = "SELECT * FROM ANIMATION WHERE CODEANIM = ?";
+            if($ligne = $this->createQuery($req, [$codeAnim])->fetch(PDO::FETCH_ASSOC)) {
+                $this->buildObject($ligne);
+            }
+            return $this;
         }
+}

@@ -62,7 +62,7 @@ class Router {
           $this->animationController->deleteAnimation();
           break;
           case 'modifierAnimation':
-          $this->animationController->updateAnimation($cdAnimation);
+          $this->animationController->updateAnimation();
           break;
           case 'inscription':
           $this->activiteController->createInscription($cdAnimation, $noActivite);

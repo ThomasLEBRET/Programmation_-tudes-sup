@@ -1,1 +1,3 @@
-<button onclick="DisplayForm('modifier', '<?= $this->animation->getCodetypeAnim() ?>')" class="btn btn-info">Modifier</button>
+<button onclick="DisplayForm('modifier',
+'<?= $this->animation->getCodeanim() ?>'
+)" class="btn btn-info">Modifier</button>
