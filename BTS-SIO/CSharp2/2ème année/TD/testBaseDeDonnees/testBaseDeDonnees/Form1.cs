@@ -26,28 +26,19 @@ namespace testBaseDeDonnees
 
         private void btExec_Click(object sender, EventArgs e)
         {
-            //host
-            string cs = @"server=localhost;user=root;password=;database=gatci";
-            //nouvel objet de type MysqlConnection
-            MySqlConnection con = new MySqlConnection(cs);
-            //permet de créer des commandes et exécuter des requêtes 
-            MySqlCommand cmd = null;
-            //permet de lire des données issues d'un résultat de MySqlCommand
-            MySqlDataReader rdr = null;
-            //Requête SQL au format string
-            string reqQuery = "";
+            MySqlConnection con = Datas.createConnexion("localhost", "root", "", "gatci");
 
             con.Open();
-            cmd = con.CreateCommand();
-            reqQuery = "SELECT * FROM  TYPE_ANIM";
+            MySqlCommand cmd = con.CreateCommand();
+            string reqQuery = "SELECT * FROM  TYPE_ANIM";
             cmd.CommandText = reqQuery;
-            rdr = cmd.ExecuteReader();
+            MySqlDataReader rdr = cmd.ExecuteReader();
 
             string resultat = "";
             while(rdr.Read())
                 resultat += "Code Type Animation : " + rdr["CODETYPEANIM"] + " Nom Type Animation : " + rdr["NOMTYPEANIM"] + "\n";
 
-            con.Close();
+            Datas.closeConnexion(con);
             MessageBox.Show(resultat);
         }
     }

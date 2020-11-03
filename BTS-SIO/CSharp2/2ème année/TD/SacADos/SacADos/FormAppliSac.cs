@@ -242,7 +242,7 @@ namespace SacADos
             {
                 if (Int32.TryParse(tbUtilUtilite.Text, out utilite))
                 {
-                    if (utilite > 0 && utilite < 20)
+                    if (utilite > 0 && utilite <= 20)
                     {
                         Article a = (Article)lbArmoire.Items[indArticleArmoire];
                         a.SetUtilite(utilite);

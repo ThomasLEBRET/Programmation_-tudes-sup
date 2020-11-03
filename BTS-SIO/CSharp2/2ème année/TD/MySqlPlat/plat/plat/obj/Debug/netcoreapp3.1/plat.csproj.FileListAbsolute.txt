@@ -1,0 +1,15 @@
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\bin\Debug\netcoreapp3.1\plat.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\bin\Debug\netcoreapp3.1\plat.deps.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\bin\Debug\netcoreapp3.1\plat.runtimeconfig.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\bin\Debug\netcoreapp3.1\plat.runtimeconfig.dev.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\bin\Debug\netcoreapp3.1\plat.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\bin\Debug\netcoreapp3.1\plat.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.csprojAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.Form1.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.csproj.GenerateResource.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.AssemblyInfoInputs.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.AssemblyInfo.cs
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\plat\plat\obj\Debug\netcoreapp3.1\plat.genruntimeconfig.cache
