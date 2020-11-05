@@ -1,0 +1,17 @@
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\TPORM.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\TPORM.deps.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\TPORM.runtimeconfig.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\TPORM.runtimeconfig.dev.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\TPORM.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\TPORM.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.csprojAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.Form1.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.csproj.GenerateResource.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.AssemblyInfoInputs.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.AssemblyInfo.cs
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.genruntimeconfig.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\bin\Debug\netcoreapp3.1\MySql.Data.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.csproj.CoreCompileInputs.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPORM\TPORM\obj\Debug\netcoreapp3.1\TPORM.csproj.CopyComplete

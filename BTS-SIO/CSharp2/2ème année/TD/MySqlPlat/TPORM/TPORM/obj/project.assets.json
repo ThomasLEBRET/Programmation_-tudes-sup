@@ -1,0 +1,116 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "MySql.Data/6.9.12": {
+        "type": "package",
+        "compile": {
+          "lib/net45/MySql.Data.dll": {}
+        },
+        "runtime": {
+          "lib/net45/MySql.Data.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "MySql.Data/6.9.12": {
+      "sha512": "f3IlXzYso8DlQ8lGs9GYEXT/FGv4C/6tZtmTbgLaeNVGmWoGjf+5mO+H8hvRMQY++Fh3SWNEZyHxSrW2J1fUOw==",
+      "type": "package",
+      "path": "mysql.data/6.9.12",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CHANGES",
+        "MySql.Data.6.9.12.nupkg.sha512",
+        "MySql.Data.nuspec",
+        "Readme.txt",
+        "content/app.config.transform",
+        "content/web.config.transform",
+        "lib/net40/MySql.Data.dll",
+        "lib/net45/MySql.Data.dll"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "MySql.Data >= 6.9.12"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Thomas\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\TPORM.csproj",
+      "projectName": "TPORM",
+      "projectPath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\TPORM.csproj",
+      "packagesPath": "C:\\Users\\Thomas\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\Thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "MySql.Data": {
+            "target": "Package",
+            "version": "[6.9.12, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'MySql.Data 6.9.12' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "MySql.Data",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}

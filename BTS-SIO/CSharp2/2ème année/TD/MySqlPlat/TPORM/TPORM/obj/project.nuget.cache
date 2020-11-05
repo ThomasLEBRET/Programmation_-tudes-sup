@@ -1,0 +1,21 @@
+{
+  "version": 2,
+  "dgSpecHash": "eJc0wRTMhR+9ydnubC8hmkvjyvlneFc0Jc+9DLLR2sVwxlvPrnTnKUB1X97lkxDnrIuxrvTQ96QDBpE8F/hrfw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\TPORM.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Thomas\\.nuget\\packages\\mysql.data\\6.9.12\\mysql.data.6.9.12.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Le package 'MySql.Data 6.9.12' a été restauré en utilisant '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' au lieu du framework cible du projet '.NETCoreApp,Version=v3.1'. Ce package n'est peut-être pas totalement compatible avec votre projet.",
+      "libraryId": "MySql.Data",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
+}
