@@ -56,10 +56,10 @@ class Router {
           $this->activiteController->voirActivitesByCodeAnimation($cdAnimation);
           break;
           case 'ajouterAnimation':
-          $this->animationController->addAnimation();
+          $this->animationController->addAnimation($this->request->getPost());
           break;
           case 'supprimerAnimation':
-          $this->animationController->deleteAnimation();
+          $this->animationController->deleteAnimation($this->request->getPost()->get("CODEANIM"));
           break;
           case 'modifierAnimation':
           $this->animationController->updateAnimation();

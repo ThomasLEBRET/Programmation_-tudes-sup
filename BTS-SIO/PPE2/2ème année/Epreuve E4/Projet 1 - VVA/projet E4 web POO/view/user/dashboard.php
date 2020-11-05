@@ -11,6 +11,7 @@ if($activites->rowCount() == 0) {
 <?php }?>
 <?php while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
     $this->activite->buildObject($ligne); ?>
+    <?php if($ligne['minRdvAct'] == 0) $ligne['minRdvAct'] = $ligne['minRdvAct']."0"; ?>
     <div class="card justify">
         <div class="card-header">
             <h1><?= $ligne['NOMANIM'] ?></h1>

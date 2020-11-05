@@ -1,13 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using MySql.Data.MySqlClient;
 
 namespace TPORM
 {
@@ -24,6 +16,14 @@ namespace TPORM
                 MessageBox.Show("La connexion a bien été opérée !");
             else
                 MessageBox.Show("La connexion a échouée !");
+        }
+
+        private void btDeconnexion_Click(object sender, EventArgs e)
+        {
+            if (ORMPlats.Deconnexion())
+                MessageBox.Show("Vous êtes bien déconnecté");
+            else
+                MessageBox.Show("La déconnexion a échouée");
         }
     }
 }

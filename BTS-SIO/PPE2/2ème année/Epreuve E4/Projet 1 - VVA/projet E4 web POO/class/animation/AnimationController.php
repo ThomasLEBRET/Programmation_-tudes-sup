@@ -23,11 +23,11 @@ class AnimationController extends Animation {
         require('view/animation/animations.php');
     }
 
-    public function addAnimation() {
+    public function addAnimation($dataPost) {
         if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
-            $this->animation->buildObject($_POST);
+            $this->animation->buildObject($dataPost);
             $this->animation->setDatecreationanim(date('Y-m-d'));
-            if($this->animation->allFiledsIsIsset($_POST)) {
+            if($this->animation->allFiledsIsIsset($dataPost)) {
                 if($this->animation->isUniqueCodeAnim($this->animation->getCodeanim())) {
                     if($this->animation->getDatecreationanim() == date('Y-m-d')) {
                         if($this->animation->getDatevaliditeanim() >= date('Y-m-d')) {
@@ -51,9 +51,18 @@ class AnimationController extends Animation {
         }
     }
 
-    public function deleteAnimation(array $datas) {
+    public function deleteAnimation($cdAnim) {
         if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
-            // Récupère un objet animation grâce à une fonction qui récupère une animation en fonction du code de l'animation
+          $this->animation->getAnimation($cdAnim);
+          if($this->animation->annuleInscriptions($cdAnim)) {
+            if($this->animation->annuleActivites($cdAnim)) {
+              if($this->animation->annuleAnimation($cdAnim)) {
+                echo "success";
+                die();
+              }
+            }
+          }
+
             // Annule les inscriptions aux activités issues de cette animation
             // Annule les animations de cette activité
             // Annule l'animation

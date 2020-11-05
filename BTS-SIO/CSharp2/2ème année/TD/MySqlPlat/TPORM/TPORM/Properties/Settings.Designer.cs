@@ -25,7 +25,7 @@ namespace TPORM.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=;database=plat")]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=;database=plat;")]
         public string sConnexion {
             get {
                 return ((string)(this["sConnexion"]));

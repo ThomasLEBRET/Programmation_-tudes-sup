@@ -3,7 +3,7 @@
   <Profiles />
   <Settings>
     <Setting Name="sConnexion" Type="System.String" Scope="User">
-      <Value Profile="(Default)">server=localhost;user=root;password=;database=plat</Value>
+      <Value Profile="(Default)">server=localhost;user=root;password=;database=plat;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

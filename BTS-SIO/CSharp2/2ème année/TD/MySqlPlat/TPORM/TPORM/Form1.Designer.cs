@@ -69,6 +69,7 @@
             this.btDeconnexion.TabIndex = 0;
             this.btDeconnexion.Text = "Déconnexion";
             this.btDeconnexion.UseVisualStyleBackColor = true;
+            this.btDeconnexion.Click += new System.EventHandler(this.btDeconnexion_Click);
             // 
             // lbPlats
             // 
