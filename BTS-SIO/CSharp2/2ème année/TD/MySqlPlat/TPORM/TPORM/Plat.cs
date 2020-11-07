@@ -1,17 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.SqlServer.Server;
+using MySql.Data.MySqlClient;
+using TPORM;
 
 namespace plat
 {
-    class Plat : IComparable<Plat>
+    public class Plat : IComparable<Plat>
     {
         private string nom;
-        private string categorie;
+        private Categorie categorie;
         private int prix;
         private int nbcalories;
         private bool glutenFree;
         private bool vegan;
 
-        public Plat(string nom, string categorie, int prix, int nbcalories, bool glutenFree, bool vegan)
+        public Plat()
+        {
+            this.nom = "unknow";
+            this.categorie = Categorie.Entrée;
+            this.prix = 0;
+            this.nbcalories = 0;
+            this.glutenFree = false;
+            this.vegan = false;
+        }
+
+        public Plat(string nom, Categorie categorie, int prix, int nbcalories, bool glutenFree, bool vegan)
         {
             this.nom = nom;
             this.categorie = categorie;
@@ -26,7 +43,7 @@ namespace plat
             return this.nom;
         }
 
-        public string GetCategorie()
+        public Categorie GetCategorie()
         {
             return this.categorie;
         }
@@ -44,6 +61,11 @@ namespace plat
         public bool GetVegan()
         {
             return this.vegan;
+        }
+
+        public bool GetGlutenFree()
+        {
+            return this.glutenFree;
         }
 
         public int CompareTo(Plat p)
@@ -65,6 +87,36 @@ namespace plat
         public override string ToString()
         {
             return "NOM : " + nom + " - CATEGORIE : " + categorie + " - PRIX : " + prix + "€ - " + nbcalories + "cal - GLUTEN : " + glutenFree + " - VEGAN : " + vegan;
+        }
+
+        public void SetCategorie(Categorie categorie)
+        {
+            this.categorie = categorie;
+        }
+
+        internal void SetPrix(int prix)
+        {
+            this.prix = prix;
+        }
+
+        public void SetVegan(bool vegan)
+        {
+            this.vegan = vegan;
+        }
+
+        public void SetGlutenFree(bool gluten)
+        {
+            this.glutenFree = gluten;
+        }
+
+        public void SetNbCalories(int nbcalories)
+        {
+            this.nbcalories = nbcalories;
+        }
+
+        internal void SetNom(string nom)
+        {
+            this.nom = nom;
         }
     }
 }
