@@ -7,13 +7,13 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-            <li class="nav-item <?php if($page == 'accueil' || $page == 'dashboard') echo "active" ?>">
-                <a class="nav-link" href="index.php?page=accueil">Accueil<span class="sr-only"></span></a>
-            </li>
-            <li class="nav-item <?php if($page == 'animation') echo "active" ?>">
-                <a class="nav-link" href="index.php?page=animation">Animations</a>
-            </li>
             <?php if(!empty(Session::get('USER'))): ?>
+              <li class="nav-item <?php if($page == 'accueil' || $page == 'dashboard') echo "active" ?>">
+                  <a class="nav-link" href="index.php?page=accueil">Accueil<span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item <?php if($page == 'animation') echo "active" ?>">
+                  <a class="nav-link" href="index.php?page=animation">Animations</a>
+              </li>
                 <li class="nav-item <?php if($page == 'compte') echo "active" ?>">
                     <a class="nav-link" href="index.php?page=compte">Mon compte</a>
                 </li>

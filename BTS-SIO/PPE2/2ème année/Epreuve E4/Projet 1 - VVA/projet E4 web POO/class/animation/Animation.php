@@ -166,6 +166,9 @@ class Animation extends Database {
         AND A.CODEANIM = cdAnim
         ";
 
+        $dtDebSej = Session::get('DATEDEBSEJOUR');
+        $dtFinSej = Session::get('DATEFINSEJOUR');
+
         $req = "
         SELECT AN.*, AN.CODEANIM as cdAnim, CONCAT(ROUND(AN.TARIFANIM,0),'€') as TARIFANIM, AN.NBREPLACEANIM - ($nbPlacesAnim$bindParam) as nbPlacesRestantes
         FROM ANIMATION AN, ACTIVITE A
@@ -173,8 +176,10 @@ class Animation extends Database {
         AND AN.DATEVALIDITEANIM > DATE(NOW())
         AND A.DATEACT > DATE(NOW())
         AND AN.LIMITEAGE <= ?
-        AND AN.NBREPLACEANIM - ($nbPlacesAnim) > 0";
-        return ($this->createQuery($req, [$ageUser]));
+        AND AN.NBREPLACEANIM - ($nbPlacesAnim) > 0
+        AND A.DATEACT >= ?
+        AND A.DATEACT <= ?";
+        return ($this->createQuery($req, [$ageUser, $dtDebSej, $dtFinSej]));
     }
 
     /**
