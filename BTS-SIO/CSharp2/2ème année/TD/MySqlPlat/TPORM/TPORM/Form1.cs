@@ -12,8 +12,9 @@ namespace TPORM
         {
             InitializeComponent();
 
-            //List<Categorie> = ORMPlat.LireCategories();
-            cbCat.DataSource = Enum.GetValues(typeof(Categorie));
+            if (ORMPlats.Connexion())
+                lbConnexion.Text = "Connection ouverte";
+            cbCat.DataSource = ORMPlats.GetCategories();
             cbCategoriePlat.DataSource = Enum.GetValues(typeof(Categorie));
         }
 
@@ -62,8 +63,10 @@ namespace TPORM
                 gluten = true;
 
             Plat p = new Plat(nom, categorie, Convert.ToInt16(prix), Convert.ToInt16(cal), vegan, gluten);
-            if(ORMPlats.AjouterPlat(p))
+            if (ORMPlats.AjouterPlat(p))
                 MessageBox.Show("Votre plat a bien été ajouté !");
+            else
+                MessageBox.Show("Le plat existe déjà, changez le nom du plat");
         }
 
         private void btNbrPlats_Click(object sender, EventArgs e)

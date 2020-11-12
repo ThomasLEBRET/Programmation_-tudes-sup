@@ -22,7 +22,9 @@ class AnimationController extends Animation {
         $anims = $this->animation->getAnimationsValides();
       }
       if($anims->rowCount() == 0) {
-        require("view/animations/errors/errorNoAnimations.php");
+        require("view/animation/errors/errorNoAnimations.php");
+      } else {
+        require('view/animation/animations.php');
       }
     } else {
       require('view/animation/errors/errorNotLogedUser.php');

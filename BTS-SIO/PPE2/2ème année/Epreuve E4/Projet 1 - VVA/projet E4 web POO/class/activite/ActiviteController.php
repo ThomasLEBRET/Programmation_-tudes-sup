@@ -23,10 +23,11 @@ class ActiviteController extends Activite {
         $activites = $this->activite->getAllActivitesForEncadrant($cdAnimation);
         $nbActivites = $activites->rowCount();
         if($nbActivites == 0) {
-            require("view/activite/errors/errorNoneActivite.php");
+            require("view/activite/alerts/alertNoneActivite.php");
         } else {
-            require("view/activite/activites.php");
+            require("view/activite/activitesForEncadrant.php");
         }
+        require("view/activite/createActivite.php");
     }
   }
 

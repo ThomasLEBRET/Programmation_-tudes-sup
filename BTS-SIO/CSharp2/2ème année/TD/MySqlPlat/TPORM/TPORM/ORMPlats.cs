@@ -23,13 +23,8 @@ namespace TPORM
 
         public static bool Deconnexion()
         {
-            if (conn == null)
-            {
-                MessageBox.Show("La connexion n'est pas déclarée");
-                return false;
-            }
-
-            return conn.State == System.Data.ConnectionState.Open;
+            conn.Close();
+            return conn.State == System.Data.ConnectionState.Closed;
         }
 
         public static int GetNbPlats()
@@ -43,13 +38,26 @@ namespace TPORM
             return nbPlats;
         }
 
-        /*public static List<Categorie> LireCategories()
+        private static bool EstPlatExistant(string nom)
         {
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT Count(*) FROM plat WHERE nom = @nom";
+            cmd.Parameters.Add("@nom", MySqlDbType.VarChar).Value = nom;
+            return Convert.ToInt32(cmd.ExecuteScalar()) == 1;
+        }
+
+        public static List<Categorie> GetCategories()
+        {
+            MySqlCommand cmd = conn.CreateCommand();
+            cmd.CommandText = "SELECT categorie FROM plat GROUP BY categorie";
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
             List<Categorie> lc = new List<Categorie>();
-            foreach(Categorie c in Enum.GetValues(typeof(Categorie)))
-                lc.Add(c);
+            while(rdr.Read())
+                lc.Add((Categorie)Enum.Parse(typeof(Categorie), (string)rdr["categorie"]));
+            rdr.Close();
             return lc;
-        }*/
+        }
 
         public static bool ModifierPlat(Plat p)
         {
@@ -62,8 +70,9 @@ namespace TPORM
             cmd.Parameters.Add("@nbcalories", MySqlDbType.Int32).Value = p.GetNbcalories();
             cmd.Parameters.Add("@glutenFree", MySqlDbType.Int32).Value = p.GetGlutenFree();
             cmd.Parameters.Add("@vegan", MySqlDbType.Int32).Value = p.GetVegan();
-
-            return cmd.ExecuteNonQuery() == 1;
+            MessageBox.Show(""+Convert.ToInt32(cmd.ExecuteScalar()));
+     
+            return Convert.ToInt32(cmd.ExecuteScalar()) == 1;
         }
 
         public static List<Plat> AfficherPlats()
@@ -84,6 +93,9 @@ namespace TPORM
 
         public static bool AjouterPlat(Plat p)
         {
+            if (EstPlatExistant(p.GetNom()))
+                return false;
+
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "INSERT INTO plat(nom, categorie, prix, nbcalories, glutenFree, vegan) VALUES(@nom, @categorie, @prix, @nbcalories, @glutenFree, @vegan)";
 
@@ -102,7 +114,6 @@ namespace TPORM
             MySqlCommand cmd = conn.CreateCommand();
             cmd.CommandText = "SELECT * FROM plat WHERE prix = (SELECT MIN(prix) FROM plat)";
             MySqlDataReader rdr = cmd.ExecuteReader();
-            string nom = "unknow";
             Plat p = new Plat();
             if (rdr.Read())
             {
@@ -174,12 +185,5 @@ namespace TPORM
             rdr.Close();
             return moyenne;
         }
-
-        /*
-        public float GetPrixMoyen();
-        public bool SupprimerPlat(Plat p);
-        private static bool ExistePlat(Plat p);
-        */
-
     }
 }
