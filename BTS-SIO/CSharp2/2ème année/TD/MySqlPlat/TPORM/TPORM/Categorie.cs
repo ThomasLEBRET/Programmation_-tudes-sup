@@ -6,7 +6,7 @@ namespace TPORM
 {
     public enum Categorie
     {
-        Entrée,
+        Entree,
         Plat,
         Dessert
     }

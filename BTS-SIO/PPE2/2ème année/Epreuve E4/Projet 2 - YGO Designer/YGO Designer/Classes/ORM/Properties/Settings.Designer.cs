@@ -31,5 +31,15 @@ namespace YGO_Designer.Classes.ORM.Properties {
                 return ((string)(this["sConnection"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("server=mysql-omuzoki.alwaysdata.net;user=omuzoki;password=##THlb0302##;database=o" +
+            "muzoki_ygodesigner;")]
+        public string loginDist {
+            get {
+                return ((string)(this["loginDist"]));
+            }
+        }
     }
 }

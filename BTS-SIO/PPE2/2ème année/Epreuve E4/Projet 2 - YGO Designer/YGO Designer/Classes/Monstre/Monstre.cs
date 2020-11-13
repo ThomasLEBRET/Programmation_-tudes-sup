@@ -1,25 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using YGO_Designer.Classes.Carte.Attribut_Carte;
-using YGO_Designer.Classes.Monstre.Attribut_Monstre;
 
 namespace YGO_Designer.Classes.Carte
 {
     public class Monstre : Carte
     {
-        private TypeMonstre cdTypeMo;
-        private AttributMonstre cdAttrMo;
+        private string typeMo;
+        private string attrMo;
         private int nbrEtoiles;
         private int atk;
         private int def;
-
-        public Monstre(TypeMonstre cdTypeMo, int no, AttributMonstre cdAttrMo, int nbrEtoiles, int atk, int def, AttributCarte codeAttr, string nom, string description) 
-            : base(no, codeAttr, nom, description)
+        public Monstre(string typeMo, string attrMo, int nivMo, int atk, int def, List<Effet> eff, int no, Attribut attr, string nom, string description)
+            : base(eff, no, attr, nom, description)
         {
-            this.cdTypeMo = cdTypeMo;
-            this.cdAttrMo = cdAttrMo;
-            this.nbrEtoiles = nbrEtoiles;
+            this.typeMo = typeMo;
+            this.attrMo = attrMo;
+            this.nbrEtoiles = nivMo;
+            this.atk = atk;
+            this.def = def;
         }
 
         public override bool Equals(object obj)
@@ -31,6 +30,30 @@ namespace YGO_Designer.Classes.Carte
                 Monstre m = (Monstre)obj;
                 return no == m.no;
             }
+        }
+
+        public string GetTypeMonstre()
+        {
+            return this.typeMo;
+        }
+
+        public string GetAttrMonstre()
+        {
+            return this.attrMo;
+        }
+
+        public int GetNivMonstre()
+        {
+            return this.nbrEtoiles;
+        }
+
+        public int GetAtk()
+        {
+            return this.atk;
+        }
+        public int GetDef()
+        {
+            return this.def;
         }
     }
 }

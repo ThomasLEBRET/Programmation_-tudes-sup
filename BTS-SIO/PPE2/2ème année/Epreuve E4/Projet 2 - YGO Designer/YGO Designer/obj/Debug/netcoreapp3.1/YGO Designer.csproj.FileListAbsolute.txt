@@ -4,8 +4,19 @@ C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème ann
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\YGO Designer.runtimeconfig.dev.json
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\YGO Designer.dll
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\YGO Designer.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\MySql.Data.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.csprojAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormAjouterCartes.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.Properties.Resources.resources
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.csproj.GenerateResource.cache
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.AssemblyInfoInputs.cache
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.AssemblyInfo.cs
@@ -14,15 +25,4 @@ C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème ann
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.dll
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.pdb
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.genruntimeconfig.cache
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormAjouterCartes.resources
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Google.Protobuf.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\K4os.Compression.LZ4.Streams.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\K4os.Hash.xxHash.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Ubiety.Dns.Core.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Zstandard.Net.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\Renci.SshNet.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\SshNet.Security.Cryptography.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\bin\Debug\netcoreapp3.1\System.Xml.XPath.XmlDocument.dll
-C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO Designer.csprojAssemblyReference.cache

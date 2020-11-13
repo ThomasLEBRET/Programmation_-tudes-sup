@@ -208,6 +208,19 @@ namespace YGO_Designer
             this.cbNbrEtoiles.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbNbrEtoiles.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbNbrEtoiles.FormattingEnabled = true;
+            this.cbNbrEtoiles.Items.AddRange(new object[] {
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12"});
             this.cbNbrEtoiles.Location = new System.Drawing.Point(734, 30);
             this.cbNbrEtoiles.Name = "cbNbrEtoiles";
             this.cbNbrEtoiles.Size = new System.Drawing.Size(57, 31);
@@ -267,8 +280,7 @@ namespace YGO_Designer
             // 
             // btAddMonstre
             // 
-            this.btAddMonstre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btAddMonstre.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.btAddMonstre.AutoSize = true;
             this.btAddMonstre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btAddMonstre.Cursor = System.Windows.Forms.Cursors.Hand;

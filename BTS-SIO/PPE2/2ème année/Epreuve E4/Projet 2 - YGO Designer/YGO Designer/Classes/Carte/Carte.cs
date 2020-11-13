@@ -1,21 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using YGO_Designer.Classes.Carte.Attribut_Carte;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
 
 namespace YGO_Designer.Classes.Carte
 {
     public class Carte
     {
         protected int no; //PK
-        protected AttributCarte codeAttr; //FK -> attribut_carte
+        protected Attribut attr; 
         protected string nom;
         protected string description;
+        protected List<Effet> eff;
 
-        public Carte(int no, AttributCarte codeAttr, string nom, string description)
+        public Carte(List<Effet> eff, int no, Attribut attr, string nom, string description)
         {
+            this.eff = new List<Effet>();
+            this.eff = eff;
             this.no = no;
-            this.codeAttr = codeAttr;
+            this.attr = attr;
             this.nom = nom;
             this.description = description;
         }
@@ -36,14 +37,19 @@ namespace YGO_Designer.Classes.Carte
             return this.nom;
         }
 
+        public List<Effet> GetListEffets()
+        {
+            return this.eff;
+        }
+
         public int GetNo()
         {
             return this.no;
         }
 
-        public AttributCarte GetCdAttr()
+        public Attribut GetAttr()
         {
-            return this.codeAttr;
+            return this.attr;
         }
         public string GetNom()
         {
@@ -53,6 +59,11 @@ namespace YGO_Designer.Classes.Carte
         public string GetDescription()
         {
             return this.description;
+        }
+
+        public void SetCdAttr(Attribut attr)
+        {
+            this.attr = attr;
         }
     }
 }

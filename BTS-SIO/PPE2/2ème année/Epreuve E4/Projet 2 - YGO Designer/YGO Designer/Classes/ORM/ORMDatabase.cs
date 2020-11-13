@@ -15,7 +15,7 @@ namespace YGO_Designer.Classes.ORM
 
         public static bool Connexion()
         {
-            conn = new MySqlConnection(Properties.Settings.Default.sConnection);
+            conn = new MySqlConnection(Properties.Settings.Default.loginDist);
             conn.Open();
             return conn.State == System.Data.ConnectionState.Open;
         }
