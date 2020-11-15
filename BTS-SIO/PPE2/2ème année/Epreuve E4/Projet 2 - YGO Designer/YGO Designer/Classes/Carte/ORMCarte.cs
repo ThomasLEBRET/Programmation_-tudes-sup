@@ -40,5 +40,28 @@ namespace YGO_Designer.Classes.Carte
             rdr.Close();
             return lA;
         }
+
+        public static bool AjouterEffetsCarte(Carte c)
+        {
+            if (c != null && ORMCarte.ExistCard(c))
+            {
+                MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+                cmd.CommandText = "INSERT INTO effet_carte(CODE_EFFET, NO_CARTE) VALUES(@cdEffet, @noCarte)";
+                bool estTransactionReussi = true;
+                cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = c.GetNo();
+                MySqlParameter cdEffet = new MySqlParameter("@cdEffet", MySqlDbType.VarChar);
+                cmd.Parameters.Add(cdEffet);
+                if (estTransactionReussi)
+                {
+                    foreach (Effet e in c.GetListEffets())
+                    {
+                        cdEffet.Value = e.GetCodeEffet();
+                        estTransactionReussi = cmd.ExecuteNonQuery() == 1;
+                    }
+                }
+                return true;
+            }
+            return false;
+        }
     }
 }

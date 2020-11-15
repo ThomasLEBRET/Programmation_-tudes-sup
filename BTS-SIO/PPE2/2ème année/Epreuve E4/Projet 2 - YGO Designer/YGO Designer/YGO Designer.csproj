@@ -5,6 +5,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>YGO_Designer</RootNamespace>
     <UseWindowsForms>true</UseWindowsForms>
+    <StartupObject>YGO_Designer.Program</StartupObject>
+    <ApplicationIcon>Resources\logoYgo.ico</ApplicationIcon>
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -12,6 +15,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="FormModel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Vues\FormTemplate .cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Classes\ORM\Properties\Settings.Designer.cs">
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <AutoGen>True</AutoGen>

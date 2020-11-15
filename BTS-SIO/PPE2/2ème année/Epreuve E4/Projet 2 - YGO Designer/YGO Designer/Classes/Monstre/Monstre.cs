@@ -11,7 +11,8 @@ namespace YGO_Designer.Classes.Carte
         private int nbrEtoiles;
         private int atk;
         private int def;
-        public Monstre(string typeMo, string attrMo, int nivMo, int atk, int def, List<Effet> eff, int no, Attribut attr, string nom, string description)
+        private string typesCarteMonstre;
+        public Monstre(string typeMo, string attrMo, int nivMo, int atk, int def, string typesCarteMonstre, List<Effet> eff, int no, Attribut attr, string nom, string description)
             : base(eff, no, attr, nom, description)
         {
             this.typeMo = typeMo;
@@ -19,6 +20,7 @@ namespace YGO_Designer.Classes.Carte
             this.nbrEtoiles = nivMo;
             this.atk = atk;
             this.def = def;
+            this.typesCarteMonstre = typesCarteMonstre;
         }
 
         public override bool Equals(object obj)
@@ -54,6 +56,11 @@ namespace YGO_Designer.Classes.Carte
         public int GetDef()
         {
             return this.def;
+        }
+
+        public string GetTypesCarteMonstre()
+        {
+            return this.typesCarteMonstre;
         }
     }
 }

@@ -1,0 +1,16 @@
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer.deps.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer.runtimeconfig.json
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\BouncyCastle.Crypto.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\Google.Protobuf.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\K4os.Compression.LZ4.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\K4os.Compression.LZ4.Streams.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\K4os.Hash.xxHash.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\MySql.Data.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\Ubiety.Dns.Core.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\Zstandard.Net.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\Renci.SshNet.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\SshNet.Security.Cryptography.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\System.Xml.XPath.XmlDocument.dll
