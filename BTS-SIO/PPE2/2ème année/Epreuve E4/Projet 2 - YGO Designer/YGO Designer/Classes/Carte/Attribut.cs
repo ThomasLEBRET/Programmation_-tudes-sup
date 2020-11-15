@@ -11,6 +11,12 @@
             this.nomAttrCarte = nomAttrCarte;
         }
 
+        public Attribut()
+        {
+            this.cdAttrCarte = "";
+            this.nomAttrCarte = "";
+        }
+
         public override string ToString()
         {
             return this.nomAttrCarte;

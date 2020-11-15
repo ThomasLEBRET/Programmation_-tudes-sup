@@ -11,6 +11,15 @@ namespace YGO_Designer.Classes.Carte
         protected string description;
         protected List<Effet> eff;
 
+        public Carte()
+        {
+            this.eff = new List<Effet>();
+            this.no = 00000000;
+            this.attr = new Attribut();
+            this.nom = "Unknow";
+            this.description = "Void";
+        }
+
         public Carte(List<Effet> eff, int no, Attribut attr, string nom, string description)
         {
             this.eff = new List<Effet>();

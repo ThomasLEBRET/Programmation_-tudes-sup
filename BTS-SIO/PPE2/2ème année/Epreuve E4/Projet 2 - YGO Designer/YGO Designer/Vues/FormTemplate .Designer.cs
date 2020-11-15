@@ -31,6 +31,7 @@ namespace YGO_Designer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTemplate));
             this.pnContainer = new System.Windows.Forms.Panel();
+            this.btChercherCarte = new System.Windows.Forms.Button();
             this.btAjouterCarte = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -44,6 +45,7 @@ namespace YGO_Designer
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnContainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnContainer.BackColor = System.Drawing.Color.Black;
+            this.pnContainer.Controls.Add(this.btChercherCarte);
             this.pnContainer.Controls.Add(this.btAjouterCarte);
             this.pnContainer.Controls.Add(this.btHome);
             this.pnContainer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -51,6 +53,24 @@ namespace YGO_Designer
             this.pnContainer.Name = "pnContainer";
             this.pnContainer.Size = new System.Drawing.Size(200, 556);
             this.pnContainer.TabIndex = 4;
+            // 
+            // btChercherCarte
+            // 
+            this.btChercherCarte.BackColor = System.Drawing.Color.Transparent;
+            this.btChercherCarte.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btChercherCarte.FlatAppearance.BorderSize = 0;
+            this.btChercherCarte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
+            this.btChercherCarte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
+            this.btChercherCarte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btChercherCarte.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btChercherCarte.ForeColor = System.Drawing.Color.White;
+            this.btChercherCarte.Location = new System.Drawing.Point(0, 186);
+            this.btChercherCarte.Name = "btChercherCarte";
+            this.btChercherCarte.Size = new System.Drawing.Size(200, 87);
+            this.btChercherCarte.TabIndex = 2;
+            this.btChercherCarte.Text = "Chercher une carte";
+            this.btChercherCarte.UseVisualStyleBackColor = false;
+            this.btChercherCarte.Click += new System.EventHandler(this.btChercherCarte_Click);
             // 
             // btAjouterCarte
             // 
@@ -137,6 +157,8 @@ namespace YGO_Designer
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btAjouterCarte;
         private System.Windows.Forms.Panel pnFormChild;
+        private System.Windows.Forms.Button btChercherCarte;
+        private System.Windows.Forms.Button Cher;
     }
 }
 

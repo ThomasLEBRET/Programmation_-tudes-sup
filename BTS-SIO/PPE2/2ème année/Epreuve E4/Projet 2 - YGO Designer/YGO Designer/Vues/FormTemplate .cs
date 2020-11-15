@@ -33,6 +33,11 @@ namespace YGO_Designer
             openChildForm(new FormAjouterCartes());
         }
 
+        private void btChercherCarte_Click(object sender, EventArgs e)
+        {
+                openChildForm(new FormChercherCarte());
+        }
+
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)

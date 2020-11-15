@@ -15,6 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Vues\Administrateur\FormChercherCarte.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="FormModel.cs">
       <SubType>Form</SubType>
     </Compile>
