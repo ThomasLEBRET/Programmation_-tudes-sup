@@ -390,9 +390,9 @@ namespace YGO_Designer
             this.rbRituelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbRituelle.Location = new System.Drawing.Point(15, 111);
             this.rbRituelle.Name = "rbRituelle";
-            this.rbRituelle.Size = new System.Drawing.Size(91, 27);
+            this.rbRituelle.Size = new System.Drawing.Size(76, 27);
             this.rbRituelle.TabIndex = 3;
-            this.rbRituelle.Text = "Rituelle";
+            this.rbRituelle.Text = "Rituel";
             this.rbRituelle.UseVisualStyleBackColor = true;
             // 
             // rbContinue
@@ -401,9 +401,9 @@ namespace YGO_Designer
             this.rbContinue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbContinue.Location = new System.Drawing.Point(454, 47);
             this.rbContinue.Name = "rbContinue";
-            this.rbContinue.Size = new System.Drawing.Size(102, 27);
+            this.rbContinue.Size = new System.Drawing.Size(92, 27);
             this.rbContinue.TabIndex = 2;
-            this.rbContinue.Text = "Continue";
+            this.rbContinue.Text = "Continu";
             this.rbContinue.UseVisualStyleBackColor = true;
             // 
             // rbQuick
@@ -412,9 +412,9 @@ namespace YGO_Designer
             this.rbQuick.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbQuick.Location = new System.Drawing.Point(230, 47);
             this.rbQuick.Name = "rbQuick";
-            this.rbQuick.Size = new System.Drawing.Size(117, 27);
+            this.rbQuick.Size = new System.Drawing.Size(84, 27);
             this.rbQuick.TabIndex = 1;
-            this.rbQuick.Text = "Jeu-Rapide";
+            this.rbQuick.Text = "Rapide";
             this.rbQuick.UseVisualStyleBackColor = true;
             // 
             // rbNone
@@ -477,9 +477,9 @@ namespace YGO_Designer
             this.rbContrePiege.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbContrePiege.Location = new System.Drawing.Point(454, 47);
             this.rbContrePiege.Name = "rbContrePiege";
-            this.rbContrePiege.Size = new System.Drawing.Size(135, 27);
+            this.rbContrePiege.Size = new System.Drawing.Size(140, 27);
             this.rbContrePiege.TabIndex = 2;
-            this.rbContrePiege.Text = "Contre-Piège";
+            this.rbContrePiege.Text = "Contre_Piège";
             this.rbContrePiege.UseVisualStyleBackColor = true;
             // 
             // rbContinu

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace YGO_Designer.Classes.Carte
@@ -73,6 +74,11 @@ namespace YGO_Designer.Classes.Carte
         public void SetCdAttr(Attribut attr)
         {
             this.attr = attr;
+        }
+
+        public void SetNo(int no)
+        {
+            this.no = no;
         }
     }
 }

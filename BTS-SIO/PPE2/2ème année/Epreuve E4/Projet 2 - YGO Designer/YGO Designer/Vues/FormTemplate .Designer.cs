@@ -31,6 +31,7 @@ namespace YGO_Designer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTemplate));
             this.pnContainer = new System.Windows.Forms.Panel();
+            this.btClose = new System.Windows.Forms.Button();
             this.btChercherCarte = new System.Windows.Forms.Button();
             this.btAjouterCarte = new System.Windows.Forms.Button();
             this.btHome = new System.Windows.Forms.Button();
@@ -45,14 +46,34 @@ namespace YGO_Designer
             | System.Windows.Forms.AnchorStyles.Left)));
             this.pnContainer.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnContainer.BackColor = System.Drawing.Color.Black;
+            this.pnContainer.Controls.Add(this.btClose);
             this.pnContainer.Controls.Add(this.btChercherCarte);
             this.pnContainer.Controls.Add(this.btAjouterCarte);
             this.pnContainer.Controls.Add(this.btHome);
             this.pnContainer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnContainer.Location = new System.Drawing.Point(1, 1);
             this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(200, 556);
+            this.pnContainer.Size = new System.Drawing.Size(200, 560);
             this.pnContainer.TabIndex = 4;
+            // 
+            // btClose
+            // 
+            this.btClose.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btClose.BackColor = System.Drawing.Color.Maroon;
+            this.btClose.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btClose.FlatAppearance.BorderSize = 0;
+            this.btClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
+            this.btClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btClose.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btClose.ForeColor = System.Drawing.Color.White;
+            this.btClose.Location = new System.Drawing.Point(0, 473);
+            this.btClose.Name = "btClose";
+            this.btClose.Size = new System.Drawing.Size(200, 87);
+            this.btClose.TabIndex = 3;
+            this.btClose.Text = "Quitter";
+            this.btClose.UseVisualStyleBackColor = false;
+            this.btClose.Click += new System.EventHandler(this.btClose_Click);
             // 
             // btChercherCarte
             // 
@@ -125,7 +146,7 @@ namespace YGO_Designer
             this.pnFormChild.BackColor = System.Drawing.Color.DimGray;
             this.pnFormChild.Location = new System.Drawing.Point(199, 1);
             this.pnFormChild.Name = "pnFormChild";
-            this.pnFormChild.Size = new System.Drawing.Size(784, 556);
+            this.pnFormChild.Size = new System.Drawing.Size(784, 560);
             this.pnFormChild.TabIndex = 5;
             // 
             // FormTemplate
@@ -139,6 +160,7 @@ namespace YGO_Designer
             this.Controls.Add(this.pnFormChild);
             this.Controls.Add(this.pnContainer);
             this.ForeColor = System.Drawing.SystemColors.Control;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormTemplate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -156,9 +178,10 @@ namespace YGO_Designer
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btAjouterCarte;
-        private System.Windows.Forms.Panel pnFormChild;
         private System.Windows.Forms.Button btChercherCarte;
         private System.Windows.Forms.Button Cher;
+        private System.Windows.Forms.Button btClose;
+        private System.Windows.Forms.Panel pnFormChild;
     }
 }
 

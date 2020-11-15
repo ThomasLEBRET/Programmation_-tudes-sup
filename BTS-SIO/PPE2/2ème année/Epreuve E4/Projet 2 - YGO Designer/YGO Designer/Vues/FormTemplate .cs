@@ -25,7 +25,7 @@ namespace YGO_Designer
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormAjouterCartes());
+            openChildForm(new FormHome());
         }
 
         private void btAjouterCarte_Click(object sender, EventArgs e)
@@ -54,7 +54,12 @@ namespace YGO_Designer
 
         private void FormTemplate_Load(object sender, EventArgs e)
         {
-            openChildForm(new FormAjouterCartes());
+            openChildForm(new FormHome());
+        }
+
+        private void btClose_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

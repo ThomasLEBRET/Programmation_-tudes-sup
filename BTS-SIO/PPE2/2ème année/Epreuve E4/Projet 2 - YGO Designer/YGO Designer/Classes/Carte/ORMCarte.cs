@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Windows.Forms;
 using YGO_Designer.Classes.ORM;
 
 namespace YGO_Designer.Classes.Carte
@@ -32,7 +33,7 @@ namespace YGO_Designer.Classes.Carte
         public static List<Effet> GetEffetsCarte(int noCarte)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
-            cmd.CommandText = "SELECT * FROM effet_carte WHERE NO_CARTE = @noCarte";
+            cmd.CommandText = "SELECT E.* FROM effet_carte EC, effet E, carte C WHERE C.NO_CARTE = EC.NO_CARTE AND C.NO_CARTE = @noCarte AND EC.CODE_EFFET = E.CODE_EFFET";
             cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = noCarte;
 
             List<Effet> lE = new List<Effet>();
@@ -43,13 +44,13 @@ namespace YGO_Designer.Classes.Carte
             return lE;
         }
 
-        public static Carte GetCarte(int noCarte)
+        public static Carte GetCarteByNo(int noCarte)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
             cmd.CommandText = "SELECT * FROM carte WHERE NO_CARTE = @noCarte";
 
             cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = noCarte;
-            
+
             Carte c = new Carte();
             string nom;
             Attribut attr = GetAttribut(noCarte);
@@ -82,6 +83,66 @@ namespace YGO_Designer.Classes.Carte
             }
             rdr.Close();
             return c;
+        }
+
+        public static List<Carte> GetCarteByPartialName(string partName)
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT NO_CARTE FROM carte WHERE NOM LIKE '%" + partName + "%'";
+            MySqlDataReader rdr = cmd.ExecuteReader();
+
+            List<List<Effet>> lE = new List<List<Effet>>();
+            List<Effet> lEc = new List<Effet>();
+            List<Attribut> lA = new List<Attribut>();
+            List<int> lN = new List<int>();
+
+            while (rdr.Read())
+                lN.Add(Convert.ToInt32(rdr["NO_CARTE"]));
+            rdr.Close();
+            for(int i = 0; i < lN.Count; i++)
+            {
+                lE.Add(GetEffetsCarte(lN[i]));
+                lA.Add(GetAttribut(lN[i]));
+            }
+            cmd.CommandText = "SELECT * FROM carte WHERE NOM LIKE '%" + partName + "%'";
+            List<Carte> lC = new List<Carte>();
+            Carte c = new Carte();
+            int no;
+            string nom;
+            string description;
+            Attribut at;
+
+            int cursorCard = 0;
+            rdr = cmd.ExecuteReader();
+            while (rdr.Read())
+            {
+                no = lN[cursorCard];
+                nom = (string)rdr["NOM"];
+                description = (string)rdr["DESCRIPTION"];
+                at = lA[cursorCard];
+                switch (lA[cursorCard].GetCdAttrCarte())
+                {
+                    case "MON":
+                        string typeMo = rdr["TYPE_MO"].ToString();
+                        string attrMo = rdr["ATTR_MO"].ToString();
+                        int nivMo = Convert.ToInt32(rdr["NIVEAU_MO"]);
+                        int atk = Convert.ToInt32(rdr["ATK"]);
+                        int def = Convert.ToInt32(rdr["DEF"]);
+                        string typeMoCarte = (string)rdr["TYPES_MONSTE_CARTE"];
+                        c = new Monstre(typeMo, attrMo, nivMo, atk, def, typeMoCarte, lE[cursorCard], no, at, nom, description);
+                        break;
+                    case "MAG":
+                        c = new Magie(lE[cursorCard], no, at, nom, description, (string)rdr["TYPE_MA"]);
+                        break;
+                    case "PIE":
+                        c = new Piege(lE[cursorCard], no, at, nom, description, (string)rdr["TYPE_PI"]);
+                        break;
+                }
+                lC.Add(c);
+                cursorCard++;
+            }
+            rdr.Close();
+            return lC;
         }
 
         public static List<Attribut> GetAttributs()

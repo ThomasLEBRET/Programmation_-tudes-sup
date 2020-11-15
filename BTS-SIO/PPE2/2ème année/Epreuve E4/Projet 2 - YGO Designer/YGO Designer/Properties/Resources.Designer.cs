@@ -61,12 +61,102 @@ namespace YGO_Designer.Properties {
         }
         
         /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Icon semblable à (Icône).
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Icon logoYgo {
+        internal static System.Drawing.Bitmap Continue {
+            get {
+                object obj = ResourceManager.GetObject("Continue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap divin {
+            get {
+                object obj = ResourceManager.GetObject("divin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap eau {
+            get {
+                object obj = ResourceManager.GetObject("eau", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Equipement {
+            get {
+                object obj = ResourceManager.GetObject("Equipement", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap feu {
+            get {
+                object obj = ResourceManager.GetObject("feu", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logoYgo {
             get {
                 object obj = ResourceManager.GetObject("logoYgo", resourceCulture);
-                return ((System.Drawing.Icon)(obj));
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap lumiere {
+            get {
+                object obj = ResourceManager.GetObject("lumiere", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magie {
+            get {
+                object obj = ResourceManager.GetObject("magie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap piege {
+            get {
+                object obj = ResourceManager.GetObject("piege", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Rituel {
+            get {
+                object obj = ResourceManager.GetObject("Rituel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -76,6 +166,46 @@ namespace YGO_Designer.Properties {
         internal static System.Drawing.Bitmap star {
             get {
                 object obj = ResourceManager.GetObject("star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tenebre {
+            get {
+                object obj = ResourceManager.GetObject("tenebre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Terrain {
+            get {
+                object obj = ResourceManager.GetObject("Terrain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap terre {
+            get {
+                object obj = ResourceManager.GetObject("terre", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap vent {
+            get {
+                object obj = ResourceManager.GetObject("vent", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

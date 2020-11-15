@@ -2,12 +2,13 @@
 {
     public enum AttributMonstre
     {
-        Bête_Divine,
-        Eau,
+        Divin,
+        Vent,
         Feu,
-        Lumière,
-        Ténèbres,
+        Eau,
         Terre,
-        Vent
+        Lumière,
+        Ténèbres
+        
     }
 }

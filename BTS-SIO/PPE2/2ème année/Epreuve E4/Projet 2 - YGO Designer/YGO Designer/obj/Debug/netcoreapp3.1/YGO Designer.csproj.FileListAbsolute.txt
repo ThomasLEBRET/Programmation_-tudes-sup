@@ -29,3 +29,5 @@ C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème ann
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormModel.resources
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormTemplate.resources
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormChercherCarte.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormLogin.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO Designer\obj\Debug\netcoreapp3.1\YGO_Designer.FormHome.resources

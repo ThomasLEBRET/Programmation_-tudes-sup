@@ -118,10 +118,49 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="logoYgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logoYgo.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="feu" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feu.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="lumiere" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\lumiere.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="vent" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\vent.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Continue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Continue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="eau" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eau.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Equipement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Equipement.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="terre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\terre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="piege" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\piege.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Rituel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Rituel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\star.PNG;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="tenebre" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\tenebre.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Terrain" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Terrain.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="magie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\magie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="divin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\divin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="logoYgo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logoYgo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

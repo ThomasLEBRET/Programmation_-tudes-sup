@@ -29,6 +29,8 @@ namespace YGO_Designer
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormChercherCarte));
             this.label7 = new System.Windows.Forms.Label();
             this.tbNoCarte = new System.Windows.Forms.TextBox();
             this.tbNomCarte = new System.Windows.Forms.TextBox();
@@ -37,9 +39,20 @@ namespace YGO_Designer
             this.btChercheParNom = new System.Windows.Forms.Button();
             this.lbCartes = new System.Windows.Forms.ListBox();
             this.paCarte = new System.Windows.Forms.Panel();
-            this.lbNom = new System.Windows.Forms.Label();
-            this.lbDescription = new System.Windows.Forms.Label();
+            this.pbTypeMP = new System.Windows.Forms.PictureBox();
+            this.lbMaPi = new System.Windows.Forms.Label();
+            this.lbDef = new System.Windows.Forms.Label();
+            this.lbAtk = new System.Windows.Forms.Label();
+            this.lbNv = new System.Windows.Forms.Label();
+            this.pbNv = new System.Windows.Forms.PictureBox();
+            this.pbAttr = new System.Windows.Forms.PictureBox();
+            this.rtbDescription = new System.Windows.Forms.RichTextBox();
+            this.rtbNom = new System.Windows.Forms.RichTextBox();
+            this.ilAttrib = new System.Windows.Forms.ImageList(this.components);
             this.paCarte.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTypeMP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNv)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAttr)).BeginInit();
             this.SuspendLayout();
             // 
             // label7
@@ -119,6 +132,7 @@ namespace YGO_Designer
             this.btChercheParNom.TabIndex = 13;
             this.btChercheParNom.Text = "Chercher par nom partiel";
             this.btChercheParNom.UseVisualStyleBackColor = false;
+            this.btChercheParNom.Click += new System.EventHandler(this.btChercheParNom_Click);
             // 
             // lbCartes
             // 
@@ -135,36 +149,147 @@ namespace YGO_Designer
             // 
             this.paCarte.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.paCarte.BackColor = System.Drawing.Color.DarkGray;
-            this.paCarte.Controls.Add(this.lbDescription);
-            this.paCarte.Controls.Add(this.lbNom);
+            this.paCarte.Controls.Add(this.pbTypeMP);
+            this.paCarte.Controls.Add(this.lbMaPi);
+            this.paCarte.Controls.Add(this.lbDef);
+            this.paCarte.Controls.Add(this.lbAtk);
+            this.paCarte.Controls.Add(this.lbNv);
+            this.paCarte.Controls.Add(this.pbNv);
+            this.paCarte.Controls.Add(this.pbAttr);
+            this.paCarte.Controls.Add(this.rtbDescription);
+            this.paCarte.Controls.Add(this.rtbNom);
+            this.paCarte.ForeColor = System.Drawing.Color.White;
             this.paCarte.Location = new System.Drawing.Point(630, 179);
             this.paCarte.Name = "paCarte";
             this.paCarte.Size = new System.Drawing.Size(308, 349);
             this.paCarte.TabIndex = 15;
             // 
-            // lbNom
+            // pbTypeMP
             // 
-            this.lbNom.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbNom.AutoSize = true;
-            this.lbNom.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbNom.ForeColor = System.Drawing.Color.White;
-            this.lbNom.Location = new System.Drawing.Point(10, 9);
-            this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(50, 23);
-            this.lbNom.TabIndex = 16;
-            this.lbNom.Text = "Nom";
+            this.pbTypeMP.BackColor = System.Drawing.Color.Transparent;
+            this.pbTypeMP.Location = new System.Drawing.Point(266, 120);
+            this.pbTypeMP.Name = "pbTypeMP";
+            this.pbTypeMP.Size = new System.Drawing.Size(30, 28);
+            this.pbTypeMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTypeMP.TabIndex = 20;
+            this.pbTypeMP.TabStop = false;
             // 
-            // lbDescription
+            // lbMaPi
             // 
-            this.lbDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbDescription.AutoSize = true;
-            this.lbDescription.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbDescription.ForeColor = System.Drawing.Color.White;
-            this.lbDescription.Location = new System.Drawing.Point(10, 67);
-            this.lbDescription.Name = "lbDescription";
-            this.lbDescription.Size = new System.Drawing.Size(103, 23);
-            this.lbDescription.TabIndex = 17;
-            this.lbDescription.Text = "Description";
+            this.lbMaPi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbMaPi.AutoSize = true;
+            this.lbMaPi.BackColor = System.Drawing.Color.Transparent;
+            this.lbMaPi.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbMaPi.ForeColor = System.Drawing.Color.Black;
+            this.lbMaPi.Location = new System.Drawing.Point(108, 117);
+            this.lbMaPi.Name = "lbMaPi";
+            this.lbMaPi.Size = new System.Drawing.Size(137, 23);
+            this.lbMaPi.TabIndex = 19;
+            this.lbMaPi.Text = "[CARTE MAGIE]";
+            // 
+            // lbDef
+            // 
+            this.lbDef.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbDef.AutoSize = true;
+            this.lbDef.BackColor = System.Drawing.Color.Transparent;
+            this.lbDef.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbDef.ForeColor = System.Drawing.Color.Black;
+            this.lbDef.Location = new System.Drawing.Point(195, 316);
+            this.lbDef.Name = "lbDef";
+            this.lbDef.Size = new System.Drawing.Size(50, 23);
+            this.lbDef.TabIndex = 18;
+            this.lbDef.Text = "DEF/ ";
+            // 
+            // lbAtk
+            // 
+            this.lbAtk.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbAtk.AutoSize = true;
+            this.lbAtk.BackColor = System.Drawing.Color.Transparent;
+            this.lbAtk.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbAtk.ForeColor = System.Drawing.Color.Black;
+            this.lbAtk.Location = new System.Drawing.Point(19, 316);
+            this.lbAtk.Name = "lbAtk";
+            this.lbAtk.Size = new System.Drawing.Size(52, 23);
+            this.lbAtk.TabIndex = 17;
+            this.lbAtk.Text = "ATK/ ";
+            // 
+            // lbNv
+            // 
+            this.lbNv.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbNv.AutoSize = true;
+            this.lbNv.BackColor = System.Drawing.Color.Transparent;
+            this.lbNv.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lbNv.ForeColor = System.Drawing.Color.Black;
+            this.lbNv.Location = new System.Drawing.Point(201, 11);
+            this.lbNv.Name = "lbNv";
+            this.lbNv.Size = new System.Drawing.Size(16, 23);
+            this.lbNv.TabIndex = 16;
+            this.lbNv.Text = "1";
+            // 
+            // pbNv
+            // 
+            this.pbNv.BackColor = System.Drawing.Color.Transparent;
+            this.pbNv.Image = ((System.Drawing.Image)(resources.GetObject("pbNv.Image")));
+            this.pbNv.Location = new System.Drawing.Point(224, 15);
+            this.pbNv.Name = "pbNv";
+            this.pbNv.Size = new System.Drawing.Size(21, 19);
+            this.pbNv.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbNv.TabIndex = 3;
+            this.pbNv.TabStop = false;
+            // 
+            // pbAttr
+            // 
+            this.pbAttr.BackColor = System.Drawing.Color.Transparent;
+            this.pbAttr.Location = new System.Drawing.Point(266, 0);
+            this.pbAttr.Name = "pbAttr";
+            this.pbAttr.Size = new System.Drawing.Size(42, 43);
+            this.pbAttr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAttr.TabIndex = 2;
+            this.pbAttr.TabStop = false;
+            // 
+            // rtbDescription
+            // 
+            this.rtbDescription.BackColor = System.Drawing.Color.White;
+            this.rtbDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbDescription.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.rtbDescription.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rtbDescription.Location = new System.Drawing.Point(19, 151);
+            this.rtbDescription.Name = "rtbDescription";
+            this.rtbDescription.ReadOnly = true;
+            this.rtbDescription.Size = new System.Drawing.Size(270, 162);
+            this.rtbDescription.TabIndex = 1;
+            this.rtbDescription.Text = "";
+            // 
+            // rtbNom
+            // 
+            this.rtbNom.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.rtbNom.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.rtbNom.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.rtbNom.Location = new System.Drawing.Point(19, 49);
+            this.rtbNom.Name = "rtbNom";
+            this.rtbNom.ReadOnly = true;
+            this.rtbNom.Size = new System.Drawing.Size(270, 65);
+            this.rtbNom.TabIndex = 0;
+            this.rtbNom.Text = "";
+            // 
+            // ilAttrib
+            // 
+            this.ilAttrib.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.ilAttrib.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("ilAttrib.ImageStream")));
+            this.ilAttrib.TransparentColor = System.Drawing.Color.Transparent;
+            this.ilAttrib.Images.SetKeyName(0, "divin.png");
+            this.ilAttrib.Images.SetKeyName(1, "vent.png");
+            this.ilAttrib.Images.SetKeyName(2, "feu.png");
+            this.ilAttrib.Images.SetKeyName(3, "eau.png");
+            this.ilAttrib.Images.SetKeyName(4, "terre.png");
+            this.ilAttrib.Images.SetKeyName(5, "lumiere.png");
+            this.ilAttrib.Images.SetKeyName(6, "tenebre.png");
+            this.ilAttrib.Images.SetKeyName(7, "Continue.png");
+            this.ilAttrib.Images.SetKeyName(8, "Equipement.png");
+            this.ilAttrib.Images.SetKeyName(9, "magie.png");
+            this.ilAttrib.Images.SetKeyName(10, "piege.png");
+            this.ilAttrib.Images.SetKeyName(11, "Rituel.png");
+            this.ilAttrib.Images.SetKeyName(12, "Terrain.png");
             // 
             // FormChercherCarte
             // 
@@ -187,6 +312,9 @@ namespace YGO_Designer
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.paCarte.ResumeLayout(false);
             this.paCarte.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbTypeMP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbNv)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAttr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -201,8 +329,16 @@ namespace YGO_Designer
         private System.Windows.Forms.Button btChercheParNom;
         private System.Windows.Forms.ListBox lbCartes;
         private System.Windows.Forms.Panel paCarte;
-        private System.Windows.Forms.Label lbNom;
-        private System.Windows.Forms.Label lbDescription;
+        private System.Windows.Forms.RichTextBox rtbDescription;
+        private System.Windows.Forms.RichTextBox rtbNom;
+        private System.Windows.Forms.ImageList ilAttrib;
+        private System.Windows.Forms.Label lbNv;
+        private System.Windows.Forms.PictureBox pbNv;
+        private System.Windows.Forms.PictureBox pbAttr;
+        private System.Windows.Forms.Label lbDef;
+        private System.Windows.Forms.Label lbAtk;
+        private System.Windows.Forms.Label lbMaPi;
+        private System.Windows.Forms.PictureBox pbTypeMP;
     }
 }
 

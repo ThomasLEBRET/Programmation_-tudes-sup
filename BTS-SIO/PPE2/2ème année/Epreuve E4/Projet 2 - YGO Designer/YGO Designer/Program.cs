@@ -17,7 +17,8 @@ namespace YGO_Designer
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormTemplate());
+            new FormLogin().Show();
+            Application.Run();
         }
     }
 }
