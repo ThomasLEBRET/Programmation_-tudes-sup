@@ -390,9 +390,9 @@ namespace YGO_Designer
             this.rbRituelle.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbRituelle.Location = new System.Drawing.Point(15, 111);
             this.rbRituelle.Name = "rbRituelle";
-            this.rbRituelle.Size = new System.Drawing.Size(76, 27);
+            this.rbRituelle.Size = new System.Drawing.Size(91, 27);
             this.rbRituelle.TabIndex = 3;
-            this.rbRituelle.Text = "Rituel";
+            this.rbRituelle.Text = "Rituelle";
             this.rbRituelle.UseVisualStyleBackColor = true;
             // 
             // rbContinue
@@ -401,9 +401,9 @@ namespace YGO_Designer
             this.rbContinue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.rbContinue.Location = new System.Drawing.Point(454, 47);
             this.rbContinue.Name = "rbContinue";
-            this.rbContinue.Size = new System.Drawing.Size(92, 27);
+            this.rbContinue.Size = new System.Drawing.Size(102, 27);
             this.rbContinue.TabIndex = 2;
-            this.rbContinue.Text = "Continu";
+            this.rbContinue.Text = "Continue";
             this.rbContinue.UseVisualStyleBackColor = true;
             // 
             // rbQuick

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: mysql-omuzoki.alwaysdata.net
--- Generation Time: Nov 14, 2020 at 10:47 PM
+-- Generation Time: Nov 15, 2020 at 10:40 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.29
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `ygo`
+-- Database: `omuzoki_ygodesigner`
 --
 
 -- --------------------------------------------------------
@@ -56,8 +56,8 @@ CREATE TABLE `carte` (
   `TYPE_MO` varchar(128) DEFAULT NULL,
   `ATTR_MO` varchar(128) DEFAULT NULL,
   `NIVEAU_MO` smallint(6) DEFAULT NULL,
-  `ATK` int(4) NOT NULL,
-  `DEF` int(4) NOT NULL,
+  `ATK` int(4) DEFAULT NULL,
+  `DEF` int(4) DEFAULT NULL,
   `TYPES_MONSTE_CARTE` varchar(50) DEFAULT NULL,
   `TYPE_MA` varchar(128) DEFAULT NULL,
   `TYPE_PI` varchar(128) DEFAULT NULL
@@ -68,7 +68,9 @@ CREATE TABLE `carte` (
 --
 
 INSERT INTO `carte` (`NO_CARTE`, `CODE_ATTR_CARTE`, `NOM`, `DESCRIPTION`, `TYPE_MO`, `ATTR_MO`, `NIVEAU_MO`, `ATK`, `DEF`, `TYPES_MONSTE_CARTE`, `TYPE_MA`, `TYPE_PI`) VALUES
-(11012154, 'MON', 'Justicia Dragarde', 'L\'avenir du Monde dépend des Dragardes nés de l\'Héritage du Monde.', 'Dragon', 'Eau', 2, 0, 2100, 'Syntoniseur', NULL, NULL);
+(11012154, 'MON', 'Justicia Dragarde', 'L\'avenir du Monde dépend des Dragardes nés de l\'Héritage du Monde.L\'avenir du Monde dépend des Dragardes nés de l\'Héritage du Monde.L\'avenir du Monde dépend des Dragardes nés de l\'Héritage du Monde.L\'avenir du Monde dépend des Dragardes nés de l\'Héritage du Monde.L\'avenir du Monde dépend des Dragardes nés de l\'Héritage du Monde.', 'Dragon', 'Eau', 2, 0, 2100, 'Syntoniseur', NULL, NULL),
+(73628505, 'MAG', 'Terra Formation', 'Ajouter 1 Magie de Terrain depuis votre Deck à votre main.', NULL, NULL, NULL, NULL, NULL, NULL, 'Normal', NULL),
+(89208725, 'PIE', 'Métavers', 'Prenez 1 Magie de Terrain depuis votre Deck, et soit activez-la soit ajoutez-la à votre main.', NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Normal');
 
 -- --------------------------------------------------------
 
@@ -134,6 +136,14 @@ CREATE TABLE `effet_carte` (
   `NO_CARTE` bigint(12) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `effet_carte`
+--
+
+INSERT INTO `effet_carte` (`CODE_EFFET`, `NO_CARTE`) VALUES
+('DECTOMAI', 73628505),
+('DECTOMAI', 89208725);
+
 -- --------------------------------------------------------
 
 --
@@ -181,6 +191,14 @@ CREATE TABLE `type_user` (
   `NOM_TYPE` char(32) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+--
+-- Dumping data for table `type_user`
+--
+
+INSERT INTO `type_user` (`CD_TYPE`, `NOM_TYPE`) VALUES
+('ADM', 'Administrateur'),
+('JOU', 'Joueur');
+
 -- --------------------------------------------------------
 
 --
@@ -192,6 +210,13 @@ CREATE TABLE `utilisateur` (
   `CD_TYPE` char(32) NOT NULL,
   `MDP` varchar(128) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `utilisateur`
+--
+
+INSERT INTO `utilisateur` (`USER`, `CD_TYPE`, `MDP`) VALUES
+('Thomas', 'ADM', 'test');
 
 --
 -- Indexes for dumped tables

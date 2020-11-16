@@ -167,10 +167,10 @@ namespace YGO_Designer
             // pbTypeMP
             // 
             this.pbTypeMP.BackColor = System.Drawing.Color.Transparent;
-            this.pbTypeMP.Location = new System.Drawing.Point(266, 120);
+            this.pbTypeMP.Location = new System.Drawing.Point(266, 117);
             this.pbTypeMP.Name = "pbTypeMP";
             this.pbTypeMP.Size = new System.Drawing.Size(30, 28);
-            this.pbTypeMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbTypeMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbTypeMP.TabIndex = 20;
             this.pbTypeMP.TabStop = false;
             // 
@@ -242,8 +242,8 @@ namespace YGO_Designer
             this.pbAttr.BackColor = System.Drawing.Color.Transparent;
             this.pbAttr.Location = new System.Drawing.Point(266, 0);
             this.pbAttr.Name = "pbAttr";
-            this.pbAttr.Size = new System.Drawing.Size(42, 43);
-            this.pbAttr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAttr.Size = new System.Drawing.Size(40, 40);
+            this.pbAttr.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbAttr.TabIndex = 2;
             this.pbAttr.TabStop = false;
             // 

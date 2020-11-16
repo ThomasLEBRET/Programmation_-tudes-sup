@@ -153,9 +153,9 @@ namespace YGO_Designer.Properties {
         /// <summary>
         ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Rituel {
+        internal static System.Drawing.Bitmap Rituelle {
             get {
-                object obj = ResourceManager.GetObject("Rituel", resourceCulture);
+                object obj = ResourceManager.GetObject("Rituelle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

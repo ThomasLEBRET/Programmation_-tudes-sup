@@ -44,9 +44,9 @@ namespace YGO_Designer
             string typeMoCa = mo.GetTypesCarteMonstre();
             if (mo.GetListEffets().Count() != 0)
                 typeMoCa = typeMoCa + "/Effet";
-            rtbDescription.Text = typeMoCa;
+            rtbDescription.Text = typeMoCa + "\n";
             rtbDescription.SelectionStart = rtbDescription.Text.Length;
-            rtbDescription.SelectionFont = new Font("Candara", 14, FontStyle.Bold);
+            rtbDescription.SelectionFont = new Font("Candara", 14, FontStyle.Regular);
             rtbDescription.AppendText(mo.GetDescription());
             rtbDescription.BackColor = Color.BurlyWood;
             rtbDescription.Show();
@@ -68,10 +68,19 @@ namespace YGO_Designer
             rtbDescription.Show();
             lbMaPi.Text = "[CARTE MAGIE]";
             lbMaPi.Show();
+
             string st = ma.GetAttr().GetNomAttrCarte().ToLower() + ".png";
             int index = ilAttrib.Images.IndexOfKey(st);
             pbAttr.Image = ilAttrib.Images[index];
             pbAttr.Show();
+
+            if(ma.GetNomTypeMa() != "Normal")
+            {
+                st = ma.GetNomTypeMa() + ".png";
+                index = ilAttrib.Images.IndexOfKey(st);
+                pbTypeMP.Image = ilAttrib.Images[index];
+                pbTypeMP.Show();
+            }
         }
 
         private void DisplayTrap(Piege pi)

@@ -142,7 +142,7 @@
   <data name="piege" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\piege.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Rituel" type="System.Resources.ResXFileRef, System.Windows.Forms">
+  <data name="Rituelle" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Rituel.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="star" type="System.Resources.ResXFileRef, System.Windows.Forms">
