@@ -5598,11 +5598,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\TPORM.csproj",
+      "projectUniqueName": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPMySql_LEBRET\\TPORM\\TPORM.csproj",
       "projectName": "TPORM",
-      "projectPath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\TPORM.csproj",
+      "projectPath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPMySql_LEBRET\\TPORM\\TPORM.csproj",
       "packagesPath": "C:\\Users\\Thomas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPORM\\TPORM\\obj\\",
+      "outputPath": "C:\\Users\\Thomas\\Documents\\GitHub\\programmation_etudes-sup\\BTS-SIO\\CSharp2\\2ème année\\TD\\MySqlPlat\\TPMySql_LEBRET\\TPORM\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Thomas\\AppData\\Roaming\\NuGet\\NuGet.Config",

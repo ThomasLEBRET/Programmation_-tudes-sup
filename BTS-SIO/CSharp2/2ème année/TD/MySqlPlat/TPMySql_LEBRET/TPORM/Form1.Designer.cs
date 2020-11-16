@@ -53,6 +53,7 @@
             this.tbCal = new System.Windows.Forms.TextBox();
             this.btQuitter = new System.Windows.Forms.Button();
             this.lbConnexion = new System.Windows.Forms.Label();
+            this.btValidModif = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btConnexion
@@ -315,11 +316,23 @@
             this.lbConnexion.TabIndex = 11;
             this.lbConnexion.Text = "Connection fermée";
             // 
+            // btValidModif
+            // 
+            this.btValidModif.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.btValidModif.Location = new System.Drawing.Point(610, 340);
+            this.btValidModif.Name = "btValidModif";
+            this.btValidModif.Size = new System.Drawing.Size(159, 52);
+            this.btValidModif.TabIndex = 12;
+            this.btValidModif.Text = "Valider les modifications";
+            this.btValidModif.UseVisualStyleBackColor = true;
+            this.btValidModif.Click += new System.EventHandler(this.btValidModif_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btValidModif);
             this.Controls.Add(this.lbConnexion);
             this.Controls.Add(this.btQuitter);
             this.Controls.Add(this.tbCal);
@@ -382,6 +395,7 @@
         private System.Windows.Forms.TextBox tbCal;
         private System.Windows.Forms.Button btQuitter;
         private System.Windows.Forms.Label lbConnexion;
+        private System.Windows.Forms.Button btValidModif;
     }
 }
 

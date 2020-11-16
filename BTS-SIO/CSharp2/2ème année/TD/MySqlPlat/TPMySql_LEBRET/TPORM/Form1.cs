@@ -8,6 +8,8 @@ namespace TPORM
 {
     public partial class Form1 : Form
     {
+
+        private List<Plat> listePlatsModif;
         public Form1()
         {
             InitializeComponent();
@@ -16,6 +18,7 @@ namespace TPORM
                 lbConnexion.Text = "Connection ouverte";
             cbCat.DataSource = ORMPlats.GetCategories();
             cbCategoriePlat.DataSource = Enum.GetValues(typeof(Categorie));
+            listePlatsModif = new List<Plat>();
         }
 
         private void btConnexion_Click(object sender, EventArgs e)
@@ -96,6 +99,12 @@ namespace TPORM
             string prix = tbPrix.Text;
             string cal = tbCal.Text;
 
+            if(!string.IsNullOrEmpty(tbNom.Text))
+            {
+                MessageBox.Show("Vous ne pouvez pas modifier le nom d'un plat");
+                return;
+            }
+
             if (!string.IsNullOrEmpty(prix))
                 p.SetPrix(Convert.ToInt16(prix));
 
@@ -113,11 +122,8 @@ namespace TPORM
                 p.SetGlutenFree(false);
 
             p.SetCategorie(categorie);
-
-            if (ORMPlats.ModifierPlat(p))
-                MessageBox.Show("Votre plat a bien été modifié !");
-            else
-                MessageBox.Show("Votre plat n'a pas pu être modifié");
+            listePlatsModif.Add(p);
+            MessageBox.Show("Les modifications sont bien prises en compte");
         }
 
         private void btPlatMoinsCher_Click(object sender, EventArgs e)
@@ -153,6 +159,21 @@ namespace TPORM
         private void btPlatPlusCal_Click(object sender, EventArgs e)
         {
             MessageBox.Show("Le plat le plus calorique de notre carte est :\n " + ORMPlats.GetPlatPlusCalorique()); 
+        }
+
+        private void btValidModif_Click(object sender, EventArgs e)
+        {
+            if (listePlatsModif.Count > 0)
+            {
+                foreach (Plat p in listePlatsModif)
+                    if (!ORMPlats.ModifierPlat(p))
+                        MessageBox.Show("Le plat " + p.ToString() + " n'a pas pu être modifié");
+                    else
+                        MessageBox.Show("Le plat " + p.ToString() + " a été modifié");
+                listePlatsModif.Clear();
+            }
+            else
+                MessageBox.Show("Il faut modifier au moins 1 plat avant de pouvoir valider les modifications");
         }
     }
 }
