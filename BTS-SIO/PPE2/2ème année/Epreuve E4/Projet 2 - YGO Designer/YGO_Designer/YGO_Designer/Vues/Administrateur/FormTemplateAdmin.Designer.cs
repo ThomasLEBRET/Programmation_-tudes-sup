@@ -1,7 +1,7 @@
 ﻿
 namespace YGO_Designer
 {
-    partial class FormTemplate
+    partial class FormTemplateAdmin
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,7 +29,7 @@ namespace YGO_Designer
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTemplate));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTemplateAdmin));
             this.pnContainer = new System.Windows.Forms.Panel();
             this.btClose = new System.Windows.Forms.Button();
             this.btChercherCarte = new System.Windows.Forms.Button();
@@ -53,7 +53,7 @@ namespace YGO_Designer
             this.pnContainer.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnContainer.Location = new System.Drawing.Point(1, 1);
             this.pnContainer.Name = "pnContainer";
-            this.pnContainer.Size = new System.Drawing.Size(200, 560);
+            this.pnContainer.Size = new System.Drawing.Size(171, 485);
             this.pnContainer.TabIndex = 4;
             // 
             // btClose
@@ -65,11 +65,11 @@ namespace YGO_Designer
             this.btClose.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Black;
             this.btClose.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btClose.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btClose.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold);
             this.btClose.ForeColor = System.Drawing.Color.White;
-            this.btClose.Location = new System.Drawing.Point(0, 473);
+            this.btClose.Location = new System.Drawing.Point(-17, 410);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(200, 87);
+            this.btClose.Size = new System.Drawing.Size(188, 82);
             this.btClose.TabIndex = 3;
             this.btClose.Text = "Quitter";
             this.btClose.UseVisualStyleBackColor = false;
@@ -83,11 +83,11 @@ namespace YGO_Designer
             this.btChercherCarte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btChercherCarte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btChercherCarte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btChercherCarte.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btChercherCarte.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold);
             this.btChercherCarte.ForeColor = System.Drawing.Color.White;
-            this.btChercherCarte.Location = new System.Drawing.Point(0, 186);
+            this.btChercherCarte.Location = new System.Drawing.Point(0, 161);
             this.btChercherCarte.Name = "btChercherCarte";
-            this.btChercherCarte.Size = new System.Drawing.Size(200, 87);
+            this.btChercherCarte.Size = new System.Drawing.Size(171, 75);
             this.btChercherCarte.TabIndex = 2;
             this.btChercherCarte.Text = "Chercher une carte";
             this.btChercherCarte.UseVisualStyleBackColor = false;
@@ -101,13 +101,13 @@ namespace YGO_Designer
             this.btAjouterCarte.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btAjouterCarte.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btAjouterCarte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btAjouterCarte.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btAjouterCarte.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Bold);
             this.btAjouterCarte.ForeColor = System.Drawing.Color.White;
-            this.btAjouterCarte.Location = new System.Drawing.Point(0, 93);
+            this.btAjouterCarte.Location = new System.Drawing.Point(0, 81);
             this.btAjouterCarte.Name = "btAjouterCarte";
-            this.btAjouterCarte.Size = new System.Drawing.Size(200, 87);
+            this.btAjouterCarte.Size = new System.Drawing.Size(171, 75);
             this.btAjouterCarte.TabIndex = 1;
-            this.btAjouterCarte.Text = "Ajouter / Modifier une carte";
+            this.btAjouterCarte.Text = "Ajouter une carte";
             this.btAjouterCarte.UseVisualStyleBackColor = false;
             this.btAjouterCarte.Click += new System.EventHandler(this.btAjouterCarte_Click);
             // 
@@ -119,11 +119,11 @@ namespace YGO_Designer
             this.btHome.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gray;
             this.btHome.FlatAppearance.MouseOverBackColor = System.Drawing.Color.DimGray;
             this.btHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btHome.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btHome.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold);
             this.btHome.ForeColor = System.Drawing.Color.White;
             this.btHome.Location = new System.Drawing.Point(0, 0);
             this.btHome.Name = "btHome";
-            this.btHome.Size = new System.Drawing.Size(200, 87);
+            this.btHome.Size = new System.Drawing.Size(171, 75);
             this.btHome.TabIndex = 0;
             this.btHome.Text = "Home";
             this.btHome.UseVisualStyleBackColor = false;
@@ -143,26 +143,26 @@ namespace YGO_Designer
             this.pnFormChild.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnFormChild.BackColor = System.Drawing.Color.DimGray;
-            this.pnFormChild.Location = new System.Drawing.Point(199, 1);
+            this.pnFormChild.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(107)))));
+            this.pnFormChild.Location = new System.Drawing.Point(171, 1);
             this.pnFormChild.Name = "pnFormChild";
-            this.pnFormChild.Size = new System.Drawing.Size(784, 560);
+            this.pnFormChild.Size = new System.Drawing.Size(672, 485);
             this.pnFormChild.TabIndex = 5;
             // 
-            // FormTemplate
+            // FormTemplateAdmin
             // 
             this.AccessibleRole = System.Windows.Forms.AccessibleRole.OutlineButton;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(1)))), ((int)(((byte)(0)))), ((int)(((byte)(60)))));
-            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.ClientSize = new System.Drawing.Size(843, 486);
             this.Controls.Add(this.pnFormChild);
             this.Controls.Add(this.pnContainer);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "FormTemplate";
+            this.Name = "FormTemplateAdmin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YGO Designer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;

@@ -39,12 +39,10 @@ while($ligne = $anims->fetch(PDO::FETCH_ASSOC)):
             <?php
             if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
                 require('view/animation/updateAnimation.php');
-                require('view/animation/deleteAnimation.php');
-                if(!empty($updateAnim) && !empty($deleteAnim)) {
-                    echo $updateAnim, $deleteAnim;
+                if(!empty($updateAnim)) {
+                    echo $updateAnim;
                 }
                 require('view/animation/components/btModifier.php');
-                require('view/animation/components/btSupprimer.php');
             }
             ?>
         </div>

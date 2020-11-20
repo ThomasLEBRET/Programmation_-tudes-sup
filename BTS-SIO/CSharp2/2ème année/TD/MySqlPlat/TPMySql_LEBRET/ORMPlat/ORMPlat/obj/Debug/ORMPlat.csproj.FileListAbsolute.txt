@@ -1,0 +1,18 @@
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\bin\Debug\ORMPlat.exe.config
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\obj\Debug\ORMPlat.Properties.Resources.resources
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\obj\Debug\ORMPlat.csproj.GenerateResource.Cache
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\obj\Debug\ORMPlat.csprojResolveAssemblyReference.cache
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\bin\Debug\ORMPlat.exe
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\bin\Debug\ORMPlat.pdb
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\bin\Debug\MySql.Data.dll
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\obj\Debug\ORMPlat.exe
+c:\users\thomas\documents\visual studio 2013\Projects\ORMPlat\ORMPlat\obj\Debug\ORMPlat.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\bin\Debug\ORMPlat.exe.config
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\obj\Debug\ORMPlat.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\obj\Debug\ORMPlat.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\bin\Debug\ORMPlat.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\bin\Debug\ORMPlat.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\bin\Debug\MySql.Data.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\obj\Debug\ORMPlat.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\obj\Debug\ORMPlat.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\MySqlPlat\TPMySql_LEBRET\ORMPlat\ORMPlat\obj\Debug\ORMPlat.csproj.GenerateResource.Cache

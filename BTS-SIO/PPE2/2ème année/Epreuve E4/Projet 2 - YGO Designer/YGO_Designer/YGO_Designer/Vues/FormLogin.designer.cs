@@ -46,7 +46,7 @@ namespace YGO_Designer
             this.lbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.lbUserName.AutoSize = true;
             this.lbUserName.Font = new System.Drawing.Font("Candara", 18F, System.Drawing.FontStyle.Bold);
-            this.lbUserName.Location = new System.Drawing.Point(192, 96);
+            this.lbUserName.Location = new System.Drawing.Point(192, 134);
             this.lbUserName.Name = "lbUserName";
             this.lbUserName.Size = new System.Drawing.Size(191, 29);
             this.lbUserName.TabIndex = 0;
@@ -66,21 +66,24 @@ namespace YGO_Designer
             // tbUserName
             // 
             this.tbUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tbUserName.Font = new System.Drawing.Font("Candara Light", 14.25F);
-            this.tbUserName.Location = new System.Drawing.Point(404, 94);
+            this.tbUserName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbUserName.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbUserName.Location = new System.Drawing.Point(404, 139);
             this.tbUserName.Name = "tbUserName";
-            this.tbUserName.Size = new System.Drawing.Size(208, 31);
+            this.tbUserName.Size = new System.Drawing.Size(208, 24);
             this.tbUserName.TabIndex = 2;
             // 
             // tbPassword
             // 
             this.tbPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.tbPassword.Font = new System.Drawing.Font("Candara Light", 14.25F);
+            this.tbPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tbPassword.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbPassword.Location = new System.Drawing.Point(404, 207);
             this.tbPassword.Name = "tbPassword";
             this.tbPassword.PasswordChar = '*';
-            this.tbPassword.Size = new System.Drawing.Size(208, 31);
+            this.tbPassword.Size = new System.Drawing.Size(208, 24);
             this.tbPassword.TabIndex = 3;
+            this.tbPassword.UseSystemPasswordChar = true;
             // 
             // btLogin
             // 
@@ -131,9 +134,9 @@ namespace YGO_Designer
             this.btClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btClose.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btClose.Location = new System.Drawing.Point(10, 426);
+            this.btClose.Location = new System.Drawing.Point(-2, 426);
             this.btClose.Name = "btClose";
-            this.btClose.Size = new System.Drawing.Size(169, 49);
+            this.btClose.Size = new System.Drawing.Size(181, 62);
             this.btClose.TabIndex = 6;
             this.btClose.Text = "Quitter";
             this.btClose.UseVisualStyleBackColor = false;

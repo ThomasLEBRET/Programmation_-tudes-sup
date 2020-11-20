@@ -30,7 +30,7 @@ namespace YGO_Designer.Classes.Carte
             else
             {
                 Monstre m = (Monstre)obj;
-                return no == m.no;
+                return this.GetNo() == m.GetNo();
             }
         }
 

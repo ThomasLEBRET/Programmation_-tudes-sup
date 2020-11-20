@@ -6,11 +6,11 @@ namespace YGO_Designer.Classes.Carte
 {
     public class Carte
     {
-        protected int no; //PK
-        protected Attribut attr; 
-        protected string nom;
-        protected string description;
-        protected List<Effet> eff;
+        private int no; //PK
+        private Attribut attr; 
+        private string nom;
+        private string description;
+        private List<Effet> eff;
 
         public Carte()
         {
@@ -44,7 +44,7 @@ namespace YGO_Designer.Classes.Carte
 
         public override string ToString()
         {
-            return this.nom;
+            return this.no + " : " + this.attr + " " + this.nom ;
         }
 
         public List<Effet> GetListEffets()

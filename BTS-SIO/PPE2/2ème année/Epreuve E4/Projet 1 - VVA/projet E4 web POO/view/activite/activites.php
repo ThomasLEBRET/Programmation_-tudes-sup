@@ -13,7 +13,7 @@ while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
       <p class="card-text">Départ à <?= $ligne['hourDebAct'].'h'.$ligne['minDebAct'] ?></p>
       <?php
       if(!empty(SESSION::get('USER'))) {
-        if($this->activite->estInscritActivite(Session::get('USER'), $cdAnimation))
+        if($this->activite->estInscritActivite(Session::get('USER'), $cdAnimation, $this->activite->getNoact()))
           require("components/btDesinscription.php");
         else
           require("components/btInscription.php");
@@ -23,6 +23,7 @@ while($ligne = $activites->fetch(PDO::FETCH_ASSOC)) {
       if(!empty($btn)) {
         echo $btn;
       }
+      
       ?>
     </div>
   </div>

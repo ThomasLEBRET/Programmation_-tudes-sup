@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace YGO_Designer.Classes.ORM.Properties {
+namespace ORMPlat.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "16.8.1.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.VisualStudio.Editors.SettingsDesigner.SettingsSingleFileGenerator", "12.0.0.0")]
     internal sealed partial class Settings : global::System.Configuration.ApplicationSettingsBase {
         
         private static Settings defaultInstance = ((Settings)(global::System.Configuration.ApplicationSettingsBase.Synchronized(new Settings())));
@@ -25,20 +25,10 @@ namespace YGO_Designer.Classes.ORM.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=;database=ygo;")]
-        public string sConnection {
+        [global::System.Configuration.DefaultSettingValueAttribute("server=localhost;user=root;password=;database=dbRestaurant;")]
+        public string sConn {
             get {
-                return ((string)(this["sConnection"]));
-            }
-        }
-        
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("server=mysql-omuzoki.alwaysdata.net;user=omuzoki;password=##THlb0302##;database=o" +
-            "muzoki_ygodesigner;")]
-        public string loginDist {
-            get {
-                return ((string)(this["loginDist"]));
+                return ((string)(this["sConn"]));
             }
         }
     }

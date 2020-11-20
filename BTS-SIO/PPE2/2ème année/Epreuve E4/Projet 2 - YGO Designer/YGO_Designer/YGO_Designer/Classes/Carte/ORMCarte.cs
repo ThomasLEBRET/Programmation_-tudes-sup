@@ -9,6 +9,32 @@ namespace YGO_Designer.Classes.Carte
 {
     public static class ORMCarte
     {
+        public static int GetNbCartes()
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT Count(*) FROM carte";
+            return Convert.ToInt32(cmd.ExecuteScalar());
+        }
+        public static int GetNbCartesMonstre()
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT Count(*) FROM carte WHERE CODE_ATTR_CARTE = 'MON'";
+            return ((Convert.ToInt32(cmd.ExecuteScalar()) * 100) / GetNbCartes());
+        }
+
+        public static int GetNbCartesMagie()
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT Count(*) FROM carte WHERE CODE_ATTR_CARTE = 'MAG'";
+            return ((Convert.ToInt32(cmd.ExecuteScalar()) * 100) / GetNbCartes());
+        }
+
+        public static int GetNbCartesPiege()
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT Count(*) FROM carte WHERE CODE_ATTR_CARTE = 'PIE'";
+            return ((Convert.ToInt32(cmd.ExecuteScalar()) * 100) / GetNbCartes());
+        }
         public static bool ExistCard(Carte c)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
@@ -16,6 +42,15 @@ namespace YGO_Designer.Classes.Carte
             cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = c.GetNo();
 
             return  Convert.ToInt32(cmd.ExecuteScalar()) == 1;
+        }
+
+        public static bool DeleteCard(Carte c)
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "DELETE FROM carte WHERE NO_CARTE = @noC";
+            cmd.Parameters.Add("@noC", MySqlDbType.Int16).Value = c.GetNo();
+
+            return Convert.ToInt32(cmd.ExecuteNonQuery()) == 1;
         }
 
         public static List<Effet> GetEffets()

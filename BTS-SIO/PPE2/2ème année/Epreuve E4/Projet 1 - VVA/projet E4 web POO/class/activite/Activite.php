@@ -121,17 +121,43 @@ class Activite extends Database {
   /**
    * Construit un objet grâce à ses mutateurs associés
    * @param  array  $params une liste de paramètres correspondant aux champs associés à l'entité de l'objet et aux noms de mutateurs
-   * @return bool   retourne toujours vrai
+   * @return Activite   retourne l'objet créé $this
    */
   public function buildObject(array $params) {
     foreach ($params as $key => $value) {
       $method = 'set'.ucfirst(strtolower($key));
-      if(method_exists($this, $method)) {
-        $this->$method($value);
-        $_SESSION[$key] = $value;
+      if(!empty($value)) {
+        if(method_exists($this, $method)) {
+          $this->$method($value);
+        }
       }
     }
     return $this;
+  }
+
+
+  public function ajouteActivite($cdAnim) {
+    $req = 
+    "
+    INSERT INTO activite(NOACT, CODEANIM, CODEETATACT, DATEACT, HRRDVACT, PRIXACT, HRDEBUTACT, HRFINACT, DATEANNULEACT, NOMRESP, PRENOMRESP)
+    VALUES(?,?,'O',?,?,?,?,?,NULL,?,?)
+    ";
+    $params = 
+    [
+      $this->noact, $this->codeanim, $this->dateact, $this->hrrdvact, $this->prixact,
+      $this->hrdebutact, date('h:i:s', strtotime($this->hrfinact)), Session::get('NOMCOMPTE'), Session::get('PRENOMCOMPTE')
+    ];
+    return $this->createQuery($req, $params) == true;
+  }
+
+  public function existeAnimationPourCetteDate($date, $cdAnim) {
+    $req = "SELECT COUNT(*) as nbActDt FROM activite WHERE DATEACT = ? AND CODEANIM = ?";
+    return $this->createQuery($req, [$date, $cdAnim])->fetch(PDO::FETCH_ASSOC)["nbActDt"] == 0;
+  }
+
+  public function annulerActiviter($noAct) {
+    $req = "UPDATE activite SET CODEETATACT = 'N' WHERE NOACT = ?";
+    return $this->createQuery($req ,[$noAct]) == true;
   }
 
   /**
@@ -157,7 +183,7 @@ class Activite extends Database {
    * @param  int $noAct le numéro d'activité lié à une animation PK ACTIVITE
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
    */
-  public function estInscritActivite($user, $noAct) {
+  public function estInscritActivite($user, $cdAnim, $noAct) {
     $req =
     "
     SELECT I.*
@@ -166,8 +192,10 @@ class Activite extends Database {
     AND A.CODEANIM = AN.CODEANIM
     AND I.USER = ?
     AND A.CODEANIM = ?
+    AND I.NOACT = ?
+    AND I.DATEANNULE IS NULL  
     ";
-    $res = $this->createQuery($req, [Session::get('USER'), $noAct])->fetch(PDO::FETCH_ASSOC);
+    $res = $this->createQuery($req, [Session::get('USER'), $cdAnim, $noAct])->fetch(PDO::FETCH_ASSOC);
     if($res) {
         if(($res['DATEANNULE'] == NULL && $res['DATEINSCRIP'] != NULL))
           return true;
@@ -182,7 +210,7 @@ class Activite extends Database {
    * @param  int $noAct le numéro d'activité lié à une animation (PK ACTIVITE)
    * @return bool        retourne vrai si l'utilisateur est inscrit à une ou plusieurs activités. False sinon
    */
-  public function peutSeReinscrire($user, $cdAnim) {
+  public function peutSeReinscrire($user, $cdAnim, $noAct) {
         $req =
         "
         SELECT I.*
@@ -191,8 +219,9 @@ class Activite extends Database {
         AND AN.CODEANIM = A.CODEANIM
         AND I.USER = ?
         AND A.CODEANIM = ?
+        AND A.NOACT = ?
         ";
-        $res = $this->createQuery($req, [$user, $cdAnim]);
+        $res = $this->createQuery($req, [$user, $cdAnim, $noAct]);
         if($res) {
             if($res->rowCount() == 1 && $res->fetch(PDO::FETCH_ASSOC)['DATEANNULE'] != NULL) {
                 return true;
@@ -209,7 +238,7 @@ class Activite extends Database {
    * @return bool         retourne vrai si une inscription a été insérée pour un utilisateur à une activité valide
    */
   public function execInscription($user, $cdAnim, $noAct) {
-    if($this->peutSeReinscrire($user, $cdAnim)) {
+    if($this->peutSeReinscrire($user, $cdAnim, $noAct)) {
       $req = "
       UPDATE INSCRIPTION
       SET DATEANNULE = NULL, DATEINSCRIP = DATE(NOW())
@@ -232,8 +261,6 @@ class Activite extends Database {
         return true;
     }
     return false;
-    var_dump($this->peutSeReinscrire($user, $cdAnim));
-    die();
   }
 
   /**
@@ -244,7 +271,7 @@ class Activite extends Database {
    * @return bool         vrai si l'inscription à l'activité concernée à été annulée, false sinon
    */
   public function annuleInscription($user, $cdAnim, $noAct) {
-    if($this->estInscritActivite($user, $cdAnim)) {
+    if($this->estInscritActivite($user, $cdAnim, $noAct)) {
       $req = "
       UPDATE INSCRIPTION
       SET DATEANNULE = ?
@@ -274,12 +301,10 @@ class Activite extends Database {
     return $this->createQuery($req, [Session::get('USER')]);
   }
 
-
-
-
-
-
-
+  public function getListeInscrits($noAct) {
+    $req = "SELECT USER FROM inscription WHERE NOACT = ? AND DATEANNULE IS NULL";
+    return $this->createQuery($req, [$noAct]);
+  }
 
   /**
    * Retourne l'ensemble des activités pour un encadrant
@@ -306,4 +331,8 @@ class Activite extends Database {
       return $this->createQuery($req, [$cdAnim]);
   }
 
+  public function estNumValide() {
+    $req = "SELECT NOACT FROM activite WHERE NOACT = ?";
+    return $this->createQuery($req, [$this->noact])->fetch(PDO::FETCH_ASSOC)["NOACT"] != $this->noact;
+  }
 }

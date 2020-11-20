@@ -1,0 +1,14 @@
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\bin\Release\YGO_Designer.exe.config
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\bin\Release\YGO_Designer.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\bin\Release\YGO_Designer.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\bin\Release\MySql.Data.dll
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.FormLogin.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.FormAjouterCartes.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.FormChercherCarte.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.FormHome.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.FormTemplate.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.csproj.GenerateResource.Cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\Release\YGO_Designer.pdb

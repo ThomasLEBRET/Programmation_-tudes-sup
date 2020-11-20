@@ -15,33 +15,37 @@ using YGO_Designer.Classes.ORM;
 
 namespace YGO_Designer
 {
-    public partial class FormTemplate : Form
+    public partial class FormTemplateAdmin : Form
     {
         private Form activeForm = null;
-        public FormTemplate()
+
+        private FormHome fh;
+        private FormAjouterCartes fac;
+        private FormChercherCarte fcc;
+        public FormTemplateAdmin()
         {
             InitializeComponent();
         }
 
         private void btHome_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormHome());
+            openChildForm(fh);
         }
 
         private void btAjouterCarte_Click(object sender, EventArgs e)
         {
-            openChildForm(new FormAjouterCartes());
+            openChildForm(fac);
         }
 
         private void btChercherCarte_Click(object sender, EventArgs e)
         {
-                openChildForm(new FormChercherCarte());
+                openChildForm(fcc);
         }
 
         private void openChildForm(Form childForm)
         {
             if (activeForm != null)
-                activeForm.Close();
+                activeForm.Hide();
             activeForm = childForm;
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
@@ -54,7 +58,10 @@ namespace YGO_Designer
 
         private void FormTemplate_Load(object sender, EventArgs e)
         {
-            openChildForm(new FormHome());
+            fh = new FormHome();
+            fac = new FormAjouterCartes();
+            fcc = new FormChercherCarte();
+            openChildForm(fh);
         }
 
         private void btClose_Click(object sender, EventArgs e)

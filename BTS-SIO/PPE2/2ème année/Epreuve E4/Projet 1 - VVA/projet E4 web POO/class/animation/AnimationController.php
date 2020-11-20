@@ -33,7 +33,7 @@ class AnimationController extends Animation {
 
   public function addAnimation($dataPost) {
     if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
-      $this->animation->buildObject($dataPost);
+      $this->animation->buildObject((array)$dataPost);
       $this->animation->setDatecreationanim(date('Y-m-d'));
       if($this->animation->allFiledsIsIsset($dataPost)) {
         if($this->animation->isUniqueCodeAnim($this->animation->getCodeanim())) {
@@ -54,26 +54,6 @@ class AnimationController extends Animation {
         }
       }
 
-    } else {
-      require('view/animation/errors/errorAccess.php');
-    }
-  }
-
-  public function deleteAnimation($cdAnim) {
-    if(!empty(Session::get('TYPEPROFIL')) && Session::get('TYPEPROFIL') == 'EN') {
-      $this->animation->getAnimation($cdAnim);
-      if($this->animation->annuleInscriptions($cdAnim)) {
-        if($this->animation->annuleActivites($cdAnim)) {
-          if($this->animation->annuleAnimation($cdAnim)) {
-            echo "success";
-            die();
-          }
-        }
-      }
-
-      // Annule les inscriptions aux activités issues de cette animation
-      // Annule les animations de cette activité
-      // Annule l'animation
     } else {
       require('view/animation/errors/errorAccess.php');
     }

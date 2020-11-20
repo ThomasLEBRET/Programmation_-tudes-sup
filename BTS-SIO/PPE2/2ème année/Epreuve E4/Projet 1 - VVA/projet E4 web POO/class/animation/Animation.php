@@ -263,9 +263,7 @@ class Animation extends Database {
                 `DIFFICULTEANIM`
                 )
                 VALUES
-                (
-                    ?,?,?,?,?,?,?,?,?,?,?,?
-                    )
+                (?,?,?,?,?,?,?,?,?,?,?,?)
                     ";
                     if($this->createQuery($req,
                     [

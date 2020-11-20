@@ -31,7 +31,7 @@ if($activites->rowCount() == 0) {
             </p>
             <?php
             if(!empty(SESSION::get('USER'))) {
-                if($this->activite->estInscritActivite(Session::get('USER'), $this->activite->getCodeanim()))
+                if($this->activite->estInscritActivite(Session::get('USER'), $this->activite->getCodeanim(), $this->activite->getNoact()))
                 require("view/activite/components/btDesinscription.php");
                 else
                 require("view/activite/components/btInscription.php");

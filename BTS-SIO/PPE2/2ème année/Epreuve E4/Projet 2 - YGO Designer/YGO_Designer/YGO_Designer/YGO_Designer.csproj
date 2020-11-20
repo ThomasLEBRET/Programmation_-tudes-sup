@@ -13,8 +13,8 @@
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>C:\Users\Thomas\Desktop\</PublishUrl>
-    <Install>false</Install>
-    <InstallFrom>Unc</InstallFrom>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
     <UpdateEnabled>true</UpdateEnabled>
     <UpdateMode>Foreground</UpdateMode>
     <UpdateInterval>7</UpdateInterval>
@@ -22,8 +22,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <InstallUrl>\\server/YGO_Designer/</InstallUrl>
     <UpdateUrl>http://localhost/YGO_Designer/</UpdateUrl>
+    <AutorunEnabled>true</AutorunEnabled>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
@@ -58,6 +58,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -68,6 +69,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Theme.cs" />
     <Compile Include="Vues\FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,16 +106,15 @@
     <Compile Include="Classes\Monstre\Monstre.cs" />
     <Compile Include="Classes\Monstre\ORMMonstre.cs" />
     <Compile Include="Classes\ORM\ORMDatabase.cs" />
-    <Compile Include="Classes\ORM\Properties\Settings.Designer.cs" />
     <Compile Include="Classes\Piege\ORMPiege.cs" />
     <Compile Include="Classes\Piege\Piege.cs" />
     <Compile Include="Classes\User\ORMUser.cs" />
     <Compile Include="Classes\User\User.cs" />
-    <Compile Include="Vues\FormTemplate .cs">
+    <Compile Include="Vues\Administrateur\FormTemplateAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vues\FormTemplate .Designer.cs">
-      <DependentUpon>FormTemplate .cs</DependentUpon>
+    <Compile Include="Vues\Administrateur\FormTemplateAdmin.Designer.cs">
+      <DependentUpon>FormTemplateAdmin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -129,8 +130,8 @@
     <EmbeddedResource Include="Vues\Administrateur\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vues\FormTemplate .resx">
-      <DependentUpon>FormTemplate .cs</DependentUpon>
+    <EmbeddedResource Include="Vues\Administrateur\FormTemplateAdmin.resx">
+      <DependentUpon>FormTemplateAdmin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -141,7 +142,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Classes\ORM\Properties\Settings.settings" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

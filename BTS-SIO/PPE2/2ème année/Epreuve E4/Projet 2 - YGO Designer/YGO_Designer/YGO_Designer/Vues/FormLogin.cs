@@ -47,7 +47,7 @@ namespace YGO_Designer
                             break;
                         case "ADM":
                             this.Close();
-                            FormTemplate ft = new FormTemplate();
+                            FormTemplateAdmin ft = new FormTemplateAdmin();
                             ft.Show();
                             break;
                     }
@@ -80,7 +80,7 @@ namespace YGO_Designer
                             break;
                         case "ADM":
                             this.Close();
-                            FormTemplate ft = new FormTemplate();
+                            FormTemplateAdmin ft = new FormTemplateAdmin();
                             ft.Show();
                             break;
                     }

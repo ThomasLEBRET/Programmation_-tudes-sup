@@ -12,6 +12,7 @@ using YGO_Designer.Classes.Carte;
 using YGO_Designer.Classes.Carte.Attribut_Carte;
 using YGO_Designer.Classes.Carte.TypeCarte;
 using YGO_Designer.Classes.ORM;
+using YGO_Designer.Classes.User;
 
 namespace YGO_Designer
 {
@@ -22,6 +23,15 @@ namespace YGO_Designer
             InitializeComponent();
 
             HideCard();
+
+            if (User.GetTypeuser() != null && User.GetTypeuser() == "ADM")
+            {
+                if (!btDelete.Enabled && !btDelete.Visible)
+                {
+                    btDelete.Enabled = true;
+                    btDelete.Visible = true;
+                }
+            }
         }
 
         private void HideCard()
@@ -50,9 +60,9 @@ namespace YGO_Designer
             rtbDescription.AppendText(mo.GetDescription());
             rtbDescription.BackColor = Color.BurlyWood;
             rtbDescription.Show();
-            lbAtk.Text = mo.GetAtk().ToString();
+            lbAtk.Text = "ATK/" + mo.GetAtk().ToString();
             lbAtk.Show();
-            lbDef.Text = mo.GetDef().ToString();
+            lbDef.Text = "DEF/" + mo.GetDef().ToString();
             lbDef.Show();
         }
 
@@ -74,13 +84,11 @@ namespace YGO_Designer
             pbAttr.Image = ilAttrib.Images[index];
             pbAttr.Show();
 
-            if(ma.GetNomTypeMa() != "Normal")
-            {
                 st = ma.GetNomTypeMa() + ".png";
                 index = ilAttrib.Images.IndexOfKey(st);
                 pbTypeMP.Image = ilAttrib.Images[index];
                 pbTypeMP.Show();
-            }
+            
         }
 
         private void DisplayTrap(Piege pi)
@@ -101,12 +109,11 @@ namespace YGO_Designer
             pbAttr.Image = ilAttrib.Images[index];
             pbAttr.Show();
 
-            if(pi.GetNomTypePi() != "Normal")
-            {
+            
                 st = pi.GetNomTypePi() + ".png";
                 index = ilAttrib.Images.IndexOfKey(st);
                 pbTypeMP.Image = ilAttrib.Images[index];
-            }
+                pbTypeMP.Show();
         }
 
         private void DisplayCard(Carte c)
@@ -138,6 +145,8 @@ namespace YGO_Designer
                 Carte c = ORMCarte.GetCarteByNo(Convert.ToInt32(tbNoCarte.Text));
                 lbCartes.Items.Clear();
                 lbCartes.Items.Add(c);
+                if (lbCartes.Items.Count > 0)
+                    lbCartes.SelectedItem = lbCartes.Items[0];
             }
             else
             {
@@ -152,19 +161,32 @@ namespace YGO_Designer
             DisplayCard(c);
         }
 
-        private void btChercheParNom_Click(object sender, EventArgs e)
+        private void tbNomCarte_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tbNomCarte.Text))
             {
                 List<Carte> lC = ORMCarte.GetCarteByPartialName(tbNomCarte.Text);
                 lbCartes.Items.Clear();
                 lbCartes.Items.AddRange(lC.ToArray());
+                if (lbCartes.Items.Count > 0)
+                    lbCartes.SelectedItem = lbCartes.Items[0];
+            }
+        }
+
+        private void btDelete_Click(object sender, EventArgs e)
+        {
+            if (lbCartes.SelectedIndex < 0)
+                return;
+            Carte c = (Carte)lbCartes.SelectedItem;
+            if (ORMCarte.DeleteCard(c))
+            {
+                MessageBox.Show("La carte " + c.GetNom() + " a bien été supprimée ainsi que tous ses effets");
+                lbCartes.Items.Clear();
+                tbNoCarte.Text = "";
+                tbNomCarte.Text = "";
             }
             else
-            {
-                MessageBox.Show("Aucun retour n'a été spécifié pour l'expression rentrée");
-                return;
-            }
+                MessageBox.Show("La carte " + c.GetNom() + " n'a pas pu être supprimée");
         }
     }
 }

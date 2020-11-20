@@ -21,6 +21,9 @@ namespace YGO_Designer
         {
             InitializeComponent();
 
+            Theme.AjouterCarte(this, Color.FromArgb(167, 103, 38), Color.FromArgb(187, 174, 152));
+            Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
+
             ORMDatabase.Connexion();
             cbTypeCarte.DataSource = ORMCarte.GetAttributs();
 
@@ -192,6 +195,26 @@ namespace YGO_Designer
             {
                 MessageBox.Show("Entrez des valeurs valides pour la conception d'une carte");
                 return;
+            }
+        }
+
+        private void tbContainCarte_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (tbContainCarte.SelectedTab.Text)
+            {
+                case "Monstre":
+                    Theme.AjouterCarte(this, Color.FromArgb(167, 103, 38), Color.FromArgb(187, 174, 152));
+                    Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
+                    break;
+                case "Magie":
+                    Theme.AjouterCarte(this, Color.FromArgb(64, 130, 109), Color.FromArgb(151, 223, 198));
+                    Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(151, 223, 198), Color.FromArgb(151, 223, 198));
+                    break;
+                case "Piège":
+                    Theme.AjouterCarte(this, Color.FromArgb(204, 78, 92), Color.FromArgb(253, 223, 224));
+                    Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(253, 223, 224), Color.FromArgb(253, 223, 224));
+                    break;
+
             }
         }
     }
