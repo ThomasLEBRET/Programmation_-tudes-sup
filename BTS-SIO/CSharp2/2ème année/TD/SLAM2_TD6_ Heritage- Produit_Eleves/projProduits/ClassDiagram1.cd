@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="projProduitsHeritage.Produit" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.25" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>ECAAAQAAAAAAAAAFgAACoAAACAAAAAAAAQAAAAEAAgI=</HashCode>
+      <FileName>Produit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projProduitsHeritage.JeuPlateau">
+    <Position X="0.75" Y="2" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAEAAASAAAAAgAAAAAAASAAAAAAAAA=</HashCode>
+      <FileName>JeuPlateau.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="projProduitsHeritage.JeuInformatique">
+    <Position X="4.75" Y="2" Width="4.25" />
+    <TypeIdentifier>
+      <HashCode>EABQAAAAAAAAAEAEAAAAAAAAAAAAAgAAAAAYAAAAAAA=</HashCode>
+      <FileName>JeuInformatique.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

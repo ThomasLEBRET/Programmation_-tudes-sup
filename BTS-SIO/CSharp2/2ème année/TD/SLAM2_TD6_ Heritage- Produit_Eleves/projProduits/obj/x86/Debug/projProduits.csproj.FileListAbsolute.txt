@@ -1,0 +1,37 @@
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\obj\x86\Debug\projProduits.Properties.Resources.resources
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\bin\Debug\projProduits.exe
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\bin\Debug\projProduits.pdb
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\obj\x86\Debug\projProduits.exe
+F:\SIO1 Mes Cours\SLAM2\SLAM2_2013\SLAM2_TD5_4ProductC#\SLAM2_TD5_Prroduits\projProduits\obj\x86\Debug\projProduits.pdb
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.exe
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.pdb
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\ResolveAssemblyReference.cache
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.FormStockProduits.resources
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.Properties.Resources.resources
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\GenerateResource.read.1.tlog
+Y:\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\GenerateResource.write.1.tlog
+Y:\SLAM2_TD5_Produits\projProduits\bin\Debug\projProduits.exe
+Y:\SLAM2_TD5_Produits\projProduits\bin\Debug\projProduits.pdb
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.exe
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.pdb
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\bin\Debug\projProduits.exe
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\bin\Debug\projProduits.pdb
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.FormStockProduits.resources
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.Properties.Resources.resources
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\GenerateResource.read.1.tlog
+C:\Projets_VS2010\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\bin\Debug\projProduits.exe
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\bin\Debug\projProduits.pdb
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.FormStockProduits.resources
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.Properties.Resources.resources
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.exe
+F:\OSX_WIN\SLAM2_TD5_Produits\projProduits\obj\x86\Debug\projProduits.pdb
+Y:\SLAM2_TD6_ Heritage- Produit\projProduits\obj\x86\Debug\projProduits.exe
+Y:\SLAM2_TD6_ Heritage- Produit\projProduits\obj\x86\Debug\projProduits.pdb

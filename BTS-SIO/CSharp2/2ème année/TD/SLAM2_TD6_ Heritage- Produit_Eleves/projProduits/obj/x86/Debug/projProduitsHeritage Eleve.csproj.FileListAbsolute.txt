@@ -1,0 +1,4 @@
+Y:\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.exe
+Y:\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.pdb
