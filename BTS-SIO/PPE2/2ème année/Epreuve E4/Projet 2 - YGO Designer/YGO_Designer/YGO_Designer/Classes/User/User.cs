@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using YGO_Designer.Classes.Carte;
 
 namespace YGO_Designer.Classes.User
 {
@@ -19,6 +20,7 @@ namespace YGO_Designer.Classes.User
         {
             return typeUser;
         }
+
 
         public static void SetUsername(string newUser)
         {

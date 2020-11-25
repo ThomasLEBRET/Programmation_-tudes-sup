@@ -2,3 +2,9 @@ Y:\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.e
 Y:\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.pdb
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.exe
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduits.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\bin\Debug\projProduits.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\bin\Debug\projProduits.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduitsHeritage Eleve.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduitsHeritage.FormStockProduits.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduitsHeritage.Properties.Resources.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\SLAM2_TD6_ Heritage- Produit_Eleves\projProduits\obj\x86\Debug\projProduitsHeritage Eleve.csproj.GenerateResource.Cache

@@ -49,6 +49,7 @@ namespace YGO_Designer
             this.rtbNom = new System.Windows.Forms.RichTextBox();
             this.ilAttrib = new System.Windows.Forms.ImageList(this.components);
             this.btDelete = new System.Windows.Forms.Button();
+            this.lbDecks = new System.Windows.Forms.ListBox();
             this.paCarte.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTypeMP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbNv)).BeginInit();
@@ -109,9 +110,9 @@ namespace YGO_Designer
             this.btChercherParNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btChercherParNum.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btChercherParNum.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btChercherParNum.Location = new System.Drawing.Point(33, 74);
+            this.btChercherParNum.Location = new System.Drawing.Point(56, 74);
             this.btChercherParNum.Name = "btChercherParNum";
-            this.btChercherParNum.Size = new System.Drawing.Size(204, 39);
+            this.btChercherParNum.Size = new System.Drawing.Size(181, 60);
             this.btChercherParNum.TabIndex = 12;
             this.btChercherParNum.Text = "Chercher par numéro";
             this.btChercherParNum.UseVisualStyleBackColor = false;
@@ -125,7 +126,7 @@ namespace YGO_Designer
             this.lbCartes.ItemHeight = 23;
             this.lbCartes.Location = new System.Drawing.Point(33, 155);
             this.lbCartes.Name = "lbCartes";
-            this.lbCartes.Size = new System.Drawing.Size(392, 303);
+            this.lbCartes.Size = new System.Drawing.Size(392, 142);
             this.lbCartes.TabIndex = 14;
             this.lbCartes.SelectedIndexChanged += new System.EventHandler(this.lbCartes_SelectedIndexChanged);
             // 
@@ -154,7 +155,7 @@ namespace YGO_Designer
             this.pbTypeMP.Location = new System.Drawing.Point(228, 101);
             this.pbTypeMP.Name = "pbTypeMP";
             this.pbTypeMP.Size = new System.Drawing.Size(30, 28);
-            this.pbTypeMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pbTypeMP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pbTypeMP.TabIndex = 20;
             this.pbTypeMP.TabStop = false;
             // 
@@ -282,9 +283,8 @@ namespace YGO_Designer
             // 
             this.btDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btDelete.AutoSize = true;
-            this.btDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(206)))), ((int)(((byte)(27)))), ((int)(((byte)(17)))));
+            this.btDelete.BackColor = System.Drawing.Color.Black;
             this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btDelete.Enabled = false;
             this.btDelete.FlatAppearance.BorderSize = 0;
             this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
             this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
@@ -294,10 +294,22 @@ namespace YGO_Designer
             this.btDelete.Name = "btDelete";
             this.btDelete.Size = new System.Drawing.Size(258, 46);
             this.btDelete.TabIndex = 16;
-            this.btDelete.Text = "Supprimer";
+            this.btDelete.Text = "Supprimer/Ajouter";
             this.btDelete.UseVisualStyleBackColor = false;
-            this.btDelete.Visible = false;
             this.btDelete.Click += new System.EventHandler(this.btDelete_Click);
+            // 
+            // lbDecks
+            // 
+            this.lbDecks.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbDecks.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDecks.FormattingEnabled = true;
+            this.lbDecks.ItemHeight = 23;
+            this.lbDecks.Location = new System.Drawing.Point(33, 355);
+            this.lbDecks.Name = "lbDecks";
+            this.lbDecks.Size = new System.Drawing.Size(392, 119);
+            this.lbDecks.TabIndex = 17;
+            this.lbDecks.Visible = false;
+            this.lbDecks.SelectedIndexChanged += new System.EventHandler(this.lbDecks_SelectedIndexChanged);
             // 
             // FormChercherCarte
             // 
@@ -305,6 +317,7 @@ namespace YGO_Designer
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(107)))));
             this.ClientSize = new System.Drawing.Size(843, 486);
+            this.Controls.Add(this.lbDecks);
             this.Controls.Add(this.btDelete);
             this.Controls.Add(this.paCarte);
             this.Controls.Add(this.lbCartes);
@@ -318,6 +331,7 @@ namespace YGO_Designer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YGO Designer - Ajouter cartes";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.VisibleChanged += new System.EventHandler(this.FormChercherCarte_VisibleChanged);
             this.paCarte.ResumeLayout(false);
             this.paCarte.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbTypeMP)).EndInit();
@@ -347,6 +361,7 @@ namespace YGO_Designer
         private System.Windows.Forms.Label lbMaPi;
         private System.Windows.Forms.PictureBox pbTypeMP;
         private System.Windows.Forms.Button btDelete;
+        private System.Windows.Forms.ListBox lbDecks;
     }
 }
 

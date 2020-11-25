@@ -30,10 +30,8 @@ namespace YGO_Designer
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAjouterCartes));
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbTypeCarte = new System.Windows.Forms.ComboBox();
             this.tbNomCarte = new System.Windows.Forms.TextBox();
             this.rtbDescriptCarte = new System.Windows.Forms.RichTextBox();
             this.tbContainCarte = new System.Windows.Forms.TabControl();
@@ -80,17 +78,6 @@ namespace YGO_Designer
             this.gbTypePiege.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Candara", 14.25F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(253, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 23);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Type de carte";
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -112,17 +99,6 @@ namespace YGO_Designer
             this.label3.Size = new System.Drawing.Size(103, 23);
             this.label3.TabIndex = 2;
             this.label3.Text = "Description";
-            // 
-            // cbTypeCarte
-            // 
-            this.cbTypeCarte.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cbTypeCarte.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbTypeCarte.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbTypeCarte.FormattingEnabled = true;
-            this.cbTypeCarte.Location = new System.Drawing.Point(268, 43);
-            this.cbTypeCarte.Name = "cbTypeCarte";
-            this.cbTypeCarte.Size = new System.Drawing.Size(104, 31);
-            this.cbTypeCarte.TabIndex = 3;
             // 
             // tbNomCarte
             // 
@@ -598,10 +574,8 @@ namespace YGO_Designer
             this.Controls.Add(this.clbEffets);
             this.Controls.Add(this.rtbDescriptCarte);
             this.Controls.Add(this.tbNomCarte);
-            this.Controls.Add(this.cbTypeCarte);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAjouterCartes";
@@ -626,10 +600,8 @@ namespace YGO_Designer
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbTypeCarte;
         private System.Windows.Forms.TextBox tbNomCarte;
         private System.Windows.Forms.RichTextBox rtbDescriptCarte;
         private System.Windows.Forms.TabControl tbContainCarte;

@@ -13,6 +13,7 @@ using YGO_Designer.Classes.Carte.Attribut_Carte;
 using YGO_Designer.Classes.Carte.TypeCarte;
 using YGO_Designer.Classes.ORM;
 using YGO_Designer.Classes.User;
+using YGO_Designer.Classes.Deck;
 
 namespace YGO_Designer
 {
@@ -26,12 +27,18 @@ namespace YGO_Designer
 
             if (User.GetTypeuser() != null && User.GetTypeuser() == "ADM")
             {
-                if (!btDelete.Enabled && !btDelete.Visible)
-                {
-                    btDelete.Enabled = true;
-                    btDelete.Visible = true;
-                }
+                btDelete.BackColor = Color.Red;
+                btDelete.Text = "Supprimer";
             }
+            else
+            {
+                btDelete.BackColor = Color.Green;
+                btDelete.Text = "Ajouter au deck";
+                lbDecks.Visible = true;
+                btDelete.Enabled = true;
+            }
+
+            lbDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
         }
 
         private void HideCard()
@@ -175,6 +182,26 @@ namespace YGO_Designer
 
         private void btDelete_Click(object sender, EventArgs e)
         {
+            if (User.GetTypeuser() == "ADM")
+                Delete();
+            else
+                AddToDeck();
+        }
+
+        private void AddToDeck()
+        {
+            if (lbCartes.SelectedIndex < 0 ||lbDecks.SelectedIndex < 0)
+                return;
+            Carte c = (Carte)lbCartes.SelectedItem;
+            Deck d = (Deck)lbDecks.SelectedItem;
+            if (ORMDeck.AjouteCarteADeck(c.GetNo(), d.GetNoDeck()))
+                MessageBox.Show("La carte " + c.GetNom() + " a bien été ajoutée dans ce deck");
+            else
+                MessageBox.Show("L'ajout de cette carte a échouée");
+            
+        }
+        private void Delete()
+        {
             if (lbCartes.SelectedIndex < 0)
                 return;
             Carte c = (Carte)lbCartes.SelectedItem;
@@ -187,6 +214,17 @@ namespace YGO_Designer
             }
             else
                 MessageBox.Show("La carte " + c.GetNom() + " n'a pas pu être supprimée");
+        }
+
+        private void lbDecks_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            btDelete.Enabled = true;
+        }
+
+        private void FormChercherCarte_VisibleChanged(object sender, EventArgs e)
+        {
+            lbDecks.Items.Clear();
+            lbDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
         }
     }
 }

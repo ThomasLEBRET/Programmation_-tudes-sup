@@ -25,7 +25,6 @@ namespace YGO_Designer
             Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
 
             ORMDatabase.Connexion();
-            cbTypeCarte.DataSource = ORMCarte.GetAttributs();
 
             foreach (Effet e in ORMCarte.GetEffets())
                 clbEffets.Items.Add(e);
@@ -38,15 +37,13 @@ namespace YGO_Designer
 
         private bool EstCarteValide()
         {
-            if (!string.IsNullOrEmpty((string)cbTypeCarte.SelectedItem.ToString()) && !string.IsNullOrEmpty(tbNomCarte.Text) && !string.IsNullOrEmpty(tbNoCarte.Text) && tbNoCarte.Text.Length == 8)
+            if (!string.IsNullOrEmpty(tbNomCarte.Text) && !string.IsNullOrEmpty(tbNoCarte.Text) && tbNoCarte.Text.Length == 8)
                 return true;
             return false;
         }
 
-        private Carte CreeCarte()
+        private Carte CreeCarte(Attribut attrCarte)
         {
-            Attribut attrCarte = (Attribut)cbTypeCarte.SelectedItem;
-
             int noC = Convert.ToInt32(tbNoCarte.Text);
             string nom = tbNomCarte.Text;
             string description = rtbDescriptCarte.Text;
@@ -58,16 +55,10 @@ namespace YGO_Designer
 
         private void btAddMonstre_Click(object sender, EventArgs e)
         {
-            Attribut attrCarte = (Attribut)cbTypeCarte.SelectedItem;
-            if (attrCarte.GetCdAttrCarte() != "MON")
-            {
-                MessageBox.Show("La carte doit être un monstre.");
-                return;
-            }
-
             if (EstCarteValide())
             {
-                Carte c = CreeCarte();
+                Attribut attrCarte = new Attribut("MON", "Monstre");
+                Carte c = CreeCarte(attrCarte);
                 if(!ORMCarte.ExistCard(c))
                 {
                     if (!string.IsNullOrEmpty(tbAtkMo.Text) && !string.IsNullOrEmpty(tbDefMo.Text))
@@ -120,10 +111,10 @@ namespace YGO_Designer
 
         private void btAddMagie_Click(object sender, EventArgs e)
         {
-            Attribut attrCarte = (Attribut)cbTypeCarte.SelectedItem;
             if (EstCarteValide())
             {
-                Carte magie = CreeCarte();
+                Attribut attrCarte = new Attribut("MAG", "Magie");
+                Carte magie = CreeCarte(attrCarte);
                 if(!ORMCarte.ExistCard(magie))
                 {
                     string typeMagie = "";
@@ -160,10 +151,10 @@ namespace YGO_Designer
 
         private void btAddPiege_Click(object sender, EventArgs e)
         {
-            Attribut attrCarte = (Attribut)cbTypeCarte.SelectedItem;
             if (EstCarteValide())
             {
-                Carte piege = CreeCarte();
+                Attribut attrCarte = new Attribut("PIE", "Piège");
+                Carte piege = CreeCarte(attrCarte);
                 if (!ORMCarte.ExistCard(piege))
                 {
                     string typePiege = "";

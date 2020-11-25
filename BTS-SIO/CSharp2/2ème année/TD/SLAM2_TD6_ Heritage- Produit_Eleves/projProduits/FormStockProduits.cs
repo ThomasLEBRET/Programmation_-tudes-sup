@@ -23,7 +23,8 @@ namespace projProduitsHeritage {
             stockSARL_SIO1A.AjouterProduit(new JeuPlateau("37", "Citadelles", 15, 37,8,15,10));
             stockSARL_SIO1A.AjouterProduit(new JeuInformatique("23", "JeuI23", 20,23,"mac","telechargement",0));
             stockSARL_SIO1A.AjouterProduit(new JeuPlateau("111", "Dragons", 11.1f, 11,8,40,8));
-            stockSARL_SIO1A.AjouterProduit(new JeuPlateau("112", "Vallée mamouths", 11.2f, 12,5,180,11));
+            stockSARL_SIO1A.AjouterProduit(new JeuPlateau("112", "Vallée mamouths", 11.2f, 12, 5, 180, 11));
+            stockSARL_SIO1A.AjouterProduit(new JeuInformatique("234", "LINQ", 20, 23, "mac", "telechargement", 0));
             //List<Produit> ll = new List<Produit> { new Produit("132", "Clock Radio", 10),new Produit ("37", "Mobile Phone", 15) };
         }
 
@@ -86,8 +87,19 @@ namespace projProduitsHeritage {
         }
 
         private void btAfficherProduits_Click(object sender, EventArgs e) {
-            List<Produit> listeP = null;
+            List<Produit> listeP = new List<Produit>();
             // TO DO en tenant compte des cases à cocher chkbPlateau et chkbInformatique
+            foreach(Produit p in stockSARL_SIO1A.GetProduits())
+            {
+                if (chkbAffPlateau.Checked && p is JeuPlateau)
+                {
+                    listeP.Add(p);
+                }
+                if (chkbAffInformatique.Checked && p is JeuInformatique)
+                {
+                    listeP.Add(p);
+                }
+            }
 
             this.AfficherDansListe(listeP);
         }
@@ -108,15 +120,28 @@ namespace projProduitsHeritage {
         }
 
         private void btAjouter_Click(object sender, EventArgs e) {
-            Produit p = null;
+            Produit p = new Produit(txtIdProduit.Text, txtDesiProduit.Text, int.Parse(txtPrixProduit.Text), int.Parse(txtStockProduit.Text));
            // TO DO
             // tenir comptebouton radio  rdbAjoutPlateau et rdbAjoutInformatique
+            if (rdbAjoutPlateau.Checked)
+            {
+                p = new JeuPlateau(txtIdProduit.Text, txtDesiProduit.Text, int.Parse(txtPrixProduit.Text), int.Parse(txtStockProduit.Text), int.Parse(txtNbJoueur.Text), int.Parse(txtDuree.Text), int.Parse(txtAgeMin.Text));
+            }
+            else
+            {
+                p = new JeuInformatique(txtIdProduit.Text, txtDesiProduit.Text, int.Parse(txtPrixProduit.Text), int.Parse(txtStockProduit.Text), txtAjoutSE.Text, txtAjoutSupport.Text, 0);
+            }
+            stockSARL_SIO1A.AjouterProduit(p);
+            MessageBox.Show("Le produit a été ajouté");
         }
 
 
         private void btLivrer_Click(object sender, EventArgs e) {
             bool ok;
-
+            if (txtQte.Text == "")
+            {
+                txtQte.Text = "0";
+            }
             ok = stockSARL_SIO1A.Livrer(txtId.Text, int.Parse(txtQte.Text));
             if (ok)
             {
@@ -131,6 +156,10 @@ namespace projProduitsHeritage {
 
         private void btVendre_Click(object sender, EventArgs e) {
             bool ok;
+            if (txtQte.Text == "")
+            {
+                txtQte.Text = "0";
+            }
 
             try
             {
@@ -148,16 +177,73 @@ namespace projProduitsHeritage {
             {
                 MessageBox.Show(es.Message);
             }
-           
+
         }
 
         private void btRechercher_Click(object sender, EventArgs e) {
-            List<Produit> listeP = null;
+            // TO DO
+            // tenir compte cases à cocher chkbRechInformatique et chkbRechPlateau
+            var prod =
+                from produit in stockSARL_SIO1A.GetProduits()
+                select produit;
 
-                // TO DO
-                // tenir compte cases à cocher chkbRechInformatique et chkbRechPlateau
-           
-            this.AfficherDansListe(listeP);
+
+            if (chkRechDesi.Checked)
+            {
+                prod =
+                    from produit in prod
+                    where produit.GetDesignation().ToUpper().Contains(txtRechDesi.Text.ToUpper())
+                    select produit;
+            }
+
+            if (chkRechPlateau.Checked)
+            {
+                if (chkRechNbJoueur.Checked)
+                {
+                    prod =
+                       from JeuPlateau produit in prod
+                       where produit.GetNbJoueur() == int.Parse(txtNbJoueur.Text)
+                       select produit;
+                }
+
+                if (chkRechDuree.Checked)
+                {
+                    prod =
+                       from JeuPlateau produit in prod
+                       where produit.GetDuree() <= int.Parse(txtRechDuree.Text)
+                       select produit;
+                }
+
+                if (chkRechAgneMin.Checked)
+                {
+                    prod =
+                       from JeuPlateau produit in prod
+                       where produit.GetAgeMin() <= int.Parse(txtRechAgeMin.Text)
+                       select produit;
+                }
+
+            }
+
+            if (chkRechInformatique.Checked)
+            {
+                if (chkRechSE.Checked)
+                {
+                    prod =
+                        from JeuInformatique produit in prod 
+                        where produit.GetSE().Contains(txtRechSE.Text)
+                        select produit;
+                }
+
+                if(chkRechSupport.Checked)
+                {
+                    prod =
+                        from JeuInformatique produit in prod
+                        where produit.GetSupport().Contains(txtRechSupport.Text)
+                        select produit;
+                }
+            }
+
+            this.AfficherDansListe(prod.ToList());
         }
 
         private void btRazStock_Click(object sender, EventArgs e) {

@@ -12,19 +12,22 @@ namespace projProduitsHeritage {
         private int prixLicence;
 
         public JeuInformatique(string id, String name, float prix, int stockInitial, string SE, string support, int prixLicence) 
+            :base(id,name,prix,stockInitial)
         {
            // TO DO
-            
+            this.SE = SE;
+            this.support = support;
+            this.prixLicence = prixLicence;
         }
 
         public string GetSE() {
             // TO DO
-            return "";
+            return this.SE;
         }
 
         public string GetSupport() {
             // TO DO
-            return "";
+            return this.support;
         }
 
        
@@ -34,19 +37,20 @@ namespace projProduitsHeritage {
         /// <returns></returns>
         public override float GetPrix(){
             // TO DO
-            return 0;
+            return base.GetPrix()*5;
         }
         public  float GetPrix(int nbLicence) {
             // TO DO
-            return 0;
+            return this.GetPrix()*nbLicence;
         }
        
         public void SetPrixLicence(int nouvPrix) {
             // TO DO
+            this.prixLicence = nouvPrix;
         }
         public override string ToString() {
             // TO DO
-            return "";
+            return base.ToString() + " SE : " + this.SE + " Support : " + this.support + " Prix Licence : " + this.prixLicence;
         }
       
     }

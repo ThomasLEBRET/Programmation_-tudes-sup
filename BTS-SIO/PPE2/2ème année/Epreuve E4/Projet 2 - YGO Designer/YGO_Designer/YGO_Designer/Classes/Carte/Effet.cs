@@ -1,4 +1,4 @@
-﻿namespace YGO_Designer.Classes
+﻿namespace YGO_Designer.Classes.Carte
 {
     public class Effet
     {

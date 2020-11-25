@@ -43,14 +43,16 @@ namespace YGO_Designer
                     switch (User.GetTypeuser())
                     {
                         case "JOU":
-                            MessageBox.Show("Bienvenu au joueur " + User.GetUsername());
+                            Form fj = new FormTemplateJoueur();
+                            fj.Show();
                             break;
                         case "ADM":
                             this.Close();
-                            FormTemplateAdmin ft = new FormTemplateAdmin();
+                            Form ft = new FormTemplateAdmin();
                             ft.Show();
                             break;
                     }
+                    this.Close();
                 }
                 else
                 {

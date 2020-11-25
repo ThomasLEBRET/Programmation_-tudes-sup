@@ -39,8 +39,6 @@ namespace projProduitsHeritage
         public Produit(string id) : this(id, "", 0, 0) // appel 1er constructeur 
         { 
         }
-        public Produit()   { // A SUPPRIMER
-        } 
 
         /// <summary>
         /// retourne l'id du produit
