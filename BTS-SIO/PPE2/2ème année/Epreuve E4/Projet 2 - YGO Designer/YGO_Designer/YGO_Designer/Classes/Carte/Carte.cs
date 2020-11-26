@@ -11,6 +11,7 @@ namespace YGO_Designer.Classes.Carte
         private string nom;
         private string description;
         private List<Effet> eff;
+        private int nbExemplaire;
 
         public Carte()
         {

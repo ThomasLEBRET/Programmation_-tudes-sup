@@ -1,4 +1,4 @@
-﻿namespace YGO_Designer.Classes.Carte
+﻿namespace YGO_Designer
 {
     public class Attribut
     {

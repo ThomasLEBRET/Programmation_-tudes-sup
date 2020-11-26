@@ -11,11 +11,25 @@ namespace YGO_Designer.Classes.Deck
 {
     public static class ORMDeck
     {
+        private static int NbExemplaireCartesDansDeck(int noDeck, int noCarte)
+        {
+            string userName = User.User.GetUsername();
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT NB_EXEMPLAIRE FROM inclus WHERE NO_DECK = @noDeck AND NO_CARTE = @noCarte";
+            cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = noDeck;
+            cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = noCarte;
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            int res = 0;
+            if(rdr.Read())
+                res = Convert.ToInt16(rdr["NB_EXEMPLAIRE"]);
+            rdr.Close();
+            return res;
+        }
         private static bool EstDeckExistant(int noDeck)
         {
             string userName = User.User.GetUsername();
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
-            cmd.CommandText = "SELECT NO_DECK FROM inclus WHERE NO_DECK = @noDeck";
+            cmd.CommandText = "SELECT NO_DECK FROM inclus WHERE NO_DECK = @noDeck AND ";
             cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = noDeck;
             MySqlDataReader rdr = cmd.ExecuteReader();
             bool estValide = false;
@@ -45,7 +59,13 @@ namespace YGO_Designer.Classes.Deck
         {
             string userName = User.User.GetUsername();
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
-            cmd.CommandText = "INSERT INTO inclus(NO_DECK, NO_CARTE) VALUES(@noDeck, @noCarte)";
+            if (NbExemplaireCartesDansDeck(numDeck, numCarte) == 0)
+                cmd.CommandText = "INSERT INTO inclus(NO_DECK, NO_CARTE, NB_EXEMPLAIRE) VALUES(@noDeck, @noCarte, 1)";
+            else
+                if (NbExemplaireCartesDansDeck(numDeck, numCarte) <= 2)
+                    cmd.CommandText = "UPDATE inclus SET NB_EXEMPLAIRE = NB_EXEMPLAIRE + 1 WHERE NO_DECK = @noDeck AND NO_CARTE = @noCarte";
+                else
+                    return false;
             cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = numDeck;
             cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = numCarte;
             return Convert.ToInt32(cmd.ExecuteNonQuery()) == 1;
@@ -83,7 +103,6 @@ namespace YGO_Designer.Classes.Deck
                 listCartes.Add(ORMCarte.GetCarteByNo(i));
             return listCartes;
         }
-
         public static void ViderDeck(int noDeck)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
@@ -91,5 +110,6 @@ namespace YGO_Designer.Classes.Deck
             cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = noDeck;
             cmd.ExecuteNonQuery();
         }
+    
     }
 }
