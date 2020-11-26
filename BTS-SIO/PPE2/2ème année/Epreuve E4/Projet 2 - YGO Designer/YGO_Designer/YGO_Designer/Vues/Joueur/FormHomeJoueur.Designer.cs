@@ -31,7 +31,6 @@ namespace YGO_Designer
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormHomeJoueur));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lbNbDecks = new System.Windows.Forms.Label();
             this.lbDeck = new System.Windows.Forms.ListBox();
             this.lbAllDecks = new System.Windows.Forms.ListBox();
             this.gbCreerDeck = new System.Windows.Forms.GroupBox();
@@ -43,8 +42,12 @@ namespace YGO_Designer
             this.lbNomDeck = new System.Windows.Forms.Label();
             this.lbViable = new System.Windows.Forms.Label();
             this.btViderDeck = new System.Windows.Forms.Button();
+            this.gbDecks = new System.Windows.Forms.GroupBox();
+            this.gbCartesDeck = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCreerDeck.SuspendLayout();
+            this.gbDecks.SuspendLayout();
+            this.gbCartesDeck.SuspendLayout();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -57,25 +60,14 @@ namespace YGO_Designer
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // lbNbDecks
-            // 
-            this.lbNbDecks.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lbNbDecks.AutoSize = true;
-            this.lbNbDecks.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNbDecks.Location = new System.Drawing.Point(391, 12);
-            this.lbNbDecks.Name = "lbNbDecks";
-            this.lbNbDecks.Size = new System.Drawing.Size(165, 23);
-            this.lbNbDecks.TabIndex = 2;
-            this.lbNbDecks.Text = "Nombre de decks : ";
-            // 
             // lbDeck
             // 
             this.lbDeck.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbDeck.FormattingEnabled = true;
             this.lbDeck.ItemHeight = 19;
-            this.lbDeck.Location = new System.Drawing.Point(37, 256);
+            this.lbDeck.Location = new System.Drawing.Point(7, 52);
             this.lbDeck.Name = "lbDeck";
-            this.lbDeck.Size = new System.Drawing.Size(443, 289);
+            this.lbDeck.Size = new System.Drawing.Size(533, 175);
             this.lbDeck.TabIndex = 3;
             // 
             // lbAllDecks
@@ -83,9 +75,9 @@ namespace YGO_Designer
             this.lbAllDecks.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbAllDecks.FormattingEnabled = true;
             this.lbAllDecks.ItemHeight = 23;
-            this.lbAllDecks.Location = new System.Drawing.Point(395, 54);
+            this.lbAllDecks.Location = new System.Drawing.Point(28, 30);
             this.lbAllDecks.Name = "lbAllDecks";
-            this.lbAllDecks.Size = new System.Drawing.Size(526, 119);
+            this.lbAllDecks.Size = new System.Drawing.Size(421, 119);
             this.lbAllDecks.TabIndex = 4;
             this.lbAllDecks.SelectedIndexChanged += new System.EventHandler(this.lbAllDecks_SelectedIndexChanged);
             // 
@@ -97,9 +89,9 @@ namespace YGO_Designer
             this.gbCreerDeck.Controls.Add(this.tbNomDeck);
             this.gbCreerDeck.Controls.Add(this.label2);
             this.gbCreerDeck.Controls.Add(this.lbNom);
-            this.gbCreerDeck.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCreerDeck.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbCreerDeck.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.gbCreerDeck.Location = new System.Drawing.Point(526, 256);
+            this.gbCreerDeck.Location = new System.Drawing.Point(592, 259);
             this.gbCreerDeck.Name = "gbCreerDeck";
             this.gbCreerDeck.Size = new System.Drawing.Size(395, 289);
             this.gbCreerDeck.TabIndex = 5;
@@ -124,14 +116,14 @@ namespace YGO_Designer
             // 
             this.tbNoDeck.Location = new System.Drawing.Point(145, 95);
             this.tbNoDeck.Name = "tbNoDeck";
-            this.tbNoDeck.Size = new System.Drawing.Size(194, 27);
+            this.tbNoDeck.Size = new System.Drawing.Size(194, 31);
             this.tbNoDeck.TabIndex = 4;
             // 
             // tbNomDeck
             // 
             this.tbNomDeck.Location = new System.Drawing.Point(145, 52);
             this.tbNomDeck.Name = "tbNomDeck";
-            this.tbNomDeck.Size = new System.Drawing.Size(194, 27);
+            this.tbNomDeck.Size = new System.Drawing.Size(194, 31);
             this.tbNomDeck.TabIndex = 3;
             // 
             // label2
@@ -139,7 +131,7 @@ namespace YGO_Designer
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(38, 98);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 19);
+            this.label2.Size = new System.Drawing.Size(77, 23);
             this.label2.TabIndex = 2;
             this.label2.Text = "Numéro";
             // 
@@ -148,7 +140,7 @@ namespace YGO_Designer
             this.lbNom.AutoSize = true;
             this.lbNom.Location = new System.Drawing.Point(38, 55);
             this.lbNom.Name = "lbNom";
-            this.lbNom.Size = new System.Drawing.Size(45, 19);
+            this.lbNom.Size = new System.Drawing.Size(54, 23);
             this.lbNom.TabIndex = 0;
             this.lbNom.Text = "Nom ";
             // 
@@ -156,7 +148,7 @@ namespace YGO_Designer
             // 
             this.lbNomDeck.AutoSize = true;
             this.lbNomDeck.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNomDeck.Location = new System.Drawing.Point(33, 202);
+            this.lbNomDeck.Location = new System.Drawing.Point(13, 23);
             this.lbNomDeck.Name = "lbNomDeck";
             this.lbNomDeck.Size = new System.Drawing.Size(54, 23);
             this.lbNomDeck.TabIndex = 7;
@@ -166,7 +158,7 @@ namespace YGO_Designer
             // 
             this.lbViable.AutoSize = true;
             this.lbViable.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbViable.Location = new System.Drawing.Point(33, 230);
+            this.lbViable.Location = new System.Drawing.Point(356, 23);
             this.lbViable.Name = "lbViable";
             this.lbViable.Size = new System.Drawing.Size(65, 23);
             this.lbViable.TabIndex = 8;
@@ -179,7 +171,7 @@ namespace YGO_Designer
             this.btViderDeck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btViderDeck.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btViderDeck.ForeColor = System.Drawing.SystemColors.Control;
-            this.btViderDeck.Location = new System.Drawing.Point(47, 150);
+            this.btViderDeck.Location = new System.Drawing.Point(315, 240);
             this.btViderDeck.Name = "btViderDeck";
             this.btViderDeck.Size = new System.Drawing.Size(225, 49);
             this.btViderDeck.TabIndex = 9;
@@ -187,23 +179,48 @@ namespace YGO_Designer
             this.btViderDeck.UseVisualStyleBackColor = false;
             this.btViderDeck.Click += new System.EventHandler(this.btViderDeck_Click);
             // 
+            // gbDecks
+            // 
+            this.gbDecks.Controls.Add(this.lbAllDecks);
+            this.gbDecks.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDecks.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbDecks.Location = new System.Drawing.Point(485, 12);
+            this.gbDecks.Name = "gbDecks";
+            this.gbDecks.Size = new System.Drawing.Size(502, 172);
+            this.gbDecks.TabIndex = 10;
+            this.gbDecks.TabStop = false;
+            this.gbDecks.Text = "Decks";
+            // 
+            // gbCartesDeck
+            // 
+            this.gbCartesDeck.Controls.Add(this.lbDeck);
+            this.gbCartesDeck.Controls.Add(this.btViderDeck);
+            this.gbCartesDeck.Controls.Add(this.lbNomDeck);
+            this.gbCartesDeck.Controls.Add(this.lbViable);
+            this.gbCartesDeck.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbCartesDeck.ForeColor = System.Drawing.SystemColors.Control;
+            this.gbCartesDeck.Location = new System.Drawing.Point(12, 236);
+            this.gbCartesDeck.Name = "gbCartesDeck";
+            this.gbCartesDeck.Padding = new System.Windows.Forms.Padding(10);
+            this.gbCartesDeck.Size = new System.Drawing.Size(546, 324);
+            this.gbCartesDeck.TabIndex = 11;
+            this.gbCartesDeck.TabStop = false;
+            this.gbCartesDeck.Text = "Cartes";
+            // 
             // FormHomeJoueur
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(70)))), ((int)(((byte)(107)))));
             this.ClientSize = new System.Drawing.Size(1000, 600);
-            this.Controls.Add(this.btViderDeck);
-            this.Controls.Add(this.lbViable);
-            this.Controls.Add(this.lbNomDeck);
+            this.Controls.Add(this.gbCartesDeck);
+            this.Controls.Add(this.gbDecks);
             this.Controls.Add(this.gbCreerDeck);
-            this.Controls.Add(this.lbAllDecks);
-            this.Controls.Add(this.lbDeck);
-            this.Controls.Add(this.lbNbDecks);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.Control;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormHomeJoueur";
+            this.Padding = new System.Windows.Forms.Padding(10);
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YGO Designer - Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -211,15 +228,16 @@ namespace YGO_Designer
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbCreerDeck.ResumeLayout(false);
             this.gbCreerDeck.PerformLayout();
+            this.gbDecks.ResumeLayout(false);
+            this.gbCartesDeck.ResumeLayout(false);
+            this.gbCartesDeck.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lbNbDecks;
         private System.Windows.Forms.ListBox lbDeck;
         private System.Windows.Forms.ListBox lbAllDecks;
         private System.Windows.Forms.GroupBox gbCreerDeck;
@@ -231,6 +249,8 @@ namespace YGO_Designer
         private System.Windows.Forms.Label lbNomDeck;
         private System.Windows.Forms.Label lbViable;
         private System.Windows.Forms.Button btViderDeck;
+        private System.Windows.Forms.GroupBox gbDecks;
+        private System.Windows.Forms.GroupBox gbCartesDeck;
     }
 }
 

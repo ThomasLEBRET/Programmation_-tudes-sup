@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using YGO_Designer.Classes;
 using YGO_Designer.Classes.Deck;
 using YGO_Designer.Classes.User;
+using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
@@ -40,8 +41,10 @@ namespace YGO_Designer
                 Deck d = new Deck(int.Parse(tbNoDeck.Text), User.GetUsername(), tbNomDeck.Text);
                 if(ORMDeck.AjouteDeck(d))
                 {
-                    MessageBox.Show("Le deck a bien été ajouté à votre collection");
                     lbAllDecks.Items.Add(d);
+                    FormSuccess fn = new FormSuccess();
+                    fn.SetDescription("Le deck a bien été ajouté à votre collection");
+                    fn.ShowDialog();
                 }
             }
         }

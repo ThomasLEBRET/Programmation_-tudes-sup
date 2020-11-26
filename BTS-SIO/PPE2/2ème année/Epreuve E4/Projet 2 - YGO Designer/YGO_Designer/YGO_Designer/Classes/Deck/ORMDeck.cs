@@ -30,7 +30,7 @@ namespace YGO_Designer.Classes.Deck
         {
             string userName = User.User.GetUsername();
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
-            cmd.CommandText = "SELECT NO_DECK FROM inclus WHERE NO_DECK = @noDeck AND ";
+            cmd.CommandText = "SELECT NO_DECK FROM inclus WHERE NO_DECK = @noDeck";
             cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = noDeck;
             MySqlDataReader rdr = cmd.ExecuteReader();
             bool estValide = false;

@@ -29,6 +29,7 @@ namespace YGO_Designer
             {
                 btDelete.BackColor = Color.Red;
                 btDelete.Text = "Supprimer";
+                gbDecks.Visible = false;
             }
             else
             {

@@ -141,6 +141,12 @@
     <Compile Include="Vues\Joueur\FormHomeJoueur.Designer.cs">
       <DependentUpon>FormHomeJoueur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vues\Notifications\FormSuccess.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Notifications\FormSuccess.Designer.cs">
+      <DependentUpon>FormSuccess.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vues\Joueur\FormTemplateJoueur.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -170,9 +176,13 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Vues\Joueur\FormHomeJoueur.resx">
       <DependentUpon>FormHomeJoueur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\Notifications\FormSuccess.resx">
+      <DependentUpon>FormSuccess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vues\Joueur\FormTemplateJoueur.resx">
       <DependentUpon>FormTemplateJoueur.cs</DependentUpon>
@@ -207,6 +217,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\close.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
