@@ -15,6 +15,12 @@ namespace YGO_Designer.Classes.Carte
             this.nomTypeMa = nomTypeMa;
         }
 
+        public Magie(List<Effet> eff, int no, Attribut attr, string nom, string description, string nomTypeMa, int nbExemplaireDansDeck)
+            : base(eff,no,attr,nom,description, nbExemplaireDansDeck)
+        {
+            this.nomTypeMa = nomTypeMa;
+        }
+
         public string GetNomTypeMa()
         {
             return this.nomTypeMa;

@@ -13,7 +13,18 @@ namespace YGO_Designer.Classes.Carte
         private int def;
         private string typesCarteMonstre;
         public Monstre(string typeMo, string attrMo, int nivMo, int atk, int def, string typesCarteMonstre, List<Effet> eff, int no, Attribut attr, string nom, string description)
-            : base(eff, no, attr, nom, description)
+            : base(eff, no, attr, nom, description, -1)
+        {
+            this.typeMo = typeMo;
+            this.attrMo = attrMo;
+            this.nbrEtoiles = nivMo;
+            this.atk = atk;
+            this.def = def;
+            this.typesCarteMonstre = typesCarteMonstre;
+        }
+
+        public Monstre(string typeMo, string attrMo, int nivMo, int atk, int def, string typesCarteMonstre, List<Effet> eff, int no, Attribut attr, string nom, string description, int nbExemplaireDansDeck)
+            : base(eff, no, attr, nom, description, nbExemplaireDansDeck)
         {
             this.typeMo = typeMo;
             this.attrMo = attrMo;

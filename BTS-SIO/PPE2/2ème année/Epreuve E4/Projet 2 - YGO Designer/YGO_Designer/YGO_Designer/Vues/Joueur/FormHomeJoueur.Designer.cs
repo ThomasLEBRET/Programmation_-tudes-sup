@@ -207,6 +207,7 @@ namespace YGO_Designer
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "YGO Designer - Home";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.VisibleChanged += new System.EventHandler(this.FormHomeJoueur_VisibleChanged);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbCreerDeck.ResumeLayout(false);
             this.gbCreerDeck.PerformLayout();

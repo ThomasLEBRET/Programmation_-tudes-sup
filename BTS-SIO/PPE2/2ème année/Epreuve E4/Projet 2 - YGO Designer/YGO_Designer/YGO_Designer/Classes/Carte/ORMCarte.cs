@@ -120,6 +120,52 @@ namespace YGO_Designer.Classes.Carte
             return c;
         }
 
+        public static Carte GetCarteByNoForDeck(int noCarte, int noDeck)
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "SELECT c.*, i.NB_EXEMPLAIRE FROM carte c, inclus i WHERE c.NO_CARTE = i.NO_CARTE AND i.NO_CARTE = @noCarte AND i.NO_DECK = @noDeck";
+
+            cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = noCarte;
+            cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = noDeck;
+
+            Carte c = new Carte();
+            string nom = "";
+            Attribut attr = GetAttribut(noCarte);
+            string description = "";
+            int nbExemplaire = 0;
+            List<Effet> eff = GetEffetsCarte(noCarte);
+            MySqlDataReader rdr = cmd.ExecuteReader();
+            if (rdr.Read())
+            {
+                nom = (string)rdr["NOM"];
+                description = (string)rdr["DESCRIPTION"];
+                nbExemplaire = Convert.ToInt16(rdr["NB_EXEMPLAIRE"]);
+                switch (attr.GetCdAttrCarte())
+                {
+                    case "MON":
+                        string typeMo = (string)rdr["TYPE_MO"];
+                        string attrMo = (string)rdr["ATTR_MO"];
+                        int nivMo = Convert.ToInt32(rdr["NIVEAU_MO"]);
+                        int atk = Convert.ToInt32(rdr["ATK"]);
+                        int def = Convert.ToInt32(rdr["DEF"]);
+                        string typeMoCarte = (string)rdr["TYPES_MONSTE_CARTE"];
+                        c = new Monstre(typeMo, attrMo, nivMo, atk, def, typeMoCarte, eff, noCarte, attr, nom, description, nbExemplaire);
+                        break;
+                    case "MAG":
+                        c = new Magie (eff, noCarte, attr, nom, description, (string)rdr["TYPE_MA"], nbExemplaire);
+                        break;
+                    case "PIE":
+                        c = new Piege(eff, noCarte, attr, nom, description, (string)rdr["TYPE_PI"], nbExemplaire);
+                        break;
+                }
+            }
+            rdr.Close();
+            return c;
+        }
+
+
+
+
         public static List<Carte> GetCarteByPartialName(string partName)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();

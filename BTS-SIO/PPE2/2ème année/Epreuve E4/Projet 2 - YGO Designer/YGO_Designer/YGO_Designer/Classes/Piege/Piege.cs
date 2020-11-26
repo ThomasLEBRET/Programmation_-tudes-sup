@@ -15,6 +15,12 @@ namespace YGO_Designer.Classes.Carte
             this.nomTypePi = nomTypePi;
         }
 
+        public Piege(List<Effet> eff, int no, Attribut attr, string nom, string description, string nomTypePi, int nbExemplaireDansDeck)
+            : base(eff, no, attr, nom, description, nbExemplaireDansDeck)
+        {
+            this.nomTypePi = nomTypePi;
+        }
+
         public string GetNomTypePi()
         {
             return this.nomTypePi;

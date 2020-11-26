@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using YGO_Designer.Classes.Carte;
 using YGO_Designer.Classes.ORM;
 
@@ -70,6 +71,7 @@ namespace YGO_Designer.Classes.Deck
             cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = numCarte;
             return Convert.ToInt32(cmd.ExecuteNonQuery()) == 1;
         }
+
         public static List<Deck> GetDecksForUser()
         {
             string userName = User.User.GetUsername();
@@ -82,6 +84,8 @@ namespace YGO_Designer.Classes.Deck
             while(rdr.Read())
                 ld.Add(new Deck(Convert.ToInt32(rdr["NO_DECK"]), (string)rdr["USER"], (string)rdr["NOM_DECK"]));
             rdr.Close();
+            foreach(Deck d in ld)
+                d.SetCartes(ORMDeck.GetCartesForADeck(d.GetNoDeck()));
             return ld;
         }
 
@@ -100,7 +104,7 @@ namespace YGO_Designer.Classes.Deck
 
             List<Carte.Carte> listCartes = new List<Carte.Carte>();
             foreach (int i in lNbCartes)
-                listCartes.Add(ORMCarte.GetCarteByNo(i));
+                listCartes.Add(ORMCarte.GetCarteByNoForDeck(i, noDeck));
             return listCartes;
         }
         public static void ViderDeck(int noDeck)

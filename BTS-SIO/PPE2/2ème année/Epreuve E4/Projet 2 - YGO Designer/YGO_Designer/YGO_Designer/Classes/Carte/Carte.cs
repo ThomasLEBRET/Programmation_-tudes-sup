@@ -11,7 +11,7 @@ namespace YGO_Designer.Classes.Carte
         private string nom;
         private string description;
         private List<Effet> eff;
-        private int nbExemplaire;
+        private int nbExemplaireDansDeck;
 
         public Carte()
         {
@@ -20,6 +20,7 @@ namespace YGO_Designer.Classes.Carte
             this.attr = new Attribut();
             this.nom = "Unknow";
             this.description = "Void";
+            this.nbExemplaireDansDeck = -1;
         }
 
         public Carte(List<Effet> eff, int no, Attribut attr, string nom, string description)
@@ -30,6 +31,13 @@ namespace YGO_Designer.Classes.Carte
             this.attr = attr;
             this.nom = nom;
             this.description = description;
+            this.nbExemplaireDansDeck = -1;
+        }
+
+        public Carte(List<Effet> eff, int no, Attribut attr, string nom, string description, int nbExemplaireDansDeck)
+            :this(eff,no,attr,nom,description)
+        {
+            this.nbExemplaireDansDeck = nbExemplaireDansDeck;
         }
 
         public override bool Equals(object obj)
@@ -45,7 +53,12 @@ namespace YGO_Designer.Classes.Carte
 
         public override string ToString()
         {
-            return this.no + " : " + this.attr + " " + this.nom ;
+            string maCarte = "";
+            if (nbExemplaireDansDeck <= 0)
+                maCarte = this.no + " : " + this.attr + " " + this.nom;
+            else
+                maCarte = this.no + " : " + this.attr + " " + this.nom + " x" + this.GetNbExemplaireDansDeck();
+            return maCarte;
         }
 
         public List<Effet> GetListEffets()
@@ -81,5 +94,11 @@ namespace YGO_Designer.Classes.Carte
         {
             this.no = no;
         }
+
+        public int GetNbExemplaireDansDeck()
+        {
+            return this.nbExemplaireDansDeck;
+        }
+
     }
 }

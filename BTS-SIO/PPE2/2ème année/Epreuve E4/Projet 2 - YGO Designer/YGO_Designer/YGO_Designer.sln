@@ -8,13 +8,25 @@ EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
 		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		YGO Test|Any CPU = YGO Test|Any CPU
+		YGO Test|x64 = YGO Test|x64
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Debug|x64.ActiveCfg = Debug|x64
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Debug|x64.Build.0 = Debug|x64
 		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Release|x64.ActiveCfg = Release|x64
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.Release|x64.Build.0 = Release|x64
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.YGO Test|Any CPU.ActiveCfg = YGO Test|Any CPU
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.YGO Test|Any CPU.Build.0 = YGO Test|Any CPU
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.YGO Test|x64.ActiveCfg = YGO Test|x64
+		{7B5170C1-F3F1-4E67-9F45-5D6FA16373CB}.YGO Test|x64.Build.0 = YGO Test|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

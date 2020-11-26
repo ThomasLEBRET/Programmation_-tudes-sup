@@ -19,14 +19,12 @@ namespace YGO_Designer
         public FormHomeJoueur()
         {
             InitializeComponent();
-
             listDeck = new List<Deck>();
             lbAllDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
         }
         private void lbAllDecks_SelectedIndexChanged(object sender, EventArgs e)
         {
             Deck d = (Deck)lbAllDecks.SelectedItem;
-            d.SetCartes(ORMDeck.GetCartesForADeck(d.GetNoDeck()));
 
             lbDeck.Items.Clear();
             lbDeck.Items.AddRange(d.GetCartes().ToArray());
@@ -62,6 +60,13 @@ namespace YGO_Designer
             else
                 return;
             
+        }
+
+        private void FormHomeJoueur_VisibleChanged(object sender, EventArgs e)
+        {
+            lbAllDecks.Items.Clear();
+            lbAllDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+            lbDeck.Items.Clear();
         }
     }
 }

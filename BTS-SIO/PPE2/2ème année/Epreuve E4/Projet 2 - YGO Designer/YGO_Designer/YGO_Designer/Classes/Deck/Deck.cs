@@ -56,9 +56,17 @@ namespace YGO_Designer.Classes.Deck
             return estValide;
         }
 
+        private int NBCartesDansDeck()
+        {
+            int nbExemplaireTotal = 0;
+            foreach(Carte.Carte c in listCartes)
+                nbExemplaireTotal += c.GetNbExemplaireDansDeck();
+            return nbExemplaireTotal;
+        }
+
         public override string ToString()
         {
-            return this.nom;
+            return this.nom + " " + NBCartesDansDeck() + " cartes";
         }
     }
 }

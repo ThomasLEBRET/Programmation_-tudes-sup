@@ -195,7 +195,11 @@ namespace YGO_Designer
             Carte c = (Carte)lbCartes.SelectedItem;
             Deck d = (Deck)lbDecks.SelectedItem;
             if (ORMDeck.AjouteCarteADeck(c.GetNo(), d.GetNoDeck()))
+            {
                 MessageBox.Show("La carte " + c.GetNom() + " a bien été ajoutée dans ce deck");
+                lbDecks.Items.Clear();
+                lbDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+            }
             else
                 MessageBox.Show("L'ajout de cette carte a échouée");
             
