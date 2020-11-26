@@ -141,6 +141,24 @@
     <Compile Include="Vues\Joueur\FormHomeJoueur.Designer.cs">
       <DependentUpon>FormHomeJoueur.cs</DependentUpon>
     </Compile>
+    <Compile Include="Vues\Notifications\FormDanger.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Notifications\FormDanger.Designer.cs">
+      <DependentUpon>FormDanger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\Notifications\FormAlert.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Notifications\FormAlert.Designer.cs">
+      <DependentUpon>FormAlert.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vues\Notifications\FormInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vues\Notifications\FormInfo.Designer.cs">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vues\Notifications\FormSuccess.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -181,6 +199,15 @@
     <EmbeddedResource Include="Vues\Joueur\FormHomeJoueur.resx">
       <DependentUpon>FormHomeJoueur.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vues\Notifications\FormDanger.resx">
+      <DependentUpon>FormDanger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\Notifications\FormAlert.resx">
+      <DependentUpon>FormAlert.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vues\Notifications\FormInfo.resx">
+      <DependentUpon>FormInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vues\Notifications\FormSuccess.resx">
       <DependentUpon>FormSuccess.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,7 +246,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\close.png" />
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

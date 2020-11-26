@@ -1,6 +1,6 @@
 ﻿namespace YGO_Designer.Vues.Joueur
 {
-    partial class FormSuccess
+    partial class FormAlert
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormSuccess));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormAlert));
             this.timClose = new System.Windows.Forms.Timer(this.components);
             this.timBeforeClose = new System.Windows.Forms.Timer(this.components);
             this.lbDesc = new System.Windows.Forms.Label();
@@ -51,14 +51,14 @@
             // lbDesc
             // 
             this.lbDesc.AutoSize = true;
-            this.lbDesc.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDesc.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.lbDesc.Font = new System.Drawing.Font("Candara", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDesc.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.lbDesc.Location = new System.Drawing.Point(105, 12);
             this.lbDesc.MaximumSize = new System.Drawing.Size(260, 100);
             this.lbDesc.Name = "lbDesc";
-            this.lbDesc.Size = new System.Drawing.Size(81, 26);
+            this.lbDesc.Size = new System.Drawing.Size(56, 26);
             this.lbDesc.TabIndex = 4;
-            this.lbDesc.Text = "Success";
+            this.lbDesc.Text = "Alert";
             // 
             // pbClose
             // 
@@ -72,11 +72,11 @@
             this.pbClose.TabIndex = 3;
             this.pbClose.TabStop = false;
             // 
-            // FormSuccess
+            // FormAlert
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(190)))), ((int)(((byte)(140)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(203)))), ((int)(((byte)(110)))));
             this.ClientSize = new System.Drawing.Size(378, 128);
             this.ControlBox = false;
             this.Controls.Add(this.lbDesc);
@@ -84,12 +84,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FormSuccess";
+            this.Name = "FormAlert";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.FormSuccess_Load);
+            this.Load += new System.EventHandler(this.FormAlert_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbClose)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

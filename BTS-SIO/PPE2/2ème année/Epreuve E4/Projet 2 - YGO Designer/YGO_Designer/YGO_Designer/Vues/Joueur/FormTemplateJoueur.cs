@@ -12,6 +12,8 @@ using YGO_Designer.Classes.Carte;
 using YGO_Designer.Classes.Carte.Attribut_Carte;
 using YGO_Designer.Classes.Carte.TypeCarte;
 using YGO_Designer.Classes.ORM;
+using YGO_Designer.Classes.User;
+using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
@@ -24,6 +26,10 @@ namespace YGO_Designer
         public FormTemplateJoueur()
         {
             InitializeComponent();
+
+            FormSuccess fs = new FormSuccess();
+            fs.SetDescription("Bienvenu " + User.GetUsername());
+            fs.Show();
         }
 
         private void btHome_Click(object sender, EventArgs e)

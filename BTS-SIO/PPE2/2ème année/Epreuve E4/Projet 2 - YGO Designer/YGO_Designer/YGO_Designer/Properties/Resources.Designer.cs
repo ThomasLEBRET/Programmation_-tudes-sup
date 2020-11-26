@@ -59,15 +59,5 @@ namespace YGO_Designer.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Recherche une ressource localisée de type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap close {
-            get {
-                object obj = ResourceManager.GetObject("close", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

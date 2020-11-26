@@ -12,3 +12,7 @@ C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème ann
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.csproj.GenerateResource.Cache
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.exe
 C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.Vues.Joueur.FormDanger.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.Vues.Joueur.FormAlert.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.Vues.Joueur.FormInfo.resources
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\PPE2\2ème année\Epreuve E4\Projet 2 - YGO Designer\YGO_Designer\YGO_Designer\obj\x64\YGO Test\YGO_Designer.Vues.Joueur.FormSuccess.resources

@@ -11,10 +11,10 @@ using System.Runtime.InteropServices;
 
 namespace YGO_Designer.Vues.Joueur
 {
-    public partial class FormSuccess : Form
+    public partial class FormAlert : Form
     {
         private string description;
-        public FormSuccess()
+        public FormAlert()
         {
             InitializeComponent();
 
@@ -58,7 +58,7 @@ namespace YGO_Designer.Vues.Joueur
             timClose.Enabled = true;
         }
 
-        private void FormSuccess_Load(object sender, EventArgs e)
+        private void FormAlert_Load(object sender, EventArgs e)
         {
             lbDesc.Text = description;
         }

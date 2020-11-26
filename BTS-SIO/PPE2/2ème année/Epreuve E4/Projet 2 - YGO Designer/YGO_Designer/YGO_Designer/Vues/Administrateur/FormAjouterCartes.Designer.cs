@@ -634,7 +634,6 @@ namespace YGO_Designer
         private System.Windows.Forms.RadioButton rbRituelle;
         private System.Windows.Forms.RadioButton rbContinue;
         private System.Windows.Forms.RadioButton rbQuick;
-        private System.Windows.Forms.RadioButton rbNo;
         private System.Windows.Forms.RadioButton rbNone;
         private System.Windows.Forms.GroupBox gbTypePiege;
         private System.Windows.Forms.RadioButton rbContrePiege;

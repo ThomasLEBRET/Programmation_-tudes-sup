@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
@@ -17,6 +18,7 @@ namespace YGO_Designer
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             new FormLogin().Show();
+            
             Application.Run();
         }
     }

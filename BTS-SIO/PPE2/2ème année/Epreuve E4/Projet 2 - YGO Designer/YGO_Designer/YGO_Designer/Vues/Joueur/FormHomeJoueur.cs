@@ -46,6 +46,18 @@ namespace YGO_Designer
                     fn.SetDescription("Le deck a bien été ajouté à votre collection");
                     fn.ShowDialog();
                 }
+                else
+                {
+                    FormDanger fd = new FormDanger();
+                    fd.SetDescription("Le deck n'a pas pu être rentrée dans la base");
+                    fd.ShowDialog();
+                }
+            } 
+            else
+            {
+                FormAlert fa = new FormAlert();
+                fa.SetDescription("Deck non nommé et/ou non numéroté");
+                fa.ShowDialog();
             }
         }
 
@@ -55,7 +67,9 @@ namespace YGO_Designer
             {
                 Deck d = (Deck)lbAllDecks.SelectedItem;
                 ORMDeck.ViderDeck(d.GetNoDeck());
-                MessageBox.Show("Votre deck est maintenant vide");
+                FormInfo fi = new FormInfo();
+                fi.SetDescription("Votre deck est maintenant vide");
+                fi.ShowDialog();
                 lbDeck.Items.Clear();
                 lbAllDecks.Items.Clear();
                 lbAllDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());

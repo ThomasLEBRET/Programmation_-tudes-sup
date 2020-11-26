@@ -12,6 +12,7 @@ using YGO_Designer.Classes.Carte;
 using YGO_Designer.Classes.Carte.Attribut_Carte;
 using YGO_Designer.Classes.Carte.TypeCarte;
 using YGO_Designer.Classes.ORM;
+using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
@@ -81,12 +82,16 @@ namespace YGO_Designer
                         c = new Monstre(typeM, attrM, nbEtoiles, atk, def, typesCarteMonstre, c.GetListEffets(), c.GetNo(), attrCarte, c.GetNom(), c.GetDescription());
                         if (ORMMonstre.AjouterMonstre((Monstre)c))
                         {
-                            MessageBox.Show(c.ToString() + " a bien été ajouté.");
+                            FormSuccess fs = new FormSuccess();
+                            fs.SetDescription(c.ToString() + " a bien été ajouté.");
+                            fs.ShowDialog();
                             return;
                         }
                         else
                         {
-                            MessageBox.Show("Le monstre n'a pas pu être ajouté.");
+                            FormAlert fa = new FormAlert();
+                            fa.SetDescription("Le monstre n'a pas pu être ajouté.");
+                            fa.ShowDialog();
                             return;
                         }
                     }

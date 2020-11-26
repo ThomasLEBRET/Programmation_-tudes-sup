@@ -12,6 +12,7 @@ namespace YGO_Designer.Classes.Deck
         private string user;
         private string nom;
         private List<Carte.Carte> listCartes;
+
         private const int nbrCarteMinClassic = 40;
         private const int nbrCarteMaxClassic = 60;
 
