@@ -18,8 +18,14 @@ using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
+    /// <summary>
+    /// Formulaire de recherche d'une carte
+    /// </summary>
     public partial class FormChercherCarte : Form
     {
+        /// <summary>
+        /// Affiche certaines informations en fonction du type d'utilisateur accédant à ce formulaire
+        /// </summary>
         public FormChercherCarte()
         {
             InitializeComponent();
@@ -49,6 +55,10 @@ namespace YGO_Designer
                 c.Hide();
         }
 
+        /// <summary>
+        /// Procédure privée affichant une représentation virtuelle d'une carte de type Monstre
+        /// </summary>
+        /// <param name="mo">Une carte de type Monstre</param>
         private void DisplayMonster(Monstre mo)
         {
             pbNv.Show();
@@ -75,6 +85,10 @@ namespace YGO_Designer
             lbDef.Show();
         }
 
+        /// <summary>
+        /// Procédure privée affichant une représentation virtuelle d'une carte de type Magie
+        /// </summary>
+        /// <param name="ma">Une carte de type Magie</param>
         private void DisplaySpell(Magie ma)
         {
             Color colorMa = new Color();
@@ -100,6 +114,10 @@ namespace YGO_Designer
             
         }
 
+        /// <summary>
+        /// Procédure privée affichant une représentation virtuelle d'une carte de type Piege
+        /// </summary>
+        /// <param name="pi">Une carte de type Piege</param>
         private void DisplayTrap(Piege pi)
         {
             Color colorPi = new Color();
@@ -125,6 +143,10 @@ namespace YGO_Designer
                 pbTypeMP.Show();
         }
 
+        /// <summary>
+        /// Procédure privée affichant une représentation virtuelle d'une carte 
+        /// </summary>
+        /// <param name="c">Une carte de type Carte</param>
         private void DisplayCard(Carte c)
         {
             HideCard();
@@ -146,6 +168,12 @@ namespace YGO_Designer
                     break;
             }
         }
+
+        /// <summary>
+        /// Contrôle si une carte peut être recherchée par son numéro
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btChercherParNum_Click(object sender, EventArgs e)
         {
             int noC = 0;
@@ -166,12 +194,22 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Affiche la carte sélectionnée dans la ListBox de résultat
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbCartes_SelectedIndexChanged(object sender, EventArgs e)
         {
             Carte c = (Carte)lbCartes.SelectedItem;
             DisplayCard(c);
         }
 
+        /// <summary>
+        /// Tente de rechercher une carte en fonction du contenu saisie dans la TextBox de recherche de carte par nom partiel
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private async void tbNomCarte_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tbNomCarte.Text))
@@ -184,6 +222,11 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Supprime une carte si l'utilisateur est un administrateur, sinon l'ajoute à un deck pour un joueur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btDelete_Click(object sender, EventArgs e)
         {
             if (User.GetTypeuser() == "ADM")
@@ -192,6 +235,9 @@ namespace YGO_Designer
                 AddToDeck();
         }
 
+        /// <summary>
+        /// Tente d'ajouter une carte à un deck pour un joueur
+        /// </summary>
         private void AddToDeck()
         {
             if (lbCartes.SelectedIndex < 0 ||lbDecks.SelectedIndex < 0)
@@ -220,6 +266,10 @@ namespace YGO_Designer
             }
             
         }
+
+        /// <summary>
+        /// Tente de supprimer une carte de la base de données lorsqu'un administrateur accède à ce formulaire et clique sur le bouton
+        /// </summary>
         private void Delete()
         {
             if (lbCartes.SelectedIndex < 0)
@@ -242,11 +292,21 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Rend le bouton enabled quand un deck est sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbDecks_SelectedIndexChanged(object sender, EventArgs e)
         {
             btDelete.Enabled = true;
         }
 
+        /// <summary>
+        /// Quand le formulaire est visible, charge la liste des decks de l'utilisateur
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormChercherCarte_VisibleChanged(object sender, EventArgs e)
         {
             lbDecks.Items.Clear();

@@ -16,8 +16,14 @@ using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
+    /// <summary>
+    /// Formulaire d'ajout d'une carte
+    /// </summary>
     public partial class FormAjouterCartes : Form
     {
+        /// <summary>
+        /// Charge le thème et les valeurs par défaut
+        /// </summary>
         public FormAjouterCartes()
         {
             InitializeComponent();
@@ -36,6 +42,10 @@ namespace YGO_Designer
             clbTypeCarteMonstre.DataSource = Enum.GetValues(typeof(TypeCarteMonstre));
         }
 
+        /// <summary>
+        /// Méthode privée contrôlant si les champs sont remplis pour une carte
+        /// </summary>
+        /// <returns>Un booléen : true si le contrôle de données est réussi, false sinon</returns>
         private bool EstCarteValide()
         {
             if (!string.IsNullOrEmpty(tbNomCarte.Text) && !string.IsNullOrEmpty(tbNoCarte.Text) && tbNoCarte.Text.Length == 8)
@@ -43,6 +53,11 @@ namespace YGO_Designer
             return false;
         }
 
+        /// <summary>
+        /// Méthode privée créant une carte à partir des zones de saisie du formulaire
+        /// </summary>
+        /// <param name="attrCarte">L'attribut de la carte préalablement construit</param>
+        /// <returns>Un objet de type Carte</returns>
         private Carte CreeCarte(Attribut attrCarte)
         {
             int noC = Convert.ToInt32(tbNoCarte.Text);
@@ -54,6 +69,11 @@ namespace YGO_Designer
             return new Carte(lE, noC, attrCarte, nom, description);
         }
 
+        /// <summary>
+        /// Procédure privée du formulaire contrôlant si un monstre peut être ajouté à la base de données
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAddMonstre_Click(object sender, EventArgs e)
         {
             if (EstCarteValide())
@@ -114,6 +134,11 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Procédure privée du formulaire contrôlant si une magie peut être ajouté à la base de données
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAddMagie_Click(object sender, EventArgs e)
         {
             if (EstCarteValide())
@@ -154,6 +179,11 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Procédure privée du formulaire contrôlant si un piège peut être ajouté à la base de données
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btAddPiege_Click(object sender, EventArgs e)
         {
             if (EstCarteValide())
@@ -194,6 +224,11 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Procédure privée du formulaire changeant le thème en fonction du Tab sélectionné depuis le TabControl
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void tbContainCarte_SelectedIndexChanged(object sender, EventArgs e)
         {
             switch (tbContainCarte.SelectedTab.Text)

@@ -15,6 +15,9 @@ using YGO_Designer.Classes.ORM;
 
 namespace YGO_Designer
 {
+    /// <summary>
+    /// Formulaire d'accueil pour un administrateur
+    /// </summary>
     public partial class FormHome : Form
     {
         public FormHome()
@@ -22,6 +25,9 @@ namespace YGO_Designer
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Procédure privée asynchrone chargeant les données du diagramme statistique des cartes de la base de données
+        /// </summary>
         private async void LoadDashboard()
         {
             int nbCartes = await ORMCarte.GetNbr();
@@ -49,6 +55,11 @@ namespace YGO_Designer
             chPropCartes.Series["Carte"].Points[2].LegendText = "Piege";
         }
 
+        /// <summary>
+        /// Charge le diagramme statistique des cartes de la base de données
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormHome_VisibleChanged(object sender, EventArgs e)
         {
             LoadDashboard();
