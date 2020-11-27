@@ -4,6 +4,9 @@ using System.Text;
 
 namespace YGO_Designer.Classes.Carte.Attribut_Carte
 {
+    /// <summary>
+    /// Enumération des types des monstres
+    /// </summary>
     public enum TypeMonstre
     {
         Aqua,

@@ -22,26 +22,36 @@ namespace YGO_Designer
             InitializeComponent();
         }
 
-        private void FormHome_VisibleChanged(object sender, EventArgs e)
+        private async void LoadDashboard()
         {
+            int nbCartes = await ORMCarte.GetNbr();
+            float nbMonstre = await ORMCarte.GetNbrMonstre();
+            float nbMagie = await ORMCarte.GetNbrMagie();
+            float nbPiege = await ORMCarte.GetNbrPiege();
+
             chPropCartes.Series.Clear();
             chPropCartes.Series.Add("Carte");
-            lbNbCartes.Text =  "Nombre de cartes : " + ORMCarte.GetNbCartes();
+            lbNbCartes.Text = "Nombre de cartes : " + nbCartes;
 
-            chPropCartes.Series["Carte"].Points.Add(ORMCarte.GetNbCartesMonstre());
+            chPropCartes.Series["Carte"].Points.Add(nbMonstre);
             chPropCartes.Series["Carte"].Points[0].Color = Color.FromArgb(167, 103, 38);
-            chPropCartes.Series["Carte"].Points[0].AxisLabel = "" + ORMCarte.GetNbCartesMonstre() + "%";
+            chPropCartes.Series["Carte"].Points[0].AxisLabel = "" + nbMonstre + "%";
             chPropCartes.Series["Carte"].Points[0].LegendText = "Monstre";
 
-            chPropCartes.Series["Carte"].Points.Add(ORMCarte.GetNbCartesMagie());
+            chPropCartes.Series["Carte"].Points.Add(nbMagie);
             chPropCartes.Series["Carte"].Points[1].Color = Color.FromArgb(64, 130, 109);
-            chPropCartes.Series["Carte"].Points[1].AxisLabel = "" + ORMCarte.GetNbCartesMagie() + "%";
+            chPropCartes.Series["Carte"].Points[1].AxisLabel = "" + nbMagie + "%";
             chPropCartes.Series["Carte"].Points[1].LegendText = "Magie ";
 
-            chPropCartes.Series["Carte"].Points.Add(ORMCarte.GetNbCartesPiege());
+            chPropCartes.Series["Carte"].Points.Add(nbPiege);
             chPropCartes.Series["Carte"].Points[2].Color = Color.FromArgb(204, 78, 92);
-            chPropCartes.Series["Carte"].Points[2].AxisLabel = "" + ORMCarte.GetNbCartesPiege() + "%";
+            chPropCartes.Series["Carte"].Points[2].AxisLabel = "" + nbPiege + "%";
             chPropCartes.Series["Carte"].Points[2].LegendText = "Piege";
+        }
+
+        private void FormHome_VisibleChanged(object sender, EventArgs e)
+        {
+            LoadDashboard();
         }    
     }
 }

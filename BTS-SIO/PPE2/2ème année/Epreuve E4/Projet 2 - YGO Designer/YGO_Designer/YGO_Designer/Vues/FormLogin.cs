@@ -13,6 +13,7 @@ using YGO_Designer.Classes.Carte.Attribut_Carte;
 using YGO_Designer.Classes.Carte.TypeCarte;
 using YGO_Designer.Classes.ORM;
 using YGO_Designer.Classes.User;
+using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
@@ -52,24 +53,31 @@ namespace YGO_Designer
                             ft.Show();
                             break;
                     }
+                    FormInfo fi = new FormInfo();
+                    fi.SetDescription("Bienvenu " + User.GetUsername());
+                    fi.ShowDialog();
                     this.Close();
                 }
                 else
                 {
-                    MessageBox.Show("La connexion a échouée.");
+                    FormDanger fd = new FormDanger();
+                    fd.SetDescription("La connexion a échouée");
+                    fd.ShowDialog();
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Entrez un nom d'utilisateur et un mot de passe valide.");
+                FormAlert fa = new FormAlert();
+                fa.SetDescription("Entrez un nom d'utilisateur et un mot de passe valide.");
+                fa.ShowDialog();
                 return;
             }
         }
 
         private void btSingin_Click(object sender, EventArgs e)
         {
-            if (ControlData() && !ORMUser.ExistUser(tbUserName.Text))
+            if (ControlData() && !ORMUser.Exist(tbUserName.Text))
             {
                 string user = tbUserName.Text;
                 string password = tbPassword.Text;
@@ -78,7 +86,9 @@ namespace YGO_Designer
                     switch(User.GetTypeuser())
                     {
                         case "JOU":
-                            MessageBox.Show("Bienvenu au joueur " + User.GetUsername());
+                            FormInfo fi = new FormInfo();
+                            fi.SetDescription("Bienvenu au joueur " + User.GetUsername());
+                            fi.ShowDialog();
                             break;
                         case "ADM":
                             this.Close();
@@ -89,13 +99,17 @@ namespace YGO_Designer
                 }
                 else
                 {
-                    MessageBox.Show("La connexion a échouée.");
+                    FormDanger fd = new FormDanger();
+                    fd.SetDescription("La connexion a échouée");
+                    fd.ShowDialog();
                     return;
                 }
             }
             else
             {
-                MessageBox.Show("Entrez un nom d'utilisateur et un mot de passe existant.");
+                FormAlert fa = new FormAlert();
+                fa.SetDescription("Entrez un nom d'utilisateur et un mot de passe existant.");
+                fa.ShowDialog();
                 return;
             }
         }

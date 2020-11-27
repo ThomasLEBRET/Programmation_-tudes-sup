@@ -44,6 +44,7 @@ namespace YGO_Designer
             this.btViderDeck = new System.Windows.Forms.Button();
             this.gbDecks = new System.Windows.Forms.GroupBox();
             this.gbCartesDeck = new System.Windows.Forms.GroupBox();
+            this.btSupprCarte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCreerDeck.SuspendLayout();
             this.gbDecks.SuspendLayout();
@@ -56,7 +57,7 @@ namespace YGO_Designer
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(373, 117);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -83,7 +84,8 @@ namespace YGO_Designer
             // 
             // gbCreerDeck
             // 
-            this.gbCreerDeck.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.gbCreerDeck.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gbCreerDeck.Controls.Add(this.button1);
             this.gbCreerDeck.Controls.Add(this.tbNoDeck);
             this.gbCreerDeck.Controls.Add(this.tbNomDeck);
@@ -193,6 +195,7 @@ namespace YGO_Designer
             // 
             // gbCartesDeck
             // 
+            this.gbCartesDeck.Controls.Add(this.btSupprCarte);
             this.gbCartesDeck.Controls.Add(this.lbDeck);
             this.gbCartesDeck.Controls.Add(this.btViderDeck);
             this.gbCartesDeck.Controls.Add(this.lbNomDeck);
@@ -206,6 +209,21 @@ namespace YGO_Designer
             this.gbCartesDeck.TabIndex = 11;
             this.gbCartesDeck.TabStop = false;
             this.gbCartesDeck.Text = "Cartes";
+            // 
+            // btSupprCarte
+            // 
+            this.btSupprCarte.BackColor = System.Drawing.Color.Red;
+            this.btSupprCarte.FlatAppearance.BorderSize = 0;
+            this.btSupprCarte.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSupprCarte.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSupprCarte.ForeColor = System.Drawing.SystemColors.Control;
+            this.btSupprCarte.Location = new System.Drawing.Point(7, 240);
+            this.btSupprCarte.Name = "btSupprCarte";
+            this.btSupprCarte.Size = new System.Drawing.Size(225, 49);
+            this.btSupprCarte.TabIndex = 10;
+            this.btSupprCarte.Text = "Supprimer la carte du deck";
+            this.btSupprCarte.UseVisualStyleBackColor = false;
+            this.btSupprCarte.Click += new System.EventHandler(this.btSupprCarte_Click);
             // 
             // FormHomeJoueur
             // 
@@ -251,6 +269,7 @@ namespace YGO_Designer
         private System.Windows.Forms.Button btViderDeck;
         private System.Windows.Forms.GroupBox gbDecks;
         private System.Windows.Forms.GroupBox gbCartesDeck;
+        private System.Windows.Forms.Button btSupprCarte;
     }
 }
 

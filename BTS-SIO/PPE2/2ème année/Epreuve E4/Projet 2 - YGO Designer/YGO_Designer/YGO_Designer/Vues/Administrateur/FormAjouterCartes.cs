@@ -22,8 +22,8 @@ namespace YGO_Designer
         {
             InitializeComponent();
 
-            Theme.AjouterCarte(this, Color.FromArgb(167, 103, 38), Color.FromArgb(187, 174, 152));
-            Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
+            Theme.Add(this, Color.FromArgb(167, 103, 38), Color.FromArgb(187, 174, 152));
+            Theme.AddTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
 
             ORMDatabase.Connexion();
 
@@ -60,7 +60,7 @@ namespace YGO_Designer
             {
                 Attribut attrCarte = new Attribut("MON", "Monstre");
                 Carte c = CreeCarte(attrCarte);
-                if(!ORMCarte.ExistCard(c))
+                if(!ORMCarte.Exist(c))
                 {
                     if (!string.IsNullOrEmpty(tbAtkMo.Text) && !string.IsNullOrEmpty(tbDefMo.Text))
                     {
@@ -80,7 +80,7 @@ namespace YGO_Designer
 
 
                         c = new Monstre(typeM, attrM, nbEtoiles, atk, def, typesCarteMonstre, c.GetListEffets(), c.GetNo(), attrCarte, c.GetNom(), c.GetDescription());
-                        if (ORMMonstre.AjouterMonstre((Monstre)c))
+                        if (ORMMonstre.Add((Monstre)c))
                         {
                             FormSuccess fs = new FormSuccess();
                             fs.SetDescription(c.ToString() + " a bien été ajouté.");
@@ -120,7 +120,7 @@ namespace YGO_Designer
             {
                 Attribut attrCarte = new Attribut("MAG", "Magie");
                 Carte magie = CreeCarte(attrCarte);
-                if(!ORMCarte.ExistCard(magie))
+                if(!ORMCarte.Exist(magie))
                 {
                     string typeMagie = "";
                     foreach (RadioButton rb in gbTypeMagie.Controls)
@@ -130,7 +130,7 @@ namespace YGO_Designer
                     }
                     magie = new Magie(magie.GetListEffets(), magie.GetNo(), magie.GetAttr(), magie.GetNom(), magie.GetDescription(), typeMagie);
                     
-                    if (ORMMagie.AjouterMagie((Magie)magie))
+                    if (ORMMagie.Add((Magie)magie))
                     {
                         MessageBox.Show(magie.ToString() + " a bien été ajouté.");
                         return;
@@ -160,7 +160,7 @@ namespace YGO_Designer
             {
                 Attribut attrCarte = new Attribut("PIE", "Piège");
                 Carte piege = CreeCarte(attrCarte);
-                if (!ORMCarte.ExistCard(piege))
+                if (!ORMCarte.Exist(piege))
                 {
                     string typePiege = "";
                     foreach (RadioButton rb in gbTypePiege.Controls)
@@ -170,7 +170,7 @@ namespace YGO_Designer
                     }
                     piege = new Piege(piege.GetListEffets(), piege.GetNo(), piege.GetAttr(), piege.GetNom(), piege.GetDescription(), typePiege);
 
-                    if (ORMPiege.AjouterPiege((Piege)piege))
+                    if (ORMPiege.Add((Piege)piege))
                     {
                         MessageBox.Show(piege.ToString() + " a bien été ajouté.");
                         return;
@@ -199,16 +199,16 @@ namespace YGO_Designer
             switch (tbContainCarte.SelectedTab.Text)
             {
                 case "Monstre":
-                    Theme.AjouterCarte(this, Color.FromArgb(167, 103, 38), Color.FromArgb(187, 174, 152));
-                    Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
+                    Theme.Add(this, Color.FromArgb(167, 103, 38), Color.FromArgb(187, 174, 152));
+                    Theme.AddTabControl(tbContainCarte, Color.FromArgb(187, 174, 152), Color.FromArgb(187, 174, 152));
                     break;
                 case "Magie":
-                    Theme.AjouterCarte(this, Color.FromArgb(64, 130, 109), Color.FromArgb(151, 223, 198));
-                    Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(151, 223, 198), Color.FromArgb(151, 223, 198));
+                    Theme.Add(this, Color.FromArgb(64, 130, 109), Color.FromArgb(151, 223, 198));
+                    Theme.AddTabControl(tbContainCarte, Color.FromArgb(151, 223, 198), Color.FromArgb(151, 223, 198));
                     break;
                 case "Piège":
-                    Theme.AjouterCarte(this, Color.FromArgb(204, 78, 92), Color.FromArgb(253, 223, 224));
-                    Theme.AjouterCarteTabControl(tbContainCarte, Color.FromArgb(253, 223, 224), Color.FromArgb(253, 223, 224));
+                    Theme.Add(this, Color.FromArgb(204, 78, 92), Color.FromArgb(253, 223, 224));
+                    Theme.AddTabControl(tbContainCarte, Color.FromArgb(253, 223, 224), Color.FromArgb(253, 223, 224));
                     break;
 
             }

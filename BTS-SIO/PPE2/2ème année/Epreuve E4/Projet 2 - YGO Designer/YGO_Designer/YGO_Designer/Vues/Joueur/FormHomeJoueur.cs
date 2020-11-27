@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YGO_Designer.Classes;
+using YGO_Designer.Classes.Carte;
 using YGO_Designer.Classes.Deck;
 using YGO_Designer.Classes.User;
 using YGO_Designer.Vues.Joueur;
@@ -21,7 +22,7 @@ namespace YGO_Designer
         {
             InitializeComponent();
             listDeck = new List<Deck>();
-            lbAllDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+            lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
         }
         private void lbAllDecks_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -31,7 +32,7 @@ namespace YGO_Designer
             lbDeck.Items.AddRange(d.GetCartes().ToArray());
 
             lbNomDeck.Text = "Nom : " + d.GetNom();
-            lbViable.Text = "Deck jouable : " + d.EstDeckValide();
+            lbViable.Text = "Deck jouable : " + d.IsDeckValid();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -39,7 +40,7 @@ namespace YGO_Designer
             if(!string.IsNullOrEmpty(tbNomDeck.Text) && !string.IsNullOrEmpty(tbNoDeck.Text))
             {
                 Deck d = new Deck(int.Parse(tbNoDeck.Text), User.GetUsername(), tbNomDeck.Text);
-                if(ORMDeck.AjouteDeck(d))
+                if(ORMDeck.Add(d))
                 {
                     lbAllDecks.Items.Add(d);
                     FormSuccess fn = new FormSuccess();
@@ -66,13 +67,13 @@ namespace YGO_Designer
             if (lbAllDecks.SelectedIndex >= 0)
             {
                 Deck d = (Deck)lbAllDecks.SelectedItem;
-                ORMDeck.ViderDeck(d.GetNoDeck());
+                ORMDeck.DeleteCards(d.GetNo());
                 FormInfo fi = new FormInfo();
                 fi.SetDescription("Votre deck est maintenant vide");
                 fi.ShowDialog();
                 lbDeck.Items.Clear();
                 lbAllDecks.Items.Clear();
-                lbAllDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+                lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
             }
             else
                 return;
@@ -82,8 +83,31 @@ namespace YGO_Designer
         private void FormHomeJoueur_VisibleChanged(object sender, EventArgs e)
         {
             lbAllDecks.Items.Clear();
-            lbAllDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+            lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
             lbDeck.Items.Clear();
+        }
+
+        private void btSupprCarte_Click(object sender, EventArgs e)
+        {
+            if (lbDeck.SelectedIndex < 0)
+                return;
+            else
+            {
+                Deck d = (Deck)lbAllDecks.SelectedItem;
+                Carte c = (Carte)lbDeck.SelectedItem;
+                if (ORMDeck.DeleteCardFromDeck(c, d))
+                {
+                    FormInfo fi = new FormInfo();
+                    fi.SetDescription("La carte " + c.ToString() + " a bien été supprimée du deck " + d.GetNom());
+                    fi.ShowDialog();
+                }
+                else
+                {
+                    FormDanger fd = new FormDanger();
+                    fd.SetDescription("La carte " + c.ToString() + " n'a pas pu être supprimée");
+                    fd.ShowDialog();
+                }
+            }
         }
     }
 }

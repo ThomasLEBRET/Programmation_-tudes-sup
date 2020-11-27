@@ -40,7 +40,7 @@ namespace YGO_Designer
                 btDelete.Enabled = true;
             }
 
-            lbDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+            lbDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
         }
 
         private void HideCard()
@@ -52,15 +52,15 @@ namespace YGO_Designer
         private void DisplayMonster(Monstre mo)
         {
             pbNv.Show();
-            lbNv.Text = mo.GetNivMonstre().ToString();
+            lbNv.Text = mo.GetNiveau().ToString();
             lbNv.Show();
-            string st = mo.GetAttrMonstre().ToLower() + ".png";
+            string st = mo.GetAttribut().ToLower() + ".png";
             int index = ilAttrib.Images.IndexOfKey(st);
             pbAttr.Image = ilAttrib.Images[index];
             pbAttr.Show();
             rtbNom.Text = mo.GetNom();
             rtbNom.Show();
-            string typeMoCa = mo.GetTypesCarteMonstre();
+            string typeMoCa = mo.GetSousTypes();
             if (mo.GetListEffets().Count() != 0)
                 typeMoCa = typeMoCa + "/Effet";
             rtbDescription.Text = typeMoCa + "\n";
@@ -93,7 +93,7 @@ namespace YGO_Designer
             pbAttr.Image = ilAttrib.Images[index];
             pbAttr.Show();
 
-                st = ma.GetNomTypeMa() + ".png";
+                st = ma.GetNomType() + ".png";
                 index = ilAttrib.Images.IndexOfKey(st);
                 pbTypeMP.Image = ilAttrib.Images[index];
                 pbTypeMP.Show();
@@ -151,7 +151,7 @@ namespace YGO_Designer
             int noC = 0;
             if(!string.IsNullOrEmpty(tbNoCarte.Text) && tbNoCarte.Text.Length == 8 && int.TryParse(tbNoCarte.Text, out noC))
             {
-                Carte c = ORMCarte.GetCarteByNo(Convert.ToInt32(tbNoCarte.Text));
+                Carte c = ORMCarte.GetByNo(Convert.ToInt32(tbNoCarte.Text));
                 lbCartes.Items.Clear();
                 lbCartes.Items.Add(c);
                 if (lbCartes.Items.Count > 0)
@@ -172,11 +172,11 @@ namespace YGO_Designer
             DisplayCard(c);
         }
 
-        private void tbNomCarte_TextChanged(object sender, EventArgs e)
+        private async void tbNomCarte_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tbNomCarte.Text))
             {
-                List<Carte> lC = ORMCarte.GetCarteByPartialName(tbNomCarte.Text);
+                List<Carte> lC = await Task.Run(() => ORMCarte.GetByPartialName(tbNomCarte.Text));
                 lbCartes.Items.Clear();
                 lbCartes.Items.AddRange(lC.ToArray());
                 if (lbCartes.Items.Count > 0)
@@ -203,14 +203,14 @@ namespace YGO_Designer
             }
             Carte c = (Carte)lbCartes.SelectedItem;
             Deck d = (Deck)lbDecks.SelectedItem;
-            if (ORMDeck.AjouteCarteADeck(c.GetNo(), d.GetNoDeck()))
+            if (ORMDeck.AddCard(c.GetNo(), d.GetNo()))
             {
                 FormSuccess fs = new FormSuccess();
                 fs.SetDescription("La carte " + c.GetNom() + " a bien été ajoutée dans ce deck");
                 fs.Show();
 
                 lbDecks.Items.Clear();
-                lbDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+                lbDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
             }
             else
             {
@@ -225,7 +225,7 @@ namespace YGO_Designer
             if (lbCartes.SelectedIndex < 0)
                 return;
             Carte c = (Carte)lbCartes.SelectedItem;
-            if (ORMCarte.DeleteCard(c))
+            if (ORMCarte.Delete(c))
             {
                 FormInfo fi = new FormInfo();
                 fi.SetDescription("La carte " + c.GetNom() + " a bien été supprimée ainsi que tous ses effets");
@@ -250,7 +250,7 @@ namespace YGO_Designer
         private void FormChercherCarte_VisibleChanged(object sender, EventArgs e)
         {
             lbDecks.Items.Clear();
-            lbDecks.Items.AddRange(ORMDeck.GetDecksForUser().ToArray());
+            lbDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
         }
     }
 }

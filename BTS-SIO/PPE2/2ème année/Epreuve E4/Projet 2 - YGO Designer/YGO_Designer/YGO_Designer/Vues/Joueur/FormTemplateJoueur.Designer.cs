@@ -178,7 +178,6 @@ namespace YGO_Designer
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button btHome;
         private System.Windows.Forms.Button btChercherCarte;
-        private System.Windows.Forms.Button Cher;
         private System.Windows.Forms.Button btClose;
         private System.Windows.Forms.Panel pnFormChild;
         private System.Windows.Forms.Button btCreerDeck;

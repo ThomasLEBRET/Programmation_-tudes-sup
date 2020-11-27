@@ -293,7 +293,7 @@ namespace YGO_Designer
             this.btDelete.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btDelete.FlatAppearance.BorderSize = 0;
             this.btDelete.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btDelete.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btDelete.Font = new System.Drawing.Font("Candara", 14.25F, System.Drawing.FontStyle.Bold);
             this.btDelete.Location = new System.Drawing.Point(818, 103);

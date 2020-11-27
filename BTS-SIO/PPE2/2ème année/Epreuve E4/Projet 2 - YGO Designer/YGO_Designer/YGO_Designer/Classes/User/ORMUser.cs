@@ -6,9 +6,17 @@ using YGO_Designer.Classes.ORM;
 
 namespace YGO_Designer.Classes.User
 {
+    /// <summary>
+    /// Classe simulant un ORM pour la classe statique User
+    /// </summary>
     public static class ORMUser
     {
-        public static bool ExistUser(string username)
+        /// <summary>
+        /// Vérifie qu'un utilisateur existe dans la base de données
+        /// </summary>
+        /// <param name="username">Le nom d'utilisateur</param>
+        /// <returns>Un booléen : true si l'utilisateur existe, false sinon</returns>
+        public static bool Exist(string username)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
             cmd.CommandText = "SELECT Count(*)  FROM utilisateur WHERE USER = @user";
@@ -17,6 +25,12 @@ namespace YGO_Designer.Classes.User
             return Convert.ToInt32(cmd.ExecuteScalar()) == 1;
         }
 
+        /// <summary>
+        /// Connecte un utilisateur 
+        /// </summary>
+        /// <param name="username">Le nom</param>
+        /// <param name="password">Le mot de passe</param>
+        /// <returns>Un booléen : true si la connexion de l'utilisateur a réussie, false sinon</returns>
         public static bool Connexion(string username, string password)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
@@ -25,18 +39,23 @@ namespace YGO_Designer.Classes.User
             cmd.Parameters.Add("@mdp", MySqlDbType.VarChar).Value = password;
             MySqlDataReader rdr = cmd.ExecuteReader();
 
-            bool estUserExistant = false;
+            bool isUserExistant = false;
             if(rdr.Read())
             {
                 User.SetUsername(rdr["USER"].ToString());
                 User.SetTypeUser(rdr["CD_TYPE"].ToString());
-                User.SetPassword(rdr["MDP"].ToString());
-                estUserExistant = true;
+                isUserExistant = true;
             }
             rdr.Close();
-            return estUserExistant;
+            return isUserExistant;
         }
 
+        /// <summary>
+        /// Inscrit un utilisateur en tant que joueur
+        /// </summary>
+        /// <param name="user">Le nom</param>
+        /// <param name="mdp">le mot de passe</param>
+        /// <returns></returns>
         public static bool Inscription(string user, string mdp)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();

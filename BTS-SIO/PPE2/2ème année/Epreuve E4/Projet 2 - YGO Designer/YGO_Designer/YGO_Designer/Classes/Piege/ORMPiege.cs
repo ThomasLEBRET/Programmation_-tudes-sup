@@ -7,9 +7,17 @@ using YGO_Designer.Classes.Carte;
 
 namespace YGO_Designer
 {
+    /// <summary>
+    /// Classe static simulant un ORM pour l'objet Piege 
+    /// </summary>
     public static class ORMPiege
     {
-        public static bool AjouterPiege(Piege pi)
+        /// <summary>
+        /// Ajoute une carte piege dans la base de données
+        /// </summary>
+        /// <param name="pi">Une carte Piege</param>
+        /// <returns>Un booléen : true si la carte a pu être ajoutée, false sinon</returns>
+        public static bool Add(Piege pi)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
 
