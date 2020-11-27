@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using YGO_Designer.Classes;
@@ -210,13 +211,13 @@ namespace YGO_Designer
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private async void tbNomCarte_TextChanged(object sender, EventArgs e)
+        private void tbNomCarte_TextChanged(object sender, EventArgs e)
         {
             if (!string.IsNullOrEmpty(tbNomCarte.Text))
             {
-                List<Carte> lC = await Task.Run(() => ORMCarte.GetByPartialName(tbNomCarte.Text));
+                Task<List<Carte>> lC = Task.Run(() => ORMCarte.GetByPartialName(tbNomCarte.Text));
                 lbCartes.Items.Clear();
-                lbCartes.Items.AddRange(lC.ToArray());
+                lbCartes.Items.AddRange(lC.Result.ToArray());
                 if (lbCartes.Items.Count > 0)
                     lbCartes.SelectedItem = lbCartes.Items[0];
             }
