@@ -29,7 +29,8 @@ namespace YGO_Designer
         {
             InitializeComponent();
             listDeck = new List<Deck>();
-            lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
+
+            ActualiseDecks();
         }
 
         /// <summary>
@@ -61,22 +62,16 @@ namespace YGO_Designer
                 if(ORMDeck.Add(d))
                 {
                     lbAllDecks.Items.Add(d);
-                    FormSuccess fn = new FormSuccess();
-                    fn.SetDescription("Le deck a bien été ajouté à votre collection");
-                    fn.ShowDialog();
+                    Notification.ShowFormSuccess("Le deck a bien été ajouté à votre collection");
                 }
                 else
                 {
-                    FormDanger fd = new FormDanger();
-                    fd.SetDescription("Le deck n'a pas pu être rentrée dans la base");
-                    fd.ShowDialog();
+                    Notification.ShowFormDanger("Le deck n'a pas pu être rentrée dans la base");
                 }
             } 
             else
             {
-                FormAlert fa = new FormAlert();
-                fa.SetDescription("Deck non nommé et/ou non numéroté");
-                fa.ShowDialog();
+                Notification.ShowFormAlert("Deck non nommé et/ou non numéroté");
             }
         }
 
@@ -91,18 +86,13 @@ namespace YGO_Designer
             {
                 Deck d = (Deck)lbAllDecks.SelectedItem;
                 ORMDeck.DeleteCards(d.GetNo());
-                FormInfo fi = new FormInfo();
-                fi.SetDescription("Votre deck est maintenant vide");
-                fi.ShowDialog();
-                lbDeck.Items.Clear();
-                lbAllDecks.Items.Clear();
-                lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
+                ActualiseDecks();
+                Notification.ShowFormInfo("Votre deck est maintenant vide");
+
             }
             else
             {
-                FormAlert fa = new FormAlert();
-                fa.SetDescription("Veuillez sélectionner un deck");
-                fa.ShowDialog();
+                Notification.ShowFormAlert("Veuillez sélectionner un deck");
             }
             
         }
@@ -114,9 +104,7 @@ namespace YGO_Designer
         /// <param name="e"></param>
         private void FormHomeJoueur_VisibleChanged(object sender, EventArgs e)
         {
-            lbAllDecks.Items.Clear();
-            lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
-            lbDeck.Items.Clear();
+            ActualiseDecks();
         }
 
         /// <summary>
@@ -130,17 +118,46 @@ namespace YGO_Designer
             {
                 Deck d = (Deck)lbAllDecks.SelectedItem;
                 Carte c = (Carte)lbDeck.SelectedItem;
-                if (ORMDeck.DeleteCardFromDeck(c, d))
+                if (ORMDeck.DeleteCard(c, d))
                 {
-                    FormInfo fi = new FormInfo();
-                    fi.SetDescription("La carte " + c.ToString() + " a bien été supprimée du deck " + d.GetNom());
-                    fi.ShowDialog();
+                    ActualiseDecks();
+                    Notification.ShowFormInfo("La carte " + c.ToString() + " a bien été supprimée du deck " + d.GetNom());
                 }
                 else
+                    Notification.ShowFormDanger("La carte " + c.ToString() + " n'a pas pu être supprimée");
+            }
+        }
+
+        /// <summary>
+        /// Procédure privée actualisant la ListBox contenant tous les decks et fait disparaître les cartes du deck en question
+        /// </summary>
+        private void ActualiseDecks()
+        {
+            lbAllDecks.Items.Clear();
+            lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
+            lbDeck.Items.Clear();
+        }
+
+        /// <summary>
+        /// Tente d'enlever un exemplaire de la carte dans le deck
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btSuppExemplaire_Click(object sender, EventArgs e)
+        {
+            if (lbDeck.SelectedIndex >= 0)
+            {
+                Deck d = (Deck)lbAllDecks.SelectedItem;
+                Carte c = (Carte)lbDeck.SelectedItem;
+                if(ORMDeck.RemoveCopyCard(c,d))
                 {
-                    FormDanger fd = new FormDanger();
-                    fd.SetDescription("La carte " + c.ToString() + " n'a pas pu être supprimée");
-                    fd.ShowDialog();
+                    if(c.GetNbExemplaireFromDeck() - 1 == 0)
+                    {
+                        if(ORMDeck.DeleteCard(c,d))
+                        {
+
+                        }
+                    }
                 }
             }
         }

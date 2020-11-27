@@ -53,26 +53,14 @@ namespace YGO_Designer
                             ft.Show();
                             break;
                     }
-                    FormSuccess fs = new FormSuccess();
-                    fs.SetDescription("Bienvenu " + User.GetUsername());
-                    fs.Show();
+                    Notification.ShowFormSuccess("Bienvenu " + User.GetUsername());
                     this.Close();
                 }
                 else
-                {
-                    FormDanger fd = new FormDanger();
-                    fd.SetDescription("La connexion a échouée");
-                    fd.ShowDialog();
-                    return;
-                }
+                    Notification.ShowFormDanger("Nom d'utilisateur et/ou mot de passe incorrect");
             }
             else
-            {
-                FormAlert fa = new FormAlert();
-                fa.SetDescription("Entrez un nom d'utilisateur et un mot de passe valide.");
-                fa.ShowDialog();
-                return;
-            }
+                Notification.ShowFormAlert("Entrez un nom d'utilisateur et un mot de passe valide");
         }
 
         private void btSingin_Click(object sender, EventArgs e)
@@ -86,32 +74,15 @@ namespace YGO_Designer
                     switch(User.GetTypeuser())
                     {
                         case "JOU":
-                            FormInfo fi = new FormInfo();
-                            fi.SetDescription("Bienvenu au joueur " + User.GetUsername());
-                            fi.ShowDialog();
-                            break;
-                        case "ADM":
-                            this.Close();
-                            FormTemplateAdmin ft = new FormTemplateAdmin();
-                            ft.Show();
+                            Notification.ShowFormInfo("Bienvenu au joueur " + User.GetUsername());
                             break;
                     }
                 }
                 else
-                {
-                    FormDanger fd = new FormDanger();
-                    fd.SetDescription("La connexion a échouée");
-                    fd.ShowDialog();
-                    return;
-                }
+                    Notification.ShowFormDanger("La connection a échouée");
             }
             else
-            {
-                FormAlert fa = new FormAlert();
-                fa.SetDescription("Entrez un nom d'utilisateur et un mot de passe existant.");
-                fa.ShowDialog();
-                return;
-            }
+                Notification.ShowFormAlert("Entrez un nom d'utilisateur et un mot de passe valide");
         }
 
         private void btClose_Click(object sender, EventArgs e)

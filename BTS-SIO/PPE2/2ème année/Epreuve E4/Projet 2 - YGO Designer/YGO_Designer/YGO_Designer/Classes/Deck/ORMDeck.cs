@@ -161,10 +161,19 @@ namespace YGO_Designer.Classes.Deck
         /// <param name="c">Un objet de type Carte</param>
         /// <param name="d">Un objet de type Deck</param>
         /// <returns>Un booléen : true si la carte a pu être supprimée du deck, false sinon</returns>
-        public static bool DeleteCardFromDeck(Carte.Carte c, Deck d)
+        public static bool DeleteCard(Carte.Carte c, Deck d)
         {
             MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
             cmd.CommandText = "DELETE FROM inclus WHERE NO_DECK = @noDeck AND NO_CARTE = @noCarte";
+            cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = d.GetNo();
+            cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = c.GetNo();
+            return Convert.ToInt32(cmd.ExecuteNonQuery()) == 1;
+        }
+
+        public static bool RemoveCopyCard(Carte.Carte c, Deck d)
+        {
+            MySqlCommand cmd = ORMDatabase.GetConn().CreateCommand();
+            cmd.CommandText = "UPDATE inclus SET NB_EXEMPLAIRE = NB_EXEMPLAIRE - 1 WHERE NO_DECK = @noDeck AND NO_CARTE = @noCarte";
             cmd.Parameters.Add("@noDeck", MySqlDbType.Int32).Value = d.GetNo();
             cmd.Parameters.Add("@noCarte", MySqlDbType.Int32).Value = c.GetNo();
             return Convert.ToInt32(cmd.ExecuteNonQuery()) == 1;

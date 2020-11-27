@@ -95,31 +95,18 @@ namespace YGO_Designer
                         foreach (TypeCarteMonstre tcm in clbTypeCarteMonstre.CheckedItems)
                             typesCarteMonstre = typesCarteMonstre + tcm.ToString() + "/";
 
-                        if(typesCarteMonstre.Length != 0)
+                        if (typesCarteMonstre.Length != 0)
                             typesCarteMonstre = typesCarteMonstre.Substring(0, typesCarteMonstre.Length - 1);
 
 
                         c = new Monstre(typeM, attrM, nbEtoiles, atk, def, typesCarteMonstre, c.GetListEffets(), c.GetNo(), attrCarte, c.GetNom(), c.GetDescription());
                         if (ORMMonstre.Add((Monstre)c))
-                        {
-                            FormSuccess fs = new FormSuccess();
-                            fs.SetDescription(c.ToString() + " a bien été ajouté.");
-                            fs.ShowDialog();
-                            return;
-                        }
+                            Notification.ShowFormSuccess(c.ToString() + " a bien été ajoutée");
                         else
-                        {
-                            FormAlert fa = new FormAlert();
-                            fa.SetDescription("Le monstre n'a pas pu être ajouté.");
-                            fa.ShowDialog();
-                            return;
-                        }
+                            Notification.ShowFormAlert("Le monstre n'a pas pu être ajouté");
                     }
                     else
-                    {
-                        MessageBox.Show("Entrez une valeur d'attaque et de défense valide.");
-                        return;
-                    }
+                        Notification.ShowFormAlert("Entrez une valeur d'attaque et de défense valide");
                 }
                 else
                 {

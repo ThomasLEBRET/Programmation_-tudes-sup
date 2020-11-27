@@ -86,6 +86,7 @@
   <ItemGroup>
     <Compile Include="Classes\Deck\Deck.cs" />
     <Compile Include="Classes\Deck\ORMDeck.cs" />
+    <Compile Include="Classes\Notification.cs" />
     <Compile Include="Classes\Theme.cs" />
     <Compile Include="Vues\FormLogin.cs">
       <SubType>Form</SubType>

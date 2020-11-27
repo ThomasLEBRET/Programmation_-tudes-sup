@@ -114,8 +114,8 @@ namespace YGO_Designer.Classes.Deck
         private int NbCartesFromDeck()
         {
             int nbExemplaireTotal = 0;
-            foreach(Carte.Carte c in listCartes)
-                nbExemplaireTotal += c.GetNbExemplaireFromDeck()*c.GetNbExemplaireFromDeck();
+            foreach (Carte.Carte c in listCartes)
+                nbExemplaireTotal += c.GetNbExemplaireFromDeck();
             return nbExemplaireTotal;
         }
 

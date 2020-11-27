@@ -45,6 +45,7 @@ namespace YGO_Designer
             this.gbDecks = new System.Windows.Forms.GroupBox();
             this.gbCartesDeck = new System.Windows.Forms.GroupBox();
             this.btSupprCarte = new System.Windows.Forms.Button();
+            this.btSuppExemplaire = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbCreerDeck.SuspendLayout();
             this.gbDecks.SuspendLayout();
@@ -195,6 +196,7 @@ namespace YGO_Designer
             // 
             // gbCartesDeck
             // 
+            this.gbCartesDeck.Controls.Add(this.btSuppExemplaire);
             this.gbCartesDeck.Controls.Add(this.btSupprCarte);
             this.gbCartesDeck.Controls.Add(this.lbDeck);
             this.gbCartesDeck.Controls.Add(this.btViderDeck);
@@ -205,7 +207,7 @@ namespace YGO_Designer
             this.gbCartesDeck.Location = new System.Drawing.Point(12, 236);
             this.gbCartesDeck.Name = "gbCartesDeck";
             this.gbCartesDeck.Padding = new System.Windows.Forms.Padding(10);
-            this.gbCartesDeck.Size = new System.Drawing.Size(546, 324);
+            this.gbCartesDeck.Size = new System.Drawing.Size(546, 351);
             this.gbCartesDeck.TabIndex = 11;
             this.gbCartesDeck.TabStop = false;
             this.gbCartesDeck.Text = "Cartes";
@@ -224,6 +226,21 @@ namespace YGO_Designer
             this.btSupprCarte.Text = "Supprimer la carte du deck";
             this.btSupprCarte.UseVisualStyleBackColor = false;
             this.btSupprCarte.Click += new System.EventHandler(this.btSupprCarte_Click);
+            // 
+            // btSuppExemplaire
+            // 
+            this.btSuppExemplaire.BackColor = System.Drawing.Color.IndianRed;
+            this.btSuppExemplaire.FlatAppearance.BorderSize = 0;
+            this.btSuppExemplaire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btSuppExemplaire.Font = new System.Drawing.Font("Candara", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btSuppExemplaire.ForeColor = System.Drawing.SystemColors.Control;
+            this.btSuppExemplaire.Location = new System.Drawing.Point(7, 295);
+            this.btSuppExemplaire.Name = "btSuppExemplaire";
+            this.btSuppExemplaire.Size = new System.Drawing.Size(225, 49);
+            this.btSuppExemplaire.TabIndex = 11;
+            this.btSuppExemplaire.Text = "Enlever un exemplaire de la carte";
+            this.btSuppExemplaire.UseVisualStyleBackColor = false;
+            this.btSuppExemplaire.Click += new System.EventHandler(this.btSuppExemplaire_Click);
             // 
             // FormHomeJoueur
             // 
@@ -270,6 +287,7 @@ namespace YGO_Designer
         private System.Windows.Forms.GroupBox gbDecks;
         private System.Windows.Forms.GroupBox gbCartesDeck;
         private System.Windows.Forms.Button btSupprCarte;
+        private System.Windows.Forms.Button btSuppExemplaire;
     }
 }
 

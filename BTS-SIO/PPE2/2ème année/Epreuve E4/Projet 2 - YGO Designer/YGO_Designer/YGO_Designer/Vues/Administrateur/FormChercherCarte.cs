@@ -178,7 +178,7 @@ namespace YGO_Designer
         private void btChercherParNum_Click(object sender, EventArgs e)
         {
             int noC = 0;
-            if(!string.IsNullOrEmpty(tbNoCarte.Text) && tbNoCarte.Text.Length == 8 && int.TryParse(tbNoCarte.Text, out noC))
+            if (!string.IsNullOrEmpty(tbNoCarte.Text) && tbNoCarte.Text.Length == 8 && int.TryParse(tbNoCarte.Text, out noC))
             {
                 Carte c = ORMCarte.GetByNo(Convert.ToInt32(tbNoCarte.Text));
                 lbCartes.Items.Clear();
@@ -187,12 +187,7 @@ namespace YGO_Designer
                     lbCartes.SelectedItem = lbCartes.Items[0];
             }
             else
-            {
-                FormAlert fa = new FormAlert();
-                fa.SetDescription("Entrez un numéro valide svp");
-                fa.ShowDialog();
-                return;
-            }
+                Notification.ShowFormAlert("Entrez un numéro valide svp");
         }
 
         /// <summary>
@@ -241,30 +236,19 @@ namespace YGO_Designer
         /// </summary>
         private void AddToDeck()
         {
-            if (lbCartes.SelectedIndex < 0 ||lbDecks.SelectedIndex < 0)
-            {
-                FormAlert fa = new FormAlert();
-                fa.SetDescription("Sélectionnez le deck dans lequel ajouter la carte et/ou une carte recherchée");
-                fa.ShowDialog();
-                return;
-            }
+            if (lbCartes.SelectedIndex < 0 || lbDecks.SelectedIndex < 0)
+                Notification.ShowFormAlert("Sélectionnez le deck dans lequel ajouter la carte et/ou une carte recherchée");
             Carte c = (Carte)lbCartes.SelectedItem;
             Deck d = (Deck)lbDecks.SelectedItem;
             if (ORMDeck.AddCard(c.GetNo(), d.GetNo()))
             {
-                FormSuccess fs = new FormSuccess();
-                fs.SetDescription("La carte " + c.GetNom() + " a bien été ajoutée dans ce deck");
-                fs.Show();
+                Notification.ShowFormSuccess("La carte " + c.GetNom() + " a bien été ajoutée dans ce deck");
 
                 lbDecks.Items.Clear();
                 lbDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
             }
             else
-            {
-                FormDanger fd = new FormDanger();
-                fd.SetDescription("L'ajout de cette carte a échouée");
-                fd.ShowDialog();
-            }
+                Notification.ShowFormDanger("L'ajout de cette carte a échouée");
             
         }
 
@@ -278,19 +262,13 @@ namespace YGO_Designer
             Carte c = (Carte)lbCartes.SelectedItem;
             if (ORMCarte.Delete(c))
             {
-                FormInfo fi = new FormInfo();
-                fi.SetDescription("La carte " + c.GetNom() + " a bien été supprimée ainsi que tous ses effets");
-                fi.ShowDialog();
+                Notification.ShowFormInfo("La carte " + c.GetNom() + " a bien été supprimée ainsi que tous ses effets");
                 lbCartes.Items.Clear();
                 tbNoCarte.Text = "";
                 tbNomCarte.Text = "";
             }
             else
-            {
-                FormDanger fd = new FormDanger();
-                fd.SetDescription("La carte " + c.GetNom() + " n'a pas pu être supprimée");
-                fd.ShowDialog();
-            }
+                Notification.ShowFormDanger("La carte " + c.GetNom() + " n'a pas pu être supprimée");
         }
 
         /// <summary>

@@ -8,12 +8,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using YGO_Designer.Classes;
 
 namespace YGO_Designer.Vues.Joueur
 {
     public partial class FormDanger : Form
     {
-        private string description;
         public FormDanger()
         {
             InitializeComponent();
@@ -35,11 +35,6 @@ namespace YGO_Designer.Vues.Joueur
             int nHeightEllipse // width of ellipse
         );
 
-        public void SetDescription(string description)
-        {
-            this.description = description;
-        }
-
         private void pbClose_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -60,7 +55,7 @@ namespace YGO_Designer.Vues.Joueur
 
         private void FormDanger_Load(object sender, EventArgs e)
         {
-            lbDesc.Text = description;
+            lbDesc.Text = Notification.GetDescription();
         }
     }
 }
