@@ -53,9 +53,9 @@ namespace YGO_Designer
                             ft.Show();
                             break;
                     }
-                    FormInfo fi = new FormInfo();
-                    fi.SetDescription("Bienvenu " + User.GetUsername());
-                    fi.ShowDialog();
+                    FormSuccess fs = new FormSuccess();
+                    fs.SetDescription("Bienvenu " + User.GetUsername());
+                    fs.Show();
                     this.Close();
                 }
                 else

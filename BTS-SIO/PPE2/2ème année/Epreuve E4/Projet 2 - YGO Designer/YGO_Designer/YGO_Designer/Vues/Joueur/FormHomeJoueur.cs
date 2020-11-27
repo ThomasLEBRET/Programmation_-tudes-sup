@@ -15,15 +15,28 @@ using YGO_Designer.Vues.Joueur;
 
 namespace YGO_Designer
 {
+    /// <summary>
+    /// Formulaire d'accueil du joueur
+    /// </summary>
     public partial class FormHomeJoueur : Form
     {
         private List<Deck> listDeck;
+
+        /// <summary>
+        /// Charge les decks de l'utilisateur et les rends accessibles dans la ListBox des decks de l'utilisateur
+        /// </summary>
         public FormHomeJoueur()
         {
             InitializeComponent();
             listDeck = new List<Deck>();
             lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
         }
+
+        /// <summary>
+        /// Affiche les informations du decks ainsi que sa liste de cartes quand le joueur sélectionne un deck
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void lbAllDecks_SelectedIndexChanged(object sender, EventArgs e)
         {
             Deck d = (Deck)lbAllDecks.SelectedItem;
@@ -35,6 +48,11 @@ namespace YGO_Designer
             lbViable.Text = "Deck jouable : " + d.IsDeckValid();
         }
 
+        /// <summary>
+        /// Tente d'ajouter un deck à la base de données pour le joueur connecté
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void button1_Click(object sender, EventArgs e)
         {
             if(!string.IsNullOrEmpty(tbNomDeck.Text) && !string.IsNullOrEmpty(tbNoDeck.Text))
@@ -62,6 +80,11 @@ namespace YGO_Designer
             }
         }
 
+        /// <summary>
+        /// Tente de vider les cartes du deck sélectionné
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btViderDeck_Click(object sender, EventArgs e)
         {
             if (lbAllDecks.SelectedIndex >= 0)
@@ -76,10 +99,19 @@ namespace YGO_Designer
                 lbAllDecks.Items.AddRange(ORMDeck.GetByUser().ToArray());
             }
             else
-                return;
+            {
+                FormAlert fa = new FormAlert();
+                fa.SetDescription("Veuillez sélectionner un deck");
+                fa.ShowDialog();
+            }
             
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void FormHomeJoueur_VisibleChanged(object sender, EventArgs e)
         {
             lbAllDecks.Items.Clear();
@@ -87,11 +119,14 @@ namespace YGO_Designer
             lbDeck.Items.Clear();
         }
 
+        /// <summary>
+        /// Tente de supprimer une carte d'un deck
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btSupprCarte_Click(object sender, EventArgs e)
         {
-            if (lbDeck.SelectedIndex < 0)
-                return;
-            else
+            if (lbDeck.SelectedIndex >= 0)
             {
                 Deck d = (Deck)lbAllDecks.SelectedItem;
                 Carte c = (Carte)lbDeck.SelectedItem;
