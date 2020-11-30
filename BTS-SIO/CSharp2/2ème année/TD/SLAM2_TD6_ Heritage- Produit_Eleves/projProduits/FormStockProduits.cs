@@ -25,6 +25,7 @@ namespace projProduitsHeritage {
             stockSARL_SIO1A.AjouterProduit(new JeuPlateau("111", "Dragons", 11.1f, 11,8,40,8));
             stockSARL_SIO1A.AjouterProduit(new JeuPlateau("112", "Vallée mamouths", 11.2f, 12, 5, 180, 11));
             stockSARL_SIO1A.AjouterProduit(new JeuInformatique("234", "LINQ", 20, 23, "mac", "telechargement", 0));
+            stockSARL_SIO1A.AjouterProduit(new JeuPlateau("38", "Land", 15, 37, 8, 15, 10));
             //List<Produit> ll = new List<Produit> { new Produit("132", "Clock Radio", 10),new Produit ("37", "Mobile Phone", 15) };
         }
 
@@ -198,10 +199,14 @@ namespace projProduitsHeritage {
 
             if (chkRechPlateau.Checked)
             {
-                prod =
-                    from produit in prod
-                    where produit is JeuPlateau
-                    select produit;
+                foreach(CheckBox c in grpbRechPlateau.Controls.OfType<CheckBox>())
+                {
+                    if(c.Checked)
+                        prod =
+                            from produit in prod
+                            where produit is JeuPlateau
+                            select produit;
+                }
 
                 if (chkRechNbJoueur.Checked)
                 {
@@ -231,10 +236,14 @@ namespace projProduitsHeritage {
 
             if (chkRechInformatique.Checked)
             {
-                prod =
-                    from produit in prod
-                    where produit is JeuInformatique
-                    select produit;
+                foreach(CheckBox c in grpbRechInformatique.Controls.OfType<CheckBox>())
+                {
+                    if(c.Checked)
+                        prod =
+                            from produit in prod
+                            where produit is JeuInformatique
+                            select produit;
+                }
                 if (chkRechSE.Checked)
                 {
                     prod =
