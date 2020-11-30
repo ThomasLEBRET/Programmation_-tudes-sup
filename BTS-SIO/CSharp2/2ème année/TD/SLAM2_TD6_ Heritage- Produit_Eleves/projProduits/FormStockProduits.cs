@@ -183,67 +183,41 @@ namespace projProduitsHeritage {
         private void btRechercher_Click(object sender, EventArgs e) {
             // TO DO
             // tenir compte cases à cocher chkbRechInformatique et chkbRechPlateau
-            var allProd =
+            var prod =
                 from produit in stockSARL_SIO1A.GetProduits()
                 select produit;
 
-            var prodPlat = from produit in allProd
-                   where produit is JeuPlateau
-                   select produit;
-
-            var prodInfo = from produit in allProd
-                   where produit is JeuInformatique
-                   select produit;
 
             if (chkRechDesi.Checked)
             {
-                prodPlat =
-                    from produit in prodPlat
-                    where produit.GetDesignation().ToUpper().Contains(txtRechDesi.Text.ToUpper())
-                    select produit;
-
-                prodInfo =
-                    from produit in prodInfo
+                prod =
+                    from produit in prod
                     where produit.GetDesignation().ToUpper().Contains(txtRechDesi.Text.ToUpper())
                     select produit;
             }
 
-
             if (chkRechPlateau.Checked)
             {
-                bool possedeConditionTri = false;
-                foreach (CheckBox c in grpbRechPlateau.Controls.OfType<CheckBox>())
-                {
-                    if (c.Checked)
-                        possedeConditionTri = true;
-                }
-
-                if (possedeConditionTri == false)
-                {
-                    prodPlat =
-                    from JeuPlateau produit in new List<JeuPlateau>()
-                    select produit;
-                }
-
                 if (chkRechNbJoueur.Checked)
                 {
-                    prodPlat = from JeuPlateau produit in prodPlat
-                           where produit.GetNbJoueur() == int.Parse(txtRechNbJoueur.Text)
-                           select produit;
+                    prod =
+                       from JeuPlateau produit in prod
+                       where produit.GetNbJoueur() == int.Parse(txtNbJoueur.Text)
+                       select produit;
                 }
 
                 if (chkRechDuree.Checked)
                 {
-                    prodPlat =
-                       from JeuPlateau produit in prodPlat
+                    prod =
+                       from JeuPlateau produit in prod
                        where produit.GetDuree() <= int.Parse(txtRechDuree.Text)
                        select produit;
                 }
 
                 if (chkRechAgneMin.Checked)
                 {
-                    prodPlat =
-                       from JeuPlateau produit in prodPlat
+                    prod =
+                       from JeuPlateau produit in prod
                        where produit.GetAgeMin() <= int.Parse(txtRechAgeMin.Text)
                        select produit;
                 }
@@ -252,39 +226,24 @@ namespace projProduitsHeritage {
 
             if (chkRechInformatique.Checked)
             {
-                bool possedeConditionTri = false;
-                foreach (CheckBox c in grpbRechInformatique.Controls.OfType<CheckBox>())
-                {
-                    if (c.Checked)
-                        possedeConditionTri = true;
-                }
-
-                if(possedeConditionTri == false)
-                {
-                    prodInfo =
-                            from JeuInformatique produit in new List<JeuInformatique>()
-                            select produit;
-                }
-
                 if (chkRechSE.Checked)
                 {
-                    prodInfo =
-                        from JeuInformatique produit in prodInfo
+                    prod =
+                        from JeuInformatique produit in prod 
                         where produit.GetSE().Contains(txtRechSE.Text)
                         select produit;
                 }
 
-                if (chkRechSupport.Checked)
+                if(chkRechSupport.Checked)
                 {
-                    prodInfo =
-                        from JeuInformatique produit in prodInfo
+                    prod =
+                        from JeuInformatique produit in prod
                         where produit.GetSupport().Contains(txtRechSupport.Text)
                         select produit;
                 }
-
             }
 
-            this.AfficherDansListe(prodInfo.ToList().Concat(prodPlat.ToList()).ToList());
+            this.AfficherDansListe(prod.ToList());
         }
 
         private void btRazStock_Click(object sender, EventArgs e) {
