@@ -1,4 +1,0 @@
-dbname omuzoki_ygodesigner 
-user omuzoki
-password ##THlb0302##
-server mysql-omuzoki.alwaysdata.net
