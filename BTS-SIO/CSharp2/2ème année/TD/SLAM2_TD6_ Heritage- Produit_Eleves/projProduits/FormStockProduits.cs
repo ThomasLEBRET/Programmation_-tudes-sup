@@ -198,11 +198,16 @@ namespace projProduitsHeritage {
 
             if (chkRechPlateau.Checked)
             {
+                prod =
+                    from produit in prod
+                    where produit is JeuPlateau
+                    select produit;
+
                 if (chkRechNbJoueur.Checked)
                 {
                     prod =
                        from JeuPlateau produit in prod
-                       where produit.GetNbJoueur() == int.Parse(txtNbJoueur.Text)
+                       where produit.GetNbJoueur() == int.Parse(txtRechNbJoueur.Text)
                        select produit;
                 }
 
@@ -226,6 +231,10 @@ namespace projProduitsHeritage {
 
             if (chkRechInformatique.Checked)
             {
+                prod =
+                    from produit in prod
+                    where produit is JeuInformatique
+                    select produit;
                 if (chkRechSE.Checked)
                 {
                     prod =
