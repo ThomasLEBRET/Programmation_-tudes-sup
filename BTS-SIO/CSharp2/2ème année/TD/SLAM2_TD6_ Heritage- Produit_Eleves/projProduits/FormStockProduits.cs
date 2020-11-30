@@ -249,10 +249,6 @@ namespace projProduitsHeritage {
                 }
 
             }
-            else
-                prodPlat =
-                    from JeuPlateau produit in new List<JeuPlateau>()
-                    select produit;
 
             if (chkRechInformatique.Checked)
             {
@@ -287,10 +283,6 @@ namespace projProduitsHeritage {
                 }
 
             }
-            else
-                prodInfo =
-                            from JeuInformatique produit in new List<JeuInformatique>()
-                            select produit;
 
             this.AfficherDansListe(prodInfo.ToList().Concat(prodPlat.ToList()).ToList());
         }
