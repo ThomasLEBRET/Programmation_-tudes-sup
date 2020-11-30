@@ -201,7 +201,7 @@ namespace projProduitsHeritage {
             {
                 foreach(CheckBox c in grpbRechPlateau.Controls.OfType<CheckBox>())
                 {
-                    if(c.Checked)
+                    if (c.Checked && c.Enabled)
                         prod =
                             from produit in prod
                             where produit is JeuPlateau
@@ -238,7 +238,7 @@ namespace projProduitsHeritage {
             {
                 foreach(CheckBox c in grpbRechInformatique.Controls.OfType<CheckBox>())
                 {
-                    if(c.Checked)
+                    if(c.Checked && c.Enabled)
                         prod =
                             from produit in prod
                             where produit is JeuInformatique
