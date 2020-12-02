@@ -1,0 +1,1 @@
+(int i) n'est déclaré nul part dans class Septième

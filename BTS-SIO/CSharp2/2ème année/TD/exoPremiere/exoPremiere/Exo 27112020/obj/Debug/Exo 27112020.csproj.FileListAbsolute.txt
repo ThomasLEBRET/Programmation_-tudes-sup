@@ -1,0 +1,4 @@
+c:\users\yann\documents\visual studio 2013\Projects\Exo 27112020\Exo 27112020\bin\Debug\Exo 27112020.exe.config
+c:\users\yann\documents\visual studio 2013\Projects\Exo 27112020\Exo 27112020\obj\Debug\Exo 27112020.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Downloads\Exo 27112020\Exo 27112020\bin\Debug\Exo 27112020.exe.config
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\bin\Debug\Exo 27112020.exe.config

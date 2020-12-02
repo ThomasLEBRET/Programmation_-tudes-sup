@@ -1,0 +1,6 @@
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\obj\Debug\exoPremiere.csprojResolveAssemblyReference.cache
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\bin\Debug\Exo 27112020.exe.config
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\bin\Debug\Exo 27112020.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\bin\Debug\Exo 27112020.pdb
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\obj\Debug\Exo 27112020.exe
+C:\Users\Thomas\Documents\GitHub\programmation_etudes-sup\BTS-SIO\CSharp2\2ème année\TD\exoPremiere\exoPremiere\Exo 27112020\obj\Debug\Exo 27112020.pdb

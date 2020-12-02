@@ -1,0 +1,9 @@
+1) Precisez ce que le programme affiche
+
+constructeur de Premiere
+second constructeur de Neuvieme
+premier constructeur de Dixieme
+=============================
+constructeur de Premiere
+premier constructeur de Neuvieme
+second constructeur de Dixieme
