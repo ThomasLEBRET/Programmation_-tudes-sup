@@ -24,8 +24,8 @@ public class Voiture extends Vehicule {
         this.nbVitesse = nbVitesse;
     }
     Voiture(String immat, int nbVitesse) {
-    super(immat);
-    this.nbVitesse = nbVitesse;
+        super(immat);
+        this.nbVitesse = nbVitesse;
     }
 
     @Override

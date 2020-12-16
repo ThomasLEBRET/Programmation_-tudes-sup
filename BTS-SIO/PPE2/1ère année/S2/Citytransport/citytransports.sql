@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `historique_voyage` (
   `email` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id_voyage`),
   KEY `FK1_historique_voyage` (`email`)
-) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+)AUTO_INCREMENT=5;
 
 --
 -- Dumping data for table `historique_voyage`
@@ -63,7 +63,7 @@ CREATE TABLE IF NOT EXISTS `incident` (
   `importance` varchar(10) NOT NULL,
   PRIMARY KEY (`id_incident`),
   KEY `cd_incident` (`cd_incident`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+)  AUTO_INCREMENT=4;
 
 --
 -- Dumping data for table `incident`
@@ -84,7 +84,7 @@ DROP TABLE IF EXISTS `ligne`;
 CREATE TABLE IF NOT EXISTS `ligne` (
   `nom_ligne` varchar(10) NOT NULL,
   PRIMARY KEY (`nom_ligne`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `ligne`
@@ -108,7 +108,7 @@ CREATE TABLE IF NOT EXISTS `parcourirs` (
   `id` int(11) NOT NULL,
   PRIMARY KEY (`nom_ligne`,`id`),
   KEY `id` (`id`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `parcourirs`
@@ -179,7 +179,7 @@ CREATE TABLE IF NOT EXISTS `reliers` (
   PRIMARY KEY (`station_depart`,`station_destination`),
   KEY `station_destination` (`station_destination`),
   KEY `fk2` (`nom_ligne`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `reliers`
@@ -279,7 +279,7 @@ CREATE TABLE IF NOT EXISTS `stations` (
   `nom_station` varchar(255) DEFAULT NULL,
   `type` varchar(255) DEFAULT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+)  AUTO_INCREMENT=41;
 
 --
 -- Dumping data for table `stations`
@@ -338,7 +338,7 @@ CREATE TABLE IF NOT EXISTS `type_incident` (
   `cd_incident` varchar(20) NOT NULL,
   `lib_incident` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`cd_incident`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `type_incident`
@@ -374,7 +374,7 @@ CREATE TABLE IF NOT EXISTS `utilisateur` (
   `derniere_ip_connue` varchar(15) DEFAULT NULL,
   `solde` int(11) DEFAULT NULL,
   PRIMARY KEY (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `utilisateur`
@@ -397,7 +397,7 @@ CREATE TABLE IF NOT EXISTS `verification` (
   `dt_enregistrement` date NOT NULL,
   `verifie` int(1) NOT NULL,
   PRIMARY KEY (`email`)
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+);
 
 --
 -- Dumping data for table `verification`

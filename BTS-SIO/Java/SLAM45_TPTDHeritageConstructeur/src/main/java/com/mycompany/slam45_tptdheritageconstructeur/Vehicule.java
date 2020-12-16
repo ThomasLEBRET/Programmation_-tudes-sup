@@ -23,7 +23,7 @@ public class Vehicule {
     }
     
     Vehicule(String immat, String couleur) {
-        this(immat);
+        this.immat = immat;
         this.couleur = couleur;
     }
 }
