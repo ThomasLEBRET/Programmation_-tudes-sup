@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Users/thomaslebret/Documents/GitHub/programmation_etudes-sup/MIAGE/L3/Programmation_java /TP/TP1/musiqueTD1Feuilles20212022ADiffuser.jar">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/musiqueTD1Feuilles20212022ADiffuser.jar"/>
+	<classpathentry kind="lib" path="/Users/thomaslebret/Documents/GitHub/programmation_etudes-sup/MIAGE/L3/Programmation_java /TP/TP1/lib/musiqueTD1Feuilles20212022ADiffuser.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
