@@ -15,6 +15,9 @@ package forme;
  * Il y a des constructeur puisque que on va construire une usine à bidon.
  * 
  * Javadoc avec signature de méthodes /!\
+ * 
+ * Pour La classe Bidon vous allez avoir plein de méthodes 
+ * des accesseurs et des modificateurs et des utilisateurs à spécifier.
  */
 
 public class Bidon {
