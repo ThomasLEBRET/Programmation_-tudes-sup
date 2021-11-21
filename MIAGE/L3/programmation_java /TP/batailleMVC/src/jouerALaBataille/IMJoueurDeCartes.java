@@ -2,10 +2,11 @@ package jouerALaBataille;
 
 import java.util.ArrayList;
 
+
 public interface IMJoueurDeCartes {
 	public String prenom();
-
-    public boolean accepte(MCarte c) ;
+	
+	public boolean accepte(MCarte c) ;
     public void pose(MCarte c);
 
     public boolean mainVide();

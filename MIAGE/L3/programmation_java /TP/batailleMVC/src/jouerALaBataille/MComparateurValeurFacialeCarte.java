@@ -15,7 +15,7 @@ public class MComparateurValeurFacialeCarte implements Comparator {
 			
 			if(c1.valeurFace() == c2.valeurFace())
 				return 0;
-			if(c1.valeurFace() < c2.valeurFace()) {
+			else if(c1.valeurFace() < c2.valeurFace()) {
 				return -1;
 			}
 			else

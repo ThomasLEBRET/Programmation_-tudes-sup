@@ -4,14 +4,12 @@ public class VJoueur implements IVJoueurDeCartes {
 
 	@Override
 	public void transmetMessage(String s) {
-		// TODO Auto-generated method stub
-		
+		System.out.println(s);
 	}
 
 	@Override
 	public void miseAJour() {
-		// TODO Auto-generated method stub
-		
+		//TODO
 	}
 	
 
